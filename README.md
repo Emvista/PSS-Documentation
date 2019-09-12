@@ -1,6 +1,11 @@
-# Anonymiser
+1. [Anomyser](#anomyser)
+1. [Sentiment](#sentiment)
 
-## Query ##
+Anonymiser
+==
+
+Query
+--
 * Server : https://api-pss.prevyo.com/pss/api/anonymise
 * Method : POST
 * Header : Content-Type: application/json
@@ -8,7 +13,8 @@
 * Poa-Token : TOKEN
 * Body (JSON) : {"text": "TEXT"}
 
-## INPUT
+INPUT
+--
 
 ```JSON
 {
@@ -16,7 +22,8 @@
 }
 ```
 
-## OUTPUT ###
+OUTPUT
+--
 HTTP Status : 200
 
 Body :
@@ -57,6 +64,10 @@ Body :
 }
 ```
 
-## TEST 
+TEST
+--
 
 `curl -X POST "https://api-pss.prevyo.com/pss/api/anonymise" -H "accept: application/json" -H "Basic Auth: YYYYYY" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Bonjour Jean, peux tu appeler demain midi, la société Emvista pour parler à Paul."}` 
+
+Sentiment
+==
