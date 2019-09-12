@@ -1,11 +1,11 @@
 # Anonymiser
 
 ## Query ##
-* Server : http://SERVER:PORT/pss/api/anonymise
+* Server : https://api-pss.prevyo.com/pss/api/anonymise
 * Method : POST
 * Header : Content-Type: application/json
-* Basic Auth : <client login>:<clien password>
-* Poa-Token : 
+* Basic Auth : BASIC_AUTH
+* Poa-Token : TOKEN
 * Body (JSON) : {"text": "TEXT"}
 
 ## INPUT
