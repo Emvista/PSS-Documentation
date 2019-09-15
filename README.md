@@ -9,16 +9,24 @@ Briques logicielles pour comprendre le langage naturel.
 4. [Keywords](#keywords)
 5. [NLU](#nlu)
 
+Glodal
+==
+
+Query
+--
+* Method : GET
+* Header : Content-Type: application/json
+* Basic Auth : BASIC_AUTH
+* Poa-Token : TOKEN
+
+
+
 Anonymiser
 ==
 
 Query
 --
 * Server : https://api-pss.prevyo.com/pss/api/anonymise
-* Method : POST
-* Header : Content-Type: application/json
-* Basic Auth : BASIC_AUTH
-* Poa-Token : TOKEN
 * Body : {"text": "TEXT"}
 
 INPUT
@@ -83,10 +91,6 @@ Sentiment
 Query
 --
 * Server : https://api-pss.prevyo.com/pss/api/sentiments
-* Method : POST
-* Header : Content-Type: application/json
-* Basic Auth : BASIC_AUTH
-* Poa-Token : TOKEN
 * Body : {"text": "TEXT"}
 
 INPUT
@@ -134,6 +138,67 @@ TEST
 
 Concepts
 ==
+
+Query
+--
+* Server : https://api-pss.prevyo.com/pss/api/concepts
+* Body : {"text": "TEXT"}
+
+INPUT
+--
+
+```JSON
+{
+    "text": "Bonjour Jean, peux tu appeler demain midi, la société Emvista pour parler à Paul ?"
+}
+```
+
+OUTPUT
+--
+HTTP Status : 200
+
+Body :
+
+```JSON
+{
+    "entities": [
+        {
+            "idSentence": 0,
+            "anonymizedValue": "[PERS]",
+            "id": 1,
+            "type": "nerd:Person>Individual>FirstName",
+            "initialValue": ""
+        },
+        {
+            "idSentence": 0,
+            "anonymizedValue": "[TIME]",
+            "id": 6,
+            "type": "nerd:Time",
+            "initialValue": ""
+        },
+        {
+            "idSentence": 0,
+            "anonymizedValue": "[ORGA]",
+            "id": 11,
+            "type": "nerd:Organization",
+            "initialValue": ""
+        },
+        {
+            "idSentence": 0,
+            "anonymizedValue": "[PERS]",
+            "id": 15,
+            "type": "nerd:Person>Individual>FirstName",
+            "initialValue": ""
+        }
+    ],
+    "anonymised": "Bonjour [PERS] , peux tu appeler [TIME] , la société [ORGA] pour parler à [PERS] ?"
+}
+```
+
+TEST
+--
+
+`curl -X POST "https://api-pss.prevyo.com/pss/api/concepts" -H "accept: application/json" -H "Basic Auth: YYYYYY" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Bonjour Jean, peux tu appeler demain midi, la société Emvista pour parler à Paul."}` 
 
 Keywords
 ==
