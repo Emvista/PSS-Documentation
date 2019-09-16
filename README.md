@@ -3,11 +3,10 @@ Prevyo Semantic Services
 
 Briques logicielles pour comprendre le langage naturel.
 
-| First Header | Second Header |
-| ------------ | ------------- |
-| [Anonymiser](#anonymiser) | [Sentiment](#sentiment) |
-| [Concepts](#concepts)  | [Keywords](#keywords) |
-
+1. [Anonymiser](#anonymiser)
+2. [Sentiment](#sentiment)
+3. [Concepts](#concepts)
+4. [Keywords](#keywords)
 5. [NLU](#nlu)
 6. [Résumés](#resumes)
 7. [Actions](#actions)
