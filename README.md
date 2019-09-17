@@ -27,7 +27,8 @@ Query
 Anonymiser
 ==
 
-L'anonymiseur a pour objectif d'anonymiser toutes les entités que l'utilisateur souhaite (noms de personnes, de marques, d'organisations, lieux, dates, etc.).
+> ![Anonymiser](./images/ic_pss_anonymisation.png =100x100)
+> L'anonymiseur a pour objectif d'anonymiser toutes les entités que l'utilisateur souhaite (noms de personnes, de marques, d'organisations, lieux, dates, etc.).
 
 Query
 --
