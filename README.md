@@ -27,8 +27,9 @@ Query
 Anonymiser
 ==
 
-> ![Anonymiser](./images/ic_pss_anonymisation.png =100x100)
-> L'anonymiseur a pour objectif d'anonymiser toutes les entités que l'utilisateur souhaite (noms de personnes, de marques, d'organisations, lieux, dates, etc.).
+<img src="images/ic_pss_anonymisation.png" alt="drawing" width="80"/>
+
+L'anonymiseur a pour objectif d'anonymiser toutes les entités que l'utilisateur souhaite (noms de personnes, de marques, d'organisations, lieux, dates, etc.).
 
 Query
 --
@@ -94,6 +95,8 @@ TEST
 Sentiment
 ==
 
+<img src="images/ic_pss_sentiment.png" alt="drawing" width="80"/>
+
 L'analyse d’opinion (<i>opinion mining</i> ou <i>sentiment analysis</i>) consiste à analyser un texte pour identifier les sentiments ainsi que les émotions qui y sont exprimés.
 
 Query
@@ -146,6 +149,8 @@ TEST
 
 Concepts
 ==
+
+<img src="images/ic_pss_concept.png" alt="drawing" width="80"/>
 
 L'identification des concepts permet de faire émerger des concepts qui n'apparaissent pas explicitement dans le texte à analyser.
 
