@@ -1,7 +1,7 @@
 Action
 ==
 
-<img src="images/ic_pss_action.png" alt="drawing" width="80"/>
+<img src="../images/ic_pss_action.png" alt="drawing" width="80"/>
 
 La reconnaissance d'actions vise à extraire les actions que doit faire une personne, pour quand, comment, pour qui, etc.
 
