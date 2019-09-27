@@ -7,7 +7,7 @@ Briques logicielles pour comprendre le langage naturel.
 2. [Sentiment](#sentiment)
 3. [Concepts](#concepts)
 4. [Keywords](#keywords)
-5. [NLU](#nlu)
+5. [NLU](README_NLU.md)
 6. [Résumés](#resumes)
 7. [Actions](#actions)
 8. [Highlighter](#highlighter)
