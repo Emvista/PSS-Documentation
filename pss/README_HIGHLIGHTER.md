@@ -1,7 +1,7 @@
 Highlighter
 ==
 
-<img src="images/ic_pss_highlighter.png" alt="drawing" width="80"/>
+<img src="../images/ic_pss_highlighter.png" alt="drawing" width="80"/>
 
 La reconnaissance des entités nommées vise à identifier dans un texte les noms de personnes, les noms de lieux, les noms d'organisations, les noms de produits, etc.
 

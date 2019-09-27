@@ -1,7 +1,7 @@
 Sentiment
 ==
 
-<img src="images/ic_pss_sentiment.png" alt="drawing" width="80"/>
+<img src="../images/ic_pss_sentiment.png" alt="drawing" width="80"/>
 
 L'analyse d’opinion (<i>opinion mining</i> ou <i>sentiment analysis</i>) consiste à analyser un texte pour identifier les sentiments ainsi que les émotions qui y sont exprimés.
 

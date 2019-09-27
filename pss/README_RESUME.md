@@ -1,7 +1,7 @@
 Résumés
 ==
 
-<img src="images/ic_pss_resume.png" alt="drawing" width="80"/>
+<img src="../images/ic_pss_resume.png" alt="drawing" width="80"/>
 
 Le générateur de résumés crée une synthèse du texte, dont le niveau d'abstraction est paramétrable.
 

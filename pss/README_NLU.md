@@ -1,6 +1,6 @@
 NLU
 ==
-<img src="images/ic_pss_nlu.png" alt="drawing" width="80"/>
+<img src="../images/ic_pss_nlu.png" alt="drawing" width="80"/>
 
 Le NLU (<i>Natural Language Understanding</i>) sert à extraire les intentions exprimées dans une phrase.
 

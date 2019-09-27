@@ -1,7 +1,7 @@
 Anonymiser
 ==
 
-<img src="images/ic_pss_anonymisation.png" alt="drawing" width="80"/>
+<img src="../images/ic_pss_anonymisation.png" alt="drawing" width="80"/>
 
 L'anonymiseur a pour objectif d'anonymiser toutes les entités que l'utilisateur souhaite (noms de personnes, de marques, d'organisations, lieux, dates, etc.).
 

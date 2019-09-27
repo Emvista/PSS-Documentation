@@ -1,7 +1,7 @@
 Keywords
 ==
 
-<img src="images/ic_pss_mot_cle.png" alt="drawing" width="80"/>
+<img src="../images/ic_pss_mot_cle.png" alt="drawing" width="80"/>
 
 L'extraction de mots clés fournit une liste ordonnée des termes les plus pertinents dans le contexte donné.
 

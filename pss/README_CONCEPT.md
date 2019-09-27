@@ -1,7 +1,7 @@
 Concepts
 ==
 
-<img src="images/ic_pss_concept.png" alt="drawing" width="80"/>
+<img src="../images/ic_pss_concept.png" alt="drawing" width="80"/>
 
 L'identification des concepts permet de faire émerger des concepts qui n'apparaissent pas explicitement dans le texte à analyser.
 
