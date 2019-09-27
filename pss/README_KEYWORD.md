@@ -11,7 +11,7 @@ Query
 * Header : Content-Type: application/json
 * Basic Auth : BASIC_AUTH
 * Poa-Token : TOKEN
-* Server : https://api-pss.prevyo.com/pss/api/keyword
+* Server : https://api-pss.prevyo.com/pss/api/keywords
 * Body : {"text": "TEXT"}
 
 INPUT
