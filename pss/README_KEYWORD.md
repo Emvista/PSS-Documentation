@@ -9,7 +9,6 @@ Query
 --
 * Method : GET
 * Header : Content-Type: application/json
-* Basic Auth : BASIC_AUTH
 * Poa-Token : TOKEN
 * Server : https://api-pss.prevyo.com/pss/api/keywords
 * Body : {"text": "TEXT"}
@@ -75,5 +74,5 @@ Body :
 TEST
 --
 
-`curl -X GET "https://api-pss.prevyo.com/pss/api/keyword" -H "accept: application/json" -H "Basic Auth: YYYYYY" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel."}` 
+`curl -X GET "https://api-pss.prevyo.com/pss/api/keyword" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel."}` 
 

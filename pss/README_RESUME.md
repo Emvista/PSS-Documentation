@@ -9,7 +9,6 @@ Query
 --
 * Method : GET
 * Header : Content-Type: application/json
-* Basic Auth : BASIC_AUTH
 * Poa-Token : TOKEN
 * Server : https://api-pss.prevyo.com/pss/api/summarizer
 * Body : {"text": "TEXT"}
@@ -84,5 +83,5 @@ Body :
 TEST
 --
 
-`curl -X GET "https://api-pss.prevyo.com/pss/api/summarizer" -H "accept: application/json" -H "Basic Auth: YYYYYY" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel. Les technologies d’intelligence artificielle mises en œuvre sont fondées à la fois sur du machine learning (système d'apprentissage) et sur des ontologies. À partir de ces briques technologiques, Emvista propose Prevyo, un assistant virtuel intelligent de gestion d’e-mails."}` 
+`curl -X GET "https://api-pss.prevyo.com/pss/api/summarizer" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel. Les technologies d’intelligence artificielle mises en œuvre sont fondées à la fois sur du machine learning (système d'apprentissage) et sur des ontologies. À partir de ces briques technologiques, Emvista propose Prevyo, un assistant virtuel intelligent de gestion d’e-mails."}` 
 

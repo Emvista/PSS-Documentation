@@ -9,7 +9,6 @@ Query
 --
 * Method : GET
 * Header : Content-Type: application/json
-* Basic Auth : BASIC_AUTH
 * Poa-Token : TOKEN
 * Server : https://api-pss.prevyo.com/pss/api/actions
 * Body : {"text": "TEXT"}
@@ -78,4 +77,4 @@ Body :
 TEST
 --
 
-`curl -X GET "https://api-pss.prevyo.com/pss/api/anonymise" -H "accept: application/json" -H "Basic Auth: YYYYYY" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Marie enverra la facture demain."}` 
+`curl -X GET "https://api-pss.prevyo.com/pss/api/anonymise" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Marie enverra la facture demain."}` 

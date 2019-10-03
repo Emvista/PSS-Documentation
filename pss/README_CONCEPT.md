@@ -9,7 +9,6 @@ Query
 --
 * Method : GET
 * Header : Content-Type: application/json
-* Basic Auth : BASIC_AUTH
 * Poa-Token : TOKEN
 * Server : https://api-pss.prevyo.com/pss/api/concepts
 * Body : {"text": "TEXT"}
@@ -68,4 +67,4 @@ Body :
 TEST
 --
 
-`curl -X GET "https://api-pss.prevyo.com/pss/api/concepts" -H "accept: application/json" -H "Basic Auth: YYYYYY" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Bonjour Jean, peux tu appeler demain midi, la société Emvista pour parler à Paul."}` 
+`curl -X GET "https://api-pss.prevyo.com/pss/api/concepts" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Bonjour Jean, peux tu appeler demain midi, la société Emvista pour parler à Paul."}` 
