@@ -1,9 +1,25 @@
 Prevyo Semantic Services
-==
+=
 
 Briques logicielles pour comprendre le langage naturel.
 
 Pour tester les Prevyo Semantic Services vous pouvez soit utiliser l'interface web [https://pss.prevyo.com/](https://pss.prevyo.com/) soit utiliser l'API REST. Pour utiliser l'API REST, il vous faudra créer un compte Prevyo sur [https://pss.prevyo.com/](https://pss.prevyo.com/) puis nous contacter à [dev@emvista.com](mailto:dev@emvista.com) pour avoir votre Token d'authentifcation.
+
+USAGE
+==
+
+Postman
+==
+
+Télécharger le fichier collection Postman : [Postman Collection](postman/PSS.postman_collection.json)
+
+Créer 2 variables :
+* PSS-SERVER : https://api-pss.prevyo.com/
+* POA-TOKEN : votre token
+
+
+REST API
+=
 
 Keywords
 ==

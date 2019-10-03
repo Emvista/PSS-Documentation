@@ -36,7 +36,7 @@
 					},
 					{
 						"key": "Poa-Token",
-						"value": "{{POA-TOKEN-DEV}}",
+						"value": "{{POA-TOKEN}}",
 						"type": "text"
 					}
 				],
@@ -45,15 +45,11 @@
 					"raw": "{\"text\":\"Marie enverra la facture demain.\"}"
 				},
 				"url": {
-					"raw": "http://server.pss.em/pss/api/actions",
-					"protocol": "http",
+					"raw": "{{PSS-SERVER}}pss/api/actions",
 					"host": [
-						"server",
-						"pss",
-						"em"
+						"{{PSS-SERVER}}pss"
 					],
 					"path": [
-						"pss",
 						"api",
 						"actions"
 					]
@@ -91,7 +87,7 @@
 					},
 					{
 						"key": "Poa-Token",
-						"value": "{{POA-TOKEN-DEV}}",
+						"value": "{{POA-TOKEN}}",
 						"type": "text"
 					}
 				],
@@ -142,7 +138,7 @@
 					},
 					{
 						"key": "Poa-Token",
-						"value": "{{POA-TOKEN-DEV}}",
+						"value": "{{POA-TOKEN}}",
 						"type": "text"
 					}
 				],
@@ -193,7 +189,7 @@
 					},
 					{
 						"key": "Poa-Token",
-						"value": "{{POA-TOKEN-DEV}}",
+						"value": "{{POA-TOKEN}}",
 						"type": "text"
 					}
 				],
@@ -244,7 +240,7 @@
 					},
 					{
 						"key": "Poa-Token",
-						"value": "{{POA-TOKEN-DEV}}",
+						"value": "{{POA-TOKEN}}",
 						"type": "text"
 					}
 				],
@@ -296,7 +292,7 @@
 					{
 						"key": "Poa-Token",
 						"type": "text",
-						"value": "{{POA-TOKEN-DEV}}"
+						"value": "{{POA-TOKEN}}"
 					}
 				],
 				"body": {
@@ -346,7 +342,7 @@
 					},
 					{
 						"key": "Poa-Token",
-						"value": "{{POA-TOKEN-DEV}}",
+						"value": "{{POA-TOKEN}}",
 						"type": "text"
 					}
 				],
@@ -397,7 +393,7 @@
 					},
 					{
 						"key": "Poa-Token",
-						"value": "{{POA-TOKEN-DEV}}",
+						"value": "{{POA-TOKEN}}",
 						"type": "text"
 					}
 				],
