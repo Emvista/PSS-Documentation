@@ -15,7 +15,7 @@ Télécharger et installer [POSTMAN](https://www.getpostman.com/)
 
 Téléchargez le fichier collection Postman : [Postman Collection](postman/PSS.postman_collection.json) et importez le dans Postman
 
-Créer 2 variables :
+Créez 2 variables :
 * PSS-SERVER : https://api-pss.prevyo.com/
 * POA-TOKEN : votre token Prevyo
 
