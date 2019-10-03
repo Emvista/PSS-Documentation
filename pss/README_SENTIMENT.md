@@ -9,7 +9,6 @@ Query
 --
 * Method : GET
 * Header : Content-Type: application/json
-* Basic Auth : BASIC_AUTH
 * Poa-Token : TOKEN
 * Server : https://api-pss.prevyo.com/pss/api/sentiments
 * Body : {"text": "TEXT"}
@@ -55,5 +54,5 @@ Body :
 TEST
 --
 
-`curl -X GET "https://api-pss.prevyo.com/pss/api/sentiments" -H "accept: application/json" -H "Basic Auth: YYYYYY" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Paul n'aime pas la très bonne pomme de Marie."}` 
+`curl -X GET "https://api-pss.prevyo.com/pss/api/sentiments" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Paul n'aime pas la très bonne pomme de Marie."}` 
 
