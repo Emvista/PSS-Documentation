@@ -7,7 +7,7 @@ L'anonymiseur a pour objectif d'anonymiser toutes les entités que l'utilisateur
 
 Query
 --
-* Method : GET
+* Method : POST
 * Header : Content-Type: application/json
 * Poa-Token : TOKEN
 * Server : https://api-pss.prevyo.com/pss/api/anonymise

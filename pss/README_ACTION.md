@@ -7,7 +7,7 @@ La reconnaissance d'actions vise à extraire les actions que doit faire une pers
 
 Query
 --
-* Method : GET
+* Method : POST
 * Header : Content-Type: application/json
 * Poa-Token : TOKEN
 * Server : https://api-pss.prevyo.com/pss/api/action
