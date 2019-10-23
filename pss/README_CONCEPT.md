@@ -30,37 +30,31 @@ Body :
 
 ```JSON
 {
-    "entities": [
-        {
-            "idSentence": 0,
-            "anonymizedValue": "[PERS]",
-            "id": 1,
-            "type": "nerd:Person>Individual>FirstName",
-            "initialValue": ""
-        },
-        {
-            "idSentence": 0,
-            "anonymizedValue": "[TIME]",
-            "id": 6,
-            "type": "nerd:Time",
-            "initialValue": ""
-        },
-        {
-            "idSentence": 0,
-            "anonymizedValue": "[ORGA]",
-            "id": 11,
-            "type": "nerd:Organization",
-            "initialValue": ""
-        },
-        {
-            "idSentence": 0,
-            "anonymizedValue": "[PERS]",
-            "id": 15,
-            "type": "nerd:Person>Individual>FirstName",
-            "initialValue": ""
-        }
-    ],
-    "anonymised": "Bonjour [PERS] , peux tu appeler [TIME] , la société [ORGA] pour parler à [PERS] ?"
+    "original": "Bonjour Jean, peux tu appeler demain midi, la société Emvista pour parler à Paul ?",
+    "concepts": {
+        "sud": 4,
+        "lieu de rencontre": 1,
+        "astronomie": 1,
+        "mode de vie": 1,
+        "poétique": 1,
+        "organisation": 1,
+        "monde de l'entreprise": 1,
+        "commerce": 1,
+        "moment": 1,
+        "unité institutionnelle": 1,
+        "religion": 1,
+        "sociologie": 1,
+        "géographie": 1,
+        "jour": 1,
+        "comportements": 1,
+        "zoologie": 1,
+        "jour de la semaine": 1,
+        "religions": 1,
+        "partie du jour": 1,
+        "droit": 1,
+        "christianisme": 1,
+        "lieu": 1
+    }
 }
 ```
 
