@@ -7,7 +7,7 @@ Le générateur de résumés crée une synthèse du texte, dont le niveau d'abst
 
 Query
 --
-* Method : GET
+* Method : POST
 * Header : Content-Type: application/json
 * Poa-Token : TOKEN
 * Server : https://api-pss.prevyo.com/pss/api/summarizer

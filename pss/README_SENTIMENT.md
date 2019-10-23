@@ -7,7 +7,7 @@ L'analyse d’opinion (<i>opinion mining</i> ou <i>sentiment analysis</i>) consi
 
 Query
 --
-* Method : GET
+* Method : POST
 * Header : Content-Type: application/json
 * Poa-Token : TOKEN
 * Server : https://api-pss.prevyo.com/pss/api/sentiments

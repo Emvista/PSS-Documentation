@@ -7,7 +7,7 @@ L'identification des concepts permet de faire émerger des concepts qui n'appara
 
 Query
 --
-* Method : GET
+* Method : POST
 * Header : Content-Type: application/json
 * Poa-Token : TOKEN
 * Server : https://api-pss.prevyo.com/pss/api/concepts

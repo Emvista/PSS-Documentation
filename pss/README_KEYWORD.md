@@ -7,7 +7,7 @@ L'extraction de mots clés fournit une liste ordonnée des termes les plus perti
 
 Query
 --
-* Method : GET
+* Method : POST
 * Header : Content-Type: application/json
 * Poa-Token : TOKEN
 * Server : https://api-pss.prevyo.com/pss/api/keyword
