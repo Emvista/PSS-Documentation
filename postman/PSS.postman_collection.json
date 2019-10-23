@@ -1,0 +1,394 @@
+{
+	"info": {
+		"_postman_id": "0688d535-8dcd-4209-81db-8a859ec61e5b",
+		"name": "Prevyo Semantic Services",
+		"description": "Briques logicielles pour comprendre le langage naturel.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PSS - Actions",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "42875cd5-a407-44b3-a9d4-555d6c695a79",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Poa-Token",
+						"value": "{{POA-TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"text\":\"Marie enverra la facture demain.\"}"
+				},
+				"url": {
+					"raw": "{{PSS-SERVER}}pss/api/actions",
+					"host": [
+						"{{PSS-SERVER}}pss"
+					],
+					"path": [
+						"api",
+						"actions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PSS - Anonymise",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "42875cd5-a407-44b3-a9d4-555d6c695a79",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Poa-Token",
+						"value": "{{POA-TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"text\":\"Bonjour Jean, peux tu appeler demain midi, la société Emvista pour parler à Paul ?\"}"
+				},
+				"url": {
+					"raw": "{{PSS-SERVER}}pss/api/anonymise",
+					"host": [
+						"{{PSS-SERVER}}pss"
+					],
+					"path": [
+						"api",
+						"anonymise"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PSS - Concepts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "42875cd5-a407-44b3-a9d4-555d6c695a79",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Poa-Token",
+						"value": "{{POA-TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"text\":\"Bonjour Jean, peux tu appeler demain midi, la société Emvista pour parler à Paul ?\"}"
+				},
+				"url": {
+					"raw": "{{PSS-SERVER}}pss/api/concepts",
+					"host": [
+						"{{PSS-SERVER}}pss"
+					],
+					"path": [
+						"api",
+						"concepts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PSS - Highlight",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "42875cd5-a407-44b3-a9d4-555d6c695a79",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Poa-Token",
+						"value": "{{POA-TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"text\":\"Marie enverra la facture demain à Pierre de chez Emvista.\"}"
+				},
+				"url": {
+					"raw": "{{PSS-SERVER}}pss/api/highlight",
+					"host": [
+						"{{PSS-SERVER}}pss"
+					],
+					"path": [
+						"api",
+						"highlight"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PSS - Keywords",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "42875cd5-a407-44b3-a9d4-555d6c695a79",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Poa-Token",
+						"value": "{{POA-TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"text\":\"Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel.\"}"
+				},
+				"url": {
+					"raw": "{{PSS-SERVER}}pss/api/keywords",
+					"host": [
+						"{{PSS-SERVER}}pss"
+					],
+					"path": [
+						"api",
+						"keywords"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PSS - nlu",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "42875cd5-a407-44b3-a9d4-555d6c695a79",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Poa-Token",
+						"type": "text",
+						"value": "{{POA-TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"text\":\"Peux-tu envoyer une facture à Marie ?\"}"
+				},
+				"url": {
+					"raw": "{{PSS-SERVER}}pss/api/nlu",
+					"host": [
+						"{{PSS-SERVER}}pss"
+					],
+					"path": [
+						"api",
+						"nlu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PSS - Summarizer",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "42875cd5-a407-44b3-a9d4-555d6c695a79",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Poa-Token",
+						"value": "{{POA-TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"text\":\"Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel. Les technologies d’intelligence artificielle mises en œuvre sont fondées à la fois sur du machine learning (système d'apprentissage) et sur des ontologies. À partir de ces briques technologiques, Emvista propose Prevyo, un assistant virtuel intelligent de gestion d’e-mails.\"}"
+				},
+				"url": {
+					"raw": "{{PSS-SERVER}}pss/api/summarizer",
+					"host": [
+						"{{PSS-SERVER}}pss"
+					],
+					"path": [
+						"api",
+						"summarizer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PSS - Sentiments",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "42875cd5-a407-44b3-a9d4-555d6c695a79",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Poa-Token",
+						"value": "{{POA-TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"text\":\"Paul n'aime pas la très bonne pomme de Marie.\"}"
+				},
+				"url": {
+					"raw": "{{PSS-SERVER}}pss/api/sentiments",
+					"host": [
+						"{{PSS-SERVER}}pss"
+					],
+					"path": [
+						"api",
+						"sentiments"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

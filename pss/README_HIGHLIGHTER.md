@@ -7,7 +7,7 @@ La reconnaissance des entités nommées vise à identifier dans un texte les nom
 
 Query
 --
-* Method : GET
+* Method : POST
 * Header : Content-Type: application/json
 * Poa-Token : TOKEN
 * Server : https://api-pss.prevyo.com/pss/api/highlight
