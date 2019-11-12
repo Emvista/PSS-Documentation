@@ -35,36 +35,36 @@ Body :
     "NC": [
       {
         "word": "briques logicielles",
-        "iteration": 1
+        "occurrence": 1
       },
       {
         "word": "langage naturel",
-        "iteration": 1
+        "occurrence": 1
       },
       {
-        "word": "briques logicielles",
-        "une société": 1
+        "word": "une société",
+        "occurrence": 1
       }
     ],
     "V": [
       {
         "word": "développer",
-        "iteration": 1
+        "occurrence": 1
       },
       {
         "word": "comprendre",
-        "iteration": 1
+        "occurrence": 1
       }
     ],
     "ADJ": [],
     "NPP": [
       {
         "word": "Montpellier",
-        "iteration": 1
+        "occurrence": 1
       },
       {
         "word": "Emvista",
-        "iteration": 1
+        "occurrence": 1
       }
     ]
   },
