@@ -30,7 +30,7 @@ Body :
 
 ```JSON
 {
-    "summerized": [
+    "abstract": [
         {
             "1": "Emvista est une société créée à Montpellier en février 2018. ",
             "2": "Emvista est une société créée à Montpellier en février 2018. ",
