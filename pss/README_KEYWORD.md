@@ -30,42 +30,43 @@ Body :
 
 ```JSON
 {
-  "original": "Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel. ",
+  "original": "Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel.",
   "keywords": {
-    "3-gram": {
-      "NC": {}
-    },
-    "10-gram": {
-      "NC": {}
-    },
-    "5-gram": {
-      "NC": {}
-    },
-    "9-gram": {
-      "NC": {}
-    },
-    "4-gram": {
-      "NC": {}
-    },
-    "8-gram": {
-      "NC": {}
-    },
-    "7-gram": {
-      "NC": {}
-    },
-    "1-gram": {
-      "NC": {}
-    },
-    "2-gram": {
-      "NC": {
-        "briques logicielles": 1,
-        "langage naturel": 1,
-        "une société": 1
+    "NC": [
+      {
+        "word": "briques logicielles",
+        "occurrence": 1
+      },
+      {
+        "word": "langage naturel",
+        "occurrence": 1
+      },
+      {
+        "word": "une société",
+        "occurrence": 1
       }
-    },
-    "6-gram": {
-      "NC": {}
-    }
+    ],
+    "V": [
+      {
+        "word": "développer",
+        "occurrence": 1
+      },
+      {
+        "word": "comprendre",
+        "occurrence": 1
+      }
+    ],
+    "ADJ": [],
+    "NPP": [
+      {
+        "word": "Montpellier",
+        "occurrence": 1
+      },
+      {
+        "word": "Emvista",
+        "occurrence": 1
+      }
+    ]
   },
   "max-gram": 10
 }
