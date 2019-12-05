@@ -1,4 +1,4 @@
-Prevyo Semantic Services
+https://pss-api.prevyo.com/Prevyo Semantic Services
 =
 
 Briques logicielles pour comprendre le langage naturel.
@@ -16,7 +16,7 @@ Télécharger et installer [POSTMAN](https://www.getpostman.com/)
 Téléchargez le fichier collection Postman : [Postman Collection](postman/PSS.postman_collection.json) et importez le dans Postman
 
 Créez 2 variables :
-* PSS-SERVER : https://api-pss.prevyo.com/
+* API PSS-SERVER : https://pss-api.prevyo.com/
 * POA-TOKEN : votre token Prevyo
 
 
