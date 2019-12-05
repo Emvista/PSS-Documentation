@@ -1,4 +1,4 @@
-https://pss-api.prevyo.com/Prevyo Semantic Services
+Prevyo Semantic Services
 =
 
 Briques logicielles pour comprendre le langage naturel.
