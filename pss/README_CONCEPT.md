@@ -10,7 +10,7 @@ Query
 * Method : POST
 * Header : Content-Type: application/json
 * Poa-Token : TOKEN
-* Server : https://api-pss.prevyo.com/pss/api/concepts
+* Server : https://pss-api.prevyo.com/pss/api/concepts
 * Body : {"text": "TEXT"}
 
 INPUT
@@ -54,4 +54,4 @@ Body :
 TEST
 --
 
-`curl -X GET "https://api-pss.prevyo.com/pss/api/concepts" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Bonjour Jean, peux tu appeler demain midi, la société Emvista pour parler à Paul."}` 
+`curl -X GET "https://pss-api.prevyo.com/pss/api/concepts" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Bonjour Jean, peux tu appeler demain midi, la société Emvista pour parler à Paul."}` 

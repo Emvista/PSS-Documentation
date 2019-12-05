@@ -10,7 +10,7 @@ Query
 * Method : POST
 * Header : Content-Type: application/json
 * Poa-Token : TOKEN
-* Server : https://api-pss.prevyo.com/pss/api/action
+* Server : https://pss-api.prevyo.com/pss/api/actions
 * Body : {"text": "TEXT"}
 
 INPUT
@@ -77,4 +77,4 @@ Body :
 TEST
 --
 
-`curl -X GET "https://api-pss.prevyo.com/pss/api/anonymise" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Marie enverra la facture demain."}` 
+`curl -X GET "https://pss-api.prevyo.com/pss/api/anonymise" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Marie enverra la facture demain."}` 
