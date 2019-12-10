@@ -34,37 +34,50 @@ Body :
   "keywords": {
     "NC": [
       {
-        "word": "briques logicielles",
-        "occurrence": 1
+        "occurence": 1,
+        "ShortForm": "société",
+        "word": "société"
       },
       {
-        "word": "langage naturel",
-        "occurrence": 1
+        "occurence": 1,
+        "ShortForm": "briques logicielles",
+        "word": "brique"
       },
       {
-        "word": "une société",
-        "occurrence": 1
+        "occurence": 1,
+        "ShortForm": "langage naturel",
+        "word": "langage"
       }
     ],
     "V": [
       {
-        "word": "développer",
-        "occurrence": 1
-      },
-      {
-        "word": "comprendre",
-        "occurrence": 1
+        "occurence": 1,
+        "ShortForm": "développer",
+        "word": "développer"
       }
     ],
-    "ADJ": [],
-    "NPP": [
+    "ADJ": [
       {
-        "word": "Montpellier",
-        "occurrence": 1
+        "occurence": 1,
+        "ShortForm": "briques logicielles",
+        "word": "logiciel"
       },
       {
-        "word": "Emvista",
-        "occurrence": 1
+        "occurence": 1,
+        "ShortForm": "langage naturel",
+        "word": "naturel"
+      }
+    ],
+    "NPP": [
+      {
+        "occurence": 2,
+        "ShortForm": "Emvista",
+        "word": "Emvista"
+      },
+      {
+        "occurence": 1,
+        "ShortForm": "Montpellier",
+        "word": "Montpellier"
       }
     ]
   },
