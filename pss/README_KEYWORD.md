@@ -18,7 +18,7 @@ INPUT
 
 ```JSON
 {
-    "text": "Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel."
+    "text": "Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel. À partir de ces briques technologiques, Emvista propose Prevyo, un assistant virtuel intelligent de gestion d’e-mails."
 }
 ```
 
@@ -30,7 +30,7 @@ Body :
 
 ```JSON
 {
-  "original": "Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel.",
+  "original": "Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel. À partir de ces briques technologiques, Emvista propose Prevyo, un assistant virtuel intelligent de gestion d'e-mails.",
   "keywords": {
     "NC": [
       {
@@ -41,9 +41,10 @@ Body :
         ]
       },
       {
-        "occurence": 1,
+        "occurence": 2,
         "word": "brique",
         "fullword": [
+          "briques technologiques",
           "briques logicielles"
         ]
       },
@@ -53,6 +54,27 @@ Body :
         "fullword": [
           "langage naturel"
         ]
+      },
+      {
+        "occurence": 1,
+        "word": "assistant",
+        "fullword": [
+          "assistant virtuel intelligent de gestion d' e-mails"
+        ]
+      },
+      {
+        "occurence": 1,
+        "word": "gestion",
+        "fullword": [
+          "assistant virtuel intelligent de gestion d' e-mails"
+        ]
+      },
+      {
+        "occurence": 1,
+        "word": "e-mail",
+        "fullword": [
+          "assistant virtuel intelligent de gestion d' e-mails"
+        ]
       }
     ],
     "V": [
@@ -61,6 +83,13 @@ Body :
         "word": "développer",
         "fullword": [
           "développer"
+        ]
+      },
+      {
+        "occurence": 1,
+        "word": "proposer",
+        "fullword": [
+          "proposer"
         ]
       }
     ],
@@ -78,11 +107,32 @@ Body :
         "fullword": [
           "langage naturel"
         ]
+      },
+      {
+        "occurence": 1,
+        "word": "technologique",
+        "fullword": [
+          "briques technologiques"
+        ]
+      },
+      {
+        "occurence": 1,
+        "word": "virtuel",
+        "fullword": [
+          "assistant virtuel intelligent de gestion d' e-mails"
+        ]
+      },
+      {
+        "occurence": 1,
+        "word": "intelligent",
+        "fullword": [
+          "assistant virtuel intelligent de gestion d' e-mails"
+        ]
       }
     ],
     "NPP": [
       {
-        "occurence": 2,
+        "occurence": 3,
         "word": "Emvista",
         "fullword": [
           "Emvista"
@@ -93,6 +143,13 @@ Body :
         "word": "Montpellier",
         "fullword": [
           "Montpellier"
+        ]
+      },
+      {
+        "occurence": 1,
+        "word": "Prevyo",
+        "fullword": [
+          "Prevyo"
         ]
       }
     ]
