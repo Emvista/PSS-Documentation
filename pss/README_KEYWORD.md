@@ -35,49 +35,65 @@ Body :
     "NC": [
       {
         "occurence": 1,
-        "ShortForm": "société",
-        "word": "société"
+        "word": "société",
+        "fullword": [
+          "société"
+        ]
       },
       {
         "occurence": 1,
-        "ShortForm": "briques logicielles",
-        "word": "brique"
+        "word": "brique",
+        "fullword": [
+          "briques logicielles"
+        ]
       },
       {
         "occurence": 1,
-        "ShortForm": "langage naturel",
-        "word": "langage"
+        "word": "langage",
+        "fullword": [
+          "langage naturel"
+        ]
       }
     ],
     "V": [
       {
         "occurence": 1,
-        "ShortForm": "développer",
-        "word": "développer"
+        "word": "développer",
+        "fullword": [
+          "développer"
+        ]
       }
     ],
     "ADJ": [
       {
         "occurence": 1,
-        "ShortForm": "briques logicielles",
-        "word": "logiciel"
+        "word": "logiciel",
+        "fullword": [
+          "briques logicielles"
+        ]
       },
       {
         "occurence": 1,
-        "ShortForm": "langage naturel",
-        "word": "naturel"
+        "word": "naturel",
+        "fullword": [
+          "langage naturel"
+        ]
       }
     ],
     "NPP": [
       {
         "occurence": 2,
-        "ShortForm": "Emvista",
-        "word": "Emvista"
+        "word": "Emvista",
+        "fullword": [
+          "Emvista"
+        ]
       },
       {
         "occurence": 1,
-        "ShortForm": "Montpellier",
-        "word": "Montpellier"
+        "word": "Montpellier",
+        "fullword": [
+          "Montpellier"
+        ]
       }
     ]
   },
