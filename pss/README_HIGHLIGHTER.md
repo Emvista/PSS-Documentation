@@ -83,4 +83,4 @@ Body :
 TEST
 --
 
-`curl -X GET "https://pss-api.prevyo.com/pss/api/highlight" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Marie enverra la facture demain à Pierre de chez Emvista."}` 
+`curl -X POST "https://pss-api.prevyo.com/pss/api/highlight" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Marie enverra la facture demain à Pierre de chez Emvista."}` 

@@ -18,7 +18,7 @@ INPUT
 
 ```JSON
 {
-    "text": "Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel."
+    "text": "Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel. À partir de ces briques technologiques, Emvista propose Prevyo, un assistant virtuel intelligent de gestion d’e-mails."
 }
 ```
 
@@ -30,41 +30,127 @@ Body :
 
 ```JSON
 {
-  "original": "Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel.",
+  "original": "Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel. À partir de ces briques technologiques, Emvista propose Prevyo, un assistant virtuel intelligent de gestion d'e-mails.",
   "keywords": {
     "NC": [
       {
-        "word": "briques logicielles",
-        "occurrence": 1
+        "occurence": 1,
+        "word": "société",
+        "fullword": [
+          "société"
+        ]
       },
       {
-        "word": "langage naturel",
-        "occurrence": 1
+        "occurence": 2,
+        "word": "brique",
+        "fullword": [
+          "briques technologiques",
+          "briques logicielles"
+        ]
       },
       {
-        "word": "une société",
-        "occurrence": 1
+        "occurence": 1,
+        "word": "langage",
+        "fullword": [
+          "langage naturel"
+        ]
+      },
+      {
+        "occurence": 1,
+        "word": "assistant",
+        "fullword": [
+          "assistant virtuel intelligent de gestion d' e-mails"
+        ]
+      },
+      {
+        "occurence": 1,
+        "word": "gestion",
+        "fullword": [
+          "assistant virtuel intelligent de gestion d' e-mails"
+        ]
+      },
+      {
+        "occurence": 1,
+        "word": "e-mail",
+        "fullword": [
+          "assistant virtuel intelligent de gestion d' e-mails"
+        ]
       }
     ],
     "V": [
       {
+        "occurence": 1,
         "word": "développer",
-        "occurrence": 1
+        "fullword": [
+          "développer"
+        ]
       },
       {
-        "word": "comprendre",
-        "occurrence": 1
+        "occurence": 1,
+        "word": "proposer",
+        "fullword": [
+          "proposer"
+        ]
       }
     ],
-    "ADJ": [],
-    "NPP": [
+    "ADJ": [
       {
-        "word": "Montpellier",
-        "occurrence": 1
+        "occurence": 1,
+        "word": "logiciel",
+        "fullword": [
+          "briques logicielles"
+        ]
       },
       {
+        "occurence": 1,
+        "word": "naturel",
+        "fullword": [
+          "langage naturel"
+        ]
+      },
+      {
+        "occurence": 1,
+        "word": "technologique",
+        "fullword": [
+          "briques technologiques"
+        ]
+      },
+      {
+        "occurence": 1,
+        "word": "virtuel",
+        "fullword": [
+          "assistant virtuel intelligent de gestion d' e-mails"
+        ]
+      },
+      {
+        "occurence": 1,
+        "word": "intelligent",
+        "fullword": [
+          "assistant virtuel intelligent de gestion d' e-mails"
+        ]
+      }
+    ],
+    "NPP": [
+      {
+        "occurence": 3,
         "word": "Emvista",
-        "occurrence": 1
+        "fullword": [
+          "Emvista"
+        ]
+      },
+      {
+        "occurence": 1,
+        "word": "Montpellier",
+        "fullword": [
+          "Montpellier"
+        ]
+      },
+      {
+        "occurence": 1,
+        "word": "Prevyo",
+        "fullword": [
+          "Prevyo"
+        ]
       }
     ]
   },
@@ -75,5 +161,5 @@ Body :
 TEST
 --
 
-`curl -X GET "https://pss-api.prevyo.com/pss/api/keyword" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel."}` 
+`curl -X POST "https://pss-api.prevyo.com/pss/api/keyword" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel."}` 
 

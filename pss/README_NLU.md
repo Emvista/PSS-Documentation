@@ -87,5 +87,5 @@ Body :
 TEST
 --
 
-`curl -X GET "https://pss-api.prevyo.com/pss/api/nlu" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Peux-tu envoyer une facture à Marie ?"}` 
+`curl -X POST "https://pss-api.prevyo.com/pss/api/nlu" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Peux-tu envoyer une facture à Marie ?"}` 
 
