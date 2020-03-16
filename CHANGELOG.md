@@ -1,16 +1,16 @@
 Version 2020.03
 ==
 
-WEB
-===
-- nouvelle visualisation du json (moteur de recherche, navigation dans le JSON facilitée)
-- les boutons permettant d'accéder au JSON sont au-dessus de la fenêtre de résultat (ils étaient au-dessous)
-- Concepts : plus de concepts affichés
-- Highlighter : étiquettes en français ; augmentation de la qualité du service de 4% (84% à 88%)
-- Actions : Le graphe affiché est en adéquation avec le JSON ; le graphe ne sort plus du cadre.
 
-RLA
+Nouveautés sur le système de compréhension du langage naturel (Recursive Linguistic Analyzer) :
+=== 
+- Amélioration qualitative du système d'analyse sémantique avec l'intégration des modèles de langage récents (CamemBERT, FlauBERT)
+- Gestion des modalités dans la représentation sémantique du texte (obligation, suggestion, ...)
+- Résolution des coréférences dans la représentation sémantique
+
+Nouveautés sur la plateforme de démonstration :
 ===
-- Amélioration qualitative du système d'analyse sémantique avec l'intégration de CamemBERT
-- Gestion des modalités au niveau des évènements (obligation, suggestion, capacité, ...)
-- Résolution des coréférences au niveau des évènements
+- Visualisation des résultats améliorée (notamment concernant la visualisation du JSON qui intègre dorénavant un moteur de recherche et une navigation facilitée ; affichage des étiquettes en français)
+- Service "Concepts" : davantage de concepts affichés
+- Service "Highlighter" : affichage des étiquettes en français
+- Service "Actions" : les erreurs de visualisation du graphe des connaissances sont corrigées. 
