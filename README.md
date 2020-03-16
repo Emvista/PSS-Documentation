@@ -5,11 +5,22 @@ Briques logicielles pour comprendre le langage naturel.
 
 Pour tester les Prevyo Semantic Services vous pouvez soit utiliser l'interface web [https://pss.prevyo.com/](https://pss.prevyo.com/) soit utiliser l'API REST. Pour utiliser l'API REST, il vous faudra créer un compte Prevyo sur [https://pss.prevyo.com/](https://pss.prevyo.com/) puis nous contacter à [dev@emvista.com](mailto:dev@emvista.com) pour avoir votre Token d'authentifcation.
 
+Version
+==
+- 2020.03 [changelog](CHANGELOG.md)
+- 2019.12
+
+Glossaire
+==
+* Lemme : Forme neutre d'un mot. C'est-à-dire sans avoir subi de modification par le contexte (singulier pour un nom ou adjectif, infinitif pour un verbe)
+* Forme : Forme d'un mot (ou ensemble de mots) tel qu'il a été utilisé dans le texte.
+* Part-of-speech (Pos) : Catégories grammaticales. Par exemple : nom commun (NC), adjectif (ADJ), verbe (VB), nom propre (NPP)
+
 USAGE
 ==
 
 Postman
-==
+===
 
 Télécharger et installer [POSTMAN](https://www.getpostman.com/)
 
@@ -18,7 +29,6 @@ Téléchargez le fichier collection Postman : [Postman Collection](postman/PSS.p
 Créez 2 variables :
 * PSS-SERVER : https://pss-api.prevyo.com/
 * POA-TOKEN : votre token Prevyo
-
 
 REST API
 =
