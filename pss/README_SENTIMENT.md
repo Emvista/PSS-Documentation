@@ -55,6 +55,14 @@ Body :
             	"Paul"
             ]
         }
+        {
+            "value": "bonne pomme",
+            "emotions": [],
+            "sentiment": "positive",
+            "point-of-view": [
+            	"Writer"
+            ]
+        }
     ]
 }
 ```
