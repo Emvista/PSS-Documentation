@@ -46,17 +46,13 @@ Body :
 {
     "results": [
         {
-            "value": {
-                "lemma": "ne pas aimer(bonne pomme)"
-            },
+            "value": "ne pas aimer(bonne pomme)",
             "emotions": [
                 "sadness"
             ],
             "sentiment": "negative",
             "point-of-view": [
-                {
-                    "value": "Paul"
-                }
+            	"Paul"
             ]
         }
     ]
