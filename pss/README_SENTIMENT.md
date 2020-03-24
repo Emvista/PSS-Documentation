@@ -54,7 +54,7 @@ Body :
             "point-of-view": [
             	"Paul"
             ]
-        }
+        },
         {
             "value": "bonne pomme",
             "emotions": [],
