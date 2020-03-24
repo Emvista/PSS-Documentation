@@ -8,7 +8,6 @@ Pour tester les Prevyo Semantic Services vous pouvez soit utiliser l'interface w
 Version
 ==
 - 2020.03 [changelog](CHANGELOG.md)
-- 2020.03 [changelog](CHANGELOG.md)
 - 2019.12
 
 Glossaire
