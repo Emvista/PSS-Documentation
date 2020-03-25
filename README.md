@@ -69,16 +69,16 @@ Dans "Luc envoie une facture", "envoyer" est un prédicat ayant pour arguments "
 
 * score (Integer) : Score de l'élément auquel cet attribut est rattaché.
 
+* sentences (List) : Phrases analysées.
+
 * sentiment (String) : Sentiment positif, négatif ou neutre exprimé dans le texte.
-Dans "Luc envoie une facture", "envoyer" est un prédicat ayant pour arguments "Luc" et "facture".
+Dans "Luc déteste envoyer une facture", un sentiment négatif est déclenchée.
 
 * source (String) : Terme à partir duquel un resultat a été généré.
 Dans "Luc envoie une facture proforma", le concept "administratif" pourrait être généré à partir de la source "facture".
 
 * start (Integer) : Index de début (en nombre de caractères).
 Dans "Luc envoie une facture proforma", la valeur de end pour le mot "une" est 11.
-
-* sentences (List) : Phrases analysées.
 
 * tag (String) : Etiquette sémantique faisant partie de l'ontologie NERD ou de l'otologie WSD : nerd:Date, nerd:Animal, nerd:Function, nerd:Nation, nerd:Time, nerd:Timemin, nerd:Timemax, nerd:Timefuzzy, nerd:Timeduration, nerd:Person, nerd:Facility, nerd:Location, nerd:LocationSource, nerd:LocationDestination, nerd:LocationFuzzy, nerd:LocationSpan, nerd:Money, nerd:Organization, nerd:Measure, nerd:PhoneNumber, nerd:EMail, nerd:Duration, nerd:Set, nerd:Url, nerd:Brand, nerd:Event, nerd:FictionalCharacter, nerd:Language, nerd:TransportLine, nerd:Sportsteam, nerd:Sport, nerd:Media, nerd:Method, nerd:Product, nerd:ProductRange, nerd:ReferenceDocument, nerd:Reference, nerd:Reward, nerd:Species, nerd:Ingredient, wsd:Concrete, wsd:Abstract, wsd:Animate, wsd:Inanimate, wsd:LivingBeing, wsd:Animal, wsd:Vehicle, wsd:Vegetal, wsd:Location, wsd:Time, wsd:TimeMin, wsd:TimeMax, wsd:TimeFuzzy, wsd:Sport, wsd:Color, wsd:MusicalInstrument, wsd:Religion, ...
 Dans "Luc envoie une facture proforma", "Luc" a pour tag nerd:Person.
