@@ -183,3 +183,10 @@ Highlighter
 La reconnaissance des entités nommées vise à identifier dans un texte les noms de personnes, les noms de lieux, les noms d'organisations, les noms de produits, etc.
 
 [Rest API](pss/README_HIGHLIGHTER.md)
+
+Parser
+==
+
+Le parser fournit une analyse syntaxique du texte, c'est-à-dire indique les catégories grammaticales de chaque mot, leur nature, leur lemme, etc., ainsi que les relations syntaxiques entre ces mots (sujet, objet, compléments, etc.).
+
+[Rest API](pss/README_PARSER.md)
