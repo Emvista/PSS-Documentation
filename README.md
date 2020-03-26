@@ -58,6 +58,9 @@ Dans "Luc déteste envoyer des e-mails", la colère et le dégoût sont des émo
 
 * plural (String) : Indication sur le caractère singulier ("false") ou pluriel ("true") de l'élément auquel il est rattaché. 
 
+* polarity (Double between -1 and +1) : Sentiment positif, négatif ou neutre exprimé dans le texte.
+Dans "Luc déteste envoyer une facture", un sentiment négatif est déclenchée.
+
 * pos (String) : Catégorie grammaticale. Voir la liste des catégories grammaticales gérées. 
 
 * predicate (String) : Sémantiquement un prédicat exprime une propriété ou une relation, c'est-à-dire quelque chose d'attribuable à une ou plusieurs entités (en l'occurrence les arguments).
@@ -70,9 +73,6 @@ Dans "Luc envoie une facture", "envoyer" est un prédicat ayant pour arguments "
 * score (Integer) : Score de l'élément auquel cet attribut est rattaché.
 
 * sentences (List) : Phrases analysées.
-
-* sentiment (String) : Sentiment positif, négatif ou neutre exprimé dans le texte.
-Dans "Luc déteste envoyer une facture", un sentiment négatif est déclenchée.
 
 * source (String) : Terme à partir duquel un resultat a été généré.
 Dans "Luc envoie une facture proforma", le concept "administratif" pourrait être généré à partir de la source "facture".
