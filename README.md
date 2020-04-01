@@ -53,7 +53,7 @@ Dans "Luc envoie une facture proforma", l'attribut "passive" vaut false car la p
 
 * person (String) : Indique la première personne ("1"), la deuxième personne ("2") ou la troisième personne ("3"). Par exemple, "vous" est la deuxième personne du pluriel (voir "plural").
 
-* point-of-view (String) : Indication sur la personne qui émet une information, un jugement, un sentiment, une émotion, ...
+* pointOfView (String) : Indication sur la personne qui émet une information, un jugement, un sentiment, une émotion, ...
 Dans "Luc déteste envoyer des e-mails", la colère et le dégoût sont des émotions portées sur l'envoie d'e-mails, du point de vue de Luc.
 
 * plural (String) : Indication sur le caractère singulier ("false") ou pluriel ("true") de l'élément auquel il est rattaché. 
