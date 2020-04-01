@@ -33,10 +33,10 @@ La sortie de ce service fournit :
 * emotions (List) : Liste d'émotions parmi : joie, tristesse, peur, colère, dégoût, surprise.
 Dans "Luc déteste envoyer des e-mails", la colère et le dégoût sont des émotions déclenchées.
 
-* sentiment (String) : Sentiment positif, négatif ou neutre exprimé dans le texte.
+* polarity (Double) : Sentiment positif, négatif ou neutre exprimé dans le texte.
 Dans "Luc envoie une facture", "envoyer" est un prédicat ayant pour arguments "Luc" et "facture".
 
-* point-of-view (String) : Indication sur la personne qui émet une information, un jugement, un sentiment, une émotion, ...
+* pointOfView (String) : Indication sur la personne qui émet une information, un jugement, un sentiment, une émotion, ...
 Dans "Luc déteste envoyer des e-mails", la colère et le dégoût sont des émotions portées sur l'envoie d'e-mails, du point de vue de Luc.
 
 
