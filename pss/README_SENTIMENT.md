@@ -18,7 +18,7 @@ INPUT
 
 ```JSON
 {
-    "text": "Paul n'aime pas la très bonne pomme de Marie."
+    "text": "Luc déteste envoyer des e-mails alors que Marie adore ça."
 }
 ```
 
@@ -44,26 +44,21 @@ Body :
 
 ```JSON
 {
-    "results": [
-        {
-            "value": "ne pas aimer(bonne pomme)",
-            "emotions": [
-                "sadness"
-            ],
-            "sentiment": "negative",
-            "point-of-view": [
-            	"Paul"
-            ]
-        },
-        {
-            "value": "bonne pomme",
-            "emotions": [],
-            "sentiment": "positive",
-            "point-of-view": [
-            	"Writer"
-            ]
-        }
-    ]
+  "startTime" : 1585730203802,
+  "endTime" : 1585730207494,
+  "result" : {
+    "sentiments" : [ {
+      "value" : "détester(envoyer)",
+      "emotions" : [ "anger", "disgust" ],
+      "polarity" : -1.0,
+      "pointOfView" : "Luc"
+    }, {
+      "value" : "adorer(ça)",
+      "emotions" : [ "joy" ],
+      "polarity" : 1.0,
+      "pointOfView" : "Marie"
+    } ]
+  }
 }
 ```
 
