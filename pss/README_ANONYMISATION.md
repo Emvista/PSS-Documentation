@@ -26,7 +26,7 @@ OUTPUT
 --
 HTTP Status : 200
 
-* annotatedValue (String) : Donnée textuelle annotée avec le langage de balisage XML. Dans ce service, une balise est de la forme <TAG_INT/> avec TAG correspondans à un type d'entité et INT correspondant à "start" qui sert d'identifiant.
+* annotatedValue (String) : Donnée textuelle annotée avec le langage de balisage XML. Dans ce service, une balise est de la forme <TAG_INT/> avec TAG correspondant à un type d'entité et INT correspondant à "start" qui sert d'identifiant.
 
 * end (Integer) : Index de fin (en nombre de caractères).
 Dans "Luc envoie une facture proforma", la valeur de end pour le mot "une" est 14.
