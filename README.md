@@ -90,7 +90,7 @@ Dans "Luc envoie une facture proforma", "Luc" a pour tag nerd:Person.
 
 * type : Type de la phrase analysée : declarative, exclamative, interrogative ou imperative. 
 
-* value (String) : Valeur de l'élément auquel cet attribut est rattaché. La valeur est soit un mot tel qu'il apparaît dans le contexte, soit sa forme lemmatisée (entrée dictionnairique).
+* value (String) : Valeur de l'élément auquel cet attribut est rattaché.
 
 * verbalForm (String) : Forme verbale : active ou passive.
 
