@@ -97,3 +97,97 @@ Parser
 Le parser fournit une analyse syntaxique du texte, c'est-à-dire indique les catégories grammaticales de chaque mot, leur nature, leur lemme, etc., ainsi que les relations syntaxiques entre ces mots (sujet, objet, compléments, etc.).
 
 [Rest API](pss/README_PARSER.md)
+
+
+Glossaire général
+==
+
+* annotatedValue (String) : Donnée textuelle annotée en utilisant le langage de balisage XML.
+
+* arguments (Object) : Sémantiquement un prédicat exprime une propriété ou une relation, c'est-à-dire quelque chose d'attribuable à une ou plusieurs entités (en l'occurrence les arguments).
+Dans "Luc envoie une facture proforma", "envoyer" est un prédicat ayant pour arguments "Luc" et "facture proforma".
+
+* concepts (List) : Liste de concepts.
+
+* context (String) : Ensemble de mots constituant le contexte de value.
+Dans "Luc envoie une facture proforma", "proforma" a pour contexte "facture proforma".
+
+* contexts (List) : Liste de contextes. Cf. "context" dans le glossaire.
+
+* definite (Boolean) : Indication sur le caractère défini ou indéfini de l'élément auquel cet attribut est rattaché (un token par exemple).
+
+* depRel (String) : Type de la relation de dépendance syntaxique entre deux tokens : sujet, objet, complément, etc. Voir la liste des dépendances gérées.
+
+* emotions (List) : Liste d'émotions parmi : joie, tristesse, peur, colère, dégoût, surprise.
+Dans "Luc déteste envoyer des e-mails", la colère et le dégoût sont des émotions déclenchées.
+
+* end (Integer) : Index de fin (en nombre de caractères).
+Dans "Luc envoie une facture proforma", la valeur de end pour le mot "une" est 14.
+
+* endTime (Time Stamp Unix) : Indication temporelle de la fin de l'analyse. Time Stamp Unix en millisecondes.
+
+* form (String) : mot ou locution tel qu'il apparaît dans le contexte (accordé en genre et en nombre par exemple). Par exemple la forme "envoyées" a pour lemme "envoyer". Voir "lemma" dans le glossaire.
+
+* head (String) : Tête syntaxique d'un token.
+
+* id (Integer) : Identifiant de l'élément auquel cet attribut est rattaché.
+
+* keywords (List) : Liste de mots clés.
+
+* lemma (String) : Forme canonique, considérée par convention comme non fléchie, d’un nom, d’un adjectif, d’un verbe, d’un pronom, présentée comme entrée principale, dans un dictionnaire. Par exemple la forme "envoyées" a pour lemme "envoyer". Voir "form" dans le glossaire.
+
+* level (Integer) : niveau d'analyse. Dans le cadre du service Summarizer, "level" est un niveau d'abstraction compris entre 1 et 10 : 1 indique un résumé proche du texte d'origine, 10 indique un texte le plus fortement résumé.
+
+* namedentities (List) : Liste des entités nommées (noms de personnes, de lieux, d'organisations, etc. ; cf. les tags ayant pour préfixe "nerd:" dans l'entrée "tag" du glossaire).
+
+* negation (Boolean : true/false) : Indique si le token, la valeur ou le prédicat considéré est négatif ou affirmatif.
+Dans "Luc envoie une facture proforma", l'attribut negation vaut false car la phrase est affirmative.
+
+* person (String) : Indique la première personne ("1"), la deuxième personne ("2") ou la troisième personne ("3"). Par exemple, "vous" est la deuxième personne du pluriel (voir "plural").
+
+* pointOfView (String) : Indication sur la personne qui émet une information, un jugement, un sentiment, une émotion, ...
+Dans "Luc déteste envoyer des e-mails", la colère et le dégoût sont des émotions portées sur l'envoie d'e-mails, du point de vue de Luc.
+
+* plural (String) : Indication sur le caractère singulier ("false") ou pluriel ("true") de l'élément auquel il est rattaché. 
+
+* polarity (Double between -1 and +1) : Sentiment positif, négatif ou neutre exprimé dans le texte.
+Dans "Luc déteste envoyer une facture", un sentiment négatif est déclenchée.
+
+* pos (String) : Catégorie grammaticale. Voir la liste des catégories grammaticales gérées. 
+
+* predicate (String) : Sémantiquement un prédicat exprime une propriété ou une relation, c'est-à-dire quelque chose d'attribuable à une ou plusieurs entités (en l'occurrence les arguments).
+Dans "Luc envoie une facture", "envoyer" est un prédicat ayant pour arguments "Luc" et "facture".
+
+* pronominal (Boolean) : Indique si le verbe est pronominal.
+
+* result (List) : Liste des résultats retournés par le service.
+
+* role (String) : Role sémantique parmis : vn:Agent, vn:Theme, vn:Patient, vn:Time, vn:Beneficiary, vn:Location, vn:Recipient, vn:Pivot, etc.
+Dans "Luc envoie une facture proforma", "Luc" a pour rôle Agent et "facture proforma" a pour rôle Theme.
+
+* score (Integer) : Score de l'élément auquel cet attribut est rattaché.
+
+* sentences (List) : Phrases analysées.
+
+* source (String) : Terme à partir duquel un resultat a été généré.
+Dans "Luc envoie une facture proforma", le concept "administratif" pourrait être généré à partir de la source "facture".
+
+* start (Integer) : Index de début (en nombre de caractères).
+Dans "Luc envoie une facture proforma", la valeur de end pour le mot "une" est 11.
+
+* startTime (Time Stamp Unix) : Indication temporelle du début de l'analyse. Time Stamp Unix en millisecondes.
+
+* tags (List) : Liste d'étiquettes sémantiques. Cf. "tag".
+
+* tag (String) : Etiquette sémantique faisant partie de l'ontologie NERD ou de l'otologie WSD : nerd:Date, nerd:Animal, nerd:Function, nerd:Nation, nerd:Time, nerd:Timemin, nerd:Timemax, nerd:Timefuzzy, nerd:Timeduration, nerd:Person, nerd:Facility, nerd:Location, nerd:LocationSource, nerd:LocationDestination, nerd:LocationFuzzy, nerd:LocationSpan, nerd:Money, nerd:Organization, nerd:Measure, nerd:PhoneNumber, nerd:EMail, nerd:Duration, nerd:Set, nerd:Url, nerd:Brand, nerd:Event, nerd:FictionalCharacter, nerd:Language, nerd:TransportLine, nerd:Sportsteam, nerd:Sport, nerd:Media, nerd:Method, nerd:Product, nerd:ProductRange, nerd:ReferenceDocument, nerd:Reference, nerd:Reward, nerd:Species, nerd:Ingredient, wsd:Concrete, wsd:Abstract, wsd:Animate, wsd:Inanimate, wsd:LivingBeing, wsd:Animal, wsd:Vehicle, wsd:Vegetal, wsd:Location, wsd:Time, wsd:TimeMin, wsd:TimeMax, wsd:TimeFuzzy, wsd:Sport, wsd:Color, wsd:MusicalInstrument, wsd:Religion, ...
+Dans "Luc envoie une facture proforma", "Luc" a pour tag nerd:Person.
+
+* tense (String) : Indique le temps utilisé ("past", "present", ou "future").
+
+* tokens (List) : Ensemble de tokens, c'est-à-dire de mots ou locutions.
+
+* type : Type de la phrase analysée : declarative, exclamative, interrogative ou imperative. 
+
+* value (String) : Valeur de l'élément auquel cet attribut est rattaché.
+
+* verbalForm (String) : Forme verbale : active ou passive.
