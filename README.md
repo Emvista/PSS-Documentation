@@ -15,10 +15,8 @@ Glossaire
 
 Le glossaire décrit les attributs fournis en sortie des services.
 
-* Agent, Theme, Beneficiary, Recipient, Patient, Pivot, Attribut, ... : Roles sémantiques faisant partie de l'ontologie VN : vn:Agent, vn:Theme, vn:Patient, vn:Time, vn:Beneficiary, vn:Location, vn:Recipient, vn:Pivot, etc.
-Dans "Luc envoie une facture proforma", "Luc" a pour rôle Agent et "facture proforma" a pour rôle Theme.
 
-* arguments (Object) : Sémantiquement un prédicat exprime une propriété ou une relation, c'est-à-dire quelque chose d'attribuable à une ou plusieurs entités (en l'occurrence les arguments)
+* arguments (Object) : Sémantiquement un prédicat exprime une propriété ou une relation, c'est-à-dire quelque chose d'attribuable à une ou plusieurs entités (en l'occurrence les arguments).
 Dans "Luc envoie une facture proforma", "envoyer" est un prédicat ayant pour arguments "Luc" et "facture proforma".
 
 * context (String) : Ensemble de mots constituant le contexte de value.
@@ -69,6 +67,9 @@ Dans "Luc envoie une facture", "envoyer" est un prédicat ayant pour arguments "
 * pronominal (Boolean) : Indique si le verbe est pronominal.
 
 * results (List) : Liste des résultats retournés par le service.
+
+* role (String) : Role sémantique parmis : vn:Agent, vn:Theme, vn:Patient, vn:Time, vn:Beneficiary, vn:Location, vn:Recipient, vn:Pivot, etc.
+Dans "Luc envoie une facture proforma", "Luc" a pour rôle Agent et "facture proforma" a pour rôle Theme.
 
 * score (Integer) : Score de l'élément auquel cet attribut est rattaché.
 
