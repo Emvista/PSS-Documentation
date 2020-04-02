@@ -3,7 +3,7 @@ Résumés
 
 <img src="../images/ic_pss_resume.png" alt="drawing" width="80"/>
 
-Le générateur de résumés crée une synthèse du texte, dont le niveau d'abstraction est paramétrable.
+Le générateur de résumés crée une synthèse du texte, dont le niveau d'abstraction est paramétrable. Le service retourne chaque phrase du texte donné en entrée, avec 10 niveaux d'abstraction pour chacune d'entre elles.
 
 Query
 --
@@ -18,7 +18,7 @@ INPUT
 
 ```JSON
 {
-    "text": "Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel. Les technologies d’intelligence artificielle mises en œuvre sont fondées à la fois sur du machine learning (système d'apprentissage) et sur des ontologies. À partir de ces briques technologiques, Emvista propose Prevyo, un assistant virtuel intelligent de gestion d’e-mails."
+    "text": "Emvista est une société (montpelliéraine) qui développe des briques logicielles pour comprendre le langage naturel."
 }
 ```
 
@@ -26,61 +26,69 @@ OUTPUT
 --
 HTTP Status : 200
 
+* endTime (Time Stamp Unix) : Indication temporelle de la fin de l'analyse. Time Stamp Unix en millisecondes.
+
+* id (Integer) : Identifiant de l'élément auquel cet attribut est rattaché.
+
+* level (Integer) : niveau d'analyse. Dans le cadre du service Summarizer, "level" est un niveau d'abstraction compris entre 1 et 10 : 1 indique un résumé proche du texte d'origine, 10 indique un texte le plus fortement résumé.
+
+* result (List) : Liste des résultats retournés par le service.
+
+* sentences (List) : Phrases analysées.
+
+* startTime (Time Stamp Unix) : Indication temporelle du début de l'analyse. Time Stamp Unix en millisecondes.
+
+* value (String) : Valeur de l'élément auquel cet attribut est rattaché.
+
 Body :
 
 ```JSON
 {
-    "abstract": [
-        {
-            "1": "Emvista est une société créée à Montpellier en février 2018. ",
-            "2": "Emvista est une société créée à Montpellier en février 2018. ",
-            "3": "Emvista est une société créée à Montpellier en février 2018. ",
-            "4": "Emvista est une société créée à Montpellier en février 2018. ",
-            "5": "Emvista est une société créée à Montpellier en février 2018. ",
-            "6": "Emvista est une société créée à Montpellier en février 2018. ",
-            "7": "Emvista est une société créée à Montpellier en février 2018. ",
-            "8": "Emvista est une société créée à Montpellier. ",
-            "9": "Emvista est une société. ",
-            "10": "Emvista est une société. "
-        },
-        {
-            "1": "Emvista développe des briques logicielles pour comprendre le langage naturel. ",
-            "2": "Emvista développe des briques logicielles pour comprendre le langage naturel. ",
-            "3": "Emvista développe des briques logicielles pour comprendre le langage naturel. ",
-            "4": "Emvista développe des briques logicielles pour comprendre le langage naturel. ",
-            "5": "Emvista développe des briques logicielles pour comprendre le langage naturel. ",
-            "6": "Emvista développe des briques logicielles pour comprendre le langage naturel. ",
-            "7": "Emvista développe des briques pour comprendre le langage. ",
-            "8": "Emvista développe des briques pour comprendre le langage. ",
-            "9": "Emvista développe des briques. ",
-            "10": "Emvista développe des briques. "
-        },
-        {
-            "1": "Les technologies d'intelligence artificielle mises en œuvre sont fondées à la fois sur du machine learning et sur des ontologies. ",
-            "2": "Les technologies d'intelligence artificielle mises en œuvre sont fondées sur du machine learning et sur des ontologies. ",
-            "3": "Les technologies d'intelligence artificielle mises en œuvre sont fondées sur du machine learning et sur des ontologies. ",
-            "4": "Les technologies d'intelligence artificielle mises en œuvre sont fondées sur du machine learning et sur des ontologies. ",
-            "5": "Les technologies d'intelligence artificielle mises en œuvre sont fondées sur du machine learning et sur des ontologies. ",
-            "6": "Les technologies d'intelligence artificielle mises en œuvre sont fondées sur du machine learning et sur des ontologies. ",
-            "7": "Les technologies d'intelligence artificielle mises en œuvre sont fondées sur du machine learning et sur des ontologies. ",
-            "8": "Les technologies d'intelligence artificielle mises en œuvre sont fondées sur du machine learning et. ",
-            "9": "Les technologies d'intelligence artificielle mises en œuvre sont fondées sur du machine learning et. ",
-            "10": "Les technologies d'intelligence artificielle mises en œuvre sont fondées sur du machine learning et. "
-        },
-        {
-            "1": "À partir de ces briques technologiques, Emvista propose Prevyo, un assistant virtuel intelligent de gestion d'e-mails. ",
-            "2": "À partir de ces briques technologiques, Emvista propose Prevyo, un assistant virtuel intelligent de gestion d'e-mails. ",
-            "3": "À partir de ces briques technologiques, Emvista propose Prevyo. ",
-            "4": "À partir de ces briques technologiques, Emvista propose Prevyo. ",
-            "5": "À partir de ces briques technologiques, Emvista propose Prevyo. ",
-            "6": "À partir de ces briques technologiques, Emvista propose Prevyo. ",
-            "7": "À partir de briques, Emvista propose Prevyo. ",
-            "8": "À partir de briques, Emvista propose Prevyo. ",
-            "9": "",
-            "10": ""
-        }
-    ]
-}
+  "startTime" : 1585838031451,
+  "endTime" : 1585838036498,
+  "result" : {
+    "sentences" : [ {
+      "id" : 0,
+      "value" : "Emvista est une société qui développe des briques logicielles pour comprendre le langage naturel . ",
+      "level" : 1
+    }, {
+      "id" : 0,
+      "value" : "Emvista est une société qui développe des briques logicielles pour comprendre le langage naturel . ",
+      "level" : 2
+    }, {
+      "id" : 0,
+      "value" : "Emvista est une société qui développe des briques logicielles pour comprendre le langage naturel . ",
+      "level" : 3
+    }, {
+      "id" : 0,
+      "value" : "Emvista est une société qui développe des briques logicielles pour comprendre le langage naturel . ",
+      "level" : 4
+    }, {
+      "id" : 0,
+      "value" : "Emvista est une société qui développe des briques logicielles pour comprendre le langage naturel . ",
+      "level" : 5
+    }, {
+      "id" : 0,
+      "value" : "Emvista est une société qui développe des briques logicielles pour comprendre le langage naturel . ",
+      "level" : 6
+    }, {
+      "id" : 0,
+      "value" : "Emvista est une société qui développe des briques pour comprendre le langage . ",
+      "level" : 7
+    }, {
+      "id" : 0,
+      "value" : "Emvista est une société . ",
+      "level" : 8
+    }, {
+      "id" : 0,
+      "value" : "Emvista est une société . ",
+      "level" : 9
+    }, {
+      "id" : 0,
+      "value" : "Emvista est une société . ",
+      "level" : 10
+    } ]
+  }
 ```
 
 TEST
