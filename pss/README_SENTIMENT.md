@@ -28,7 +28,7 @@ HTTP Status : 200
 
 La sortie de ce service fournit :
 
-* value (String) : Valeur de l'élément auquel cet attribut est rattaché. La valeur est soit un mot tel qu'il apparaît dans le contexte, soit sa forme lemmatisée (entrée dictionnairique).
+* value (String) : Valeur de l'élément auquel cet attribut est rattaché.
 
 * emotions (List) : Liste d'émotions parmi : joie, tristesse, peur, colère, dégoût, surprise.
 Dans "Luc déteste envoyer des e-mails", la colère et le dégoût sont des émotions déclenchées.
