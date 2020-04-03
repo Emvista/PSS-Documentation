@@ -72,7 +72,7 @@ Summarizer
 
 <img src="images/ic_pss_resume.png" alt="drawing" width="80"/>
 
-Summarizer generates a textual abstract from a given text. The generated abstract can be adapted to the compression rate given by the user.
+The Summarizer service generates a textual abstract from a given text. The abstract is generated according to a compression rate defined by the user (from 1 to 10).
 
 [Rest API](pss/README_RESUME-en.md)
 
