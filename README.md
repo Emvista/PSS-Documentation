@@ -78,7 +78,7 @@ Meaning Representation
 
 <img src="images/ic_pss_action.png" alt="drawing" width="80"/>
 
-La reconnaissance d'actions vise à extraire les actions que doit faire une personne, pour quand, comment, pour qui, etc.
+Meaning Representation retourne une représentation sémantique du texte donné en entrée.
 
 [Rest API](pss/README_MEANING.md)
 
