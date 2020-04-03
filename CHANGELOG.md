@@ -1,3 +1,17 @@
+Version 2020.04
+==
+
+
+Nouveautés sur le système de compréhension du langage naturel (Recursive Linguistic Analyzer) :
+=== 
+- Exécution plus rapide
+
+Nouveautés sur la plateforme de démonstration :
+===
+- Nouveau service Parser : analyse syntaxique
+- Documentation complète
+
+
 Version 2020.03
 ==
 
