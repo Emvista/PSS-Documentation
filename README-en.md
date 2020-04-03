@@ -67,14 +67,14 @@ L'identification des concepts permet de faire émerger des concepts qui n'appara
 
 [Rest API](pss/README_CONCEPT.md)
 
-Résumés
+Summarizer
 ==
 
 <img src="images/ic_pss_resume.png" alt="drawing" width="80"/>
 
-Le générateur de résumés crée une synthèse du texte, dont le niveau d'abstraction est paramétrable.
+Summarizer generates a textual abstract from a given text. The generated abstract can be adapted to the compression rate given by the user.
 
-[Rest API](pss/README_RESUME.md)
+[Rest API](pss/README_RESUME-en.md)
 
 Meaning Representation
 ==
