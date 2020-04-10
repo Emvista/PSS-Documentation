@@ -155,6 +155,42 @@ Dans "Luc déteste envoyer des e-mails", la colère et le dégoût sont des émo
 Dans "Luc déteste envoyer une facture", un sentiment négatif est déclenchée.
 
 * pos (String) : Catégorie grammaticale. Voir la liste des catégories grammaticales gérées. 
+Liste des catégories grammaticales gérées (pos) :
+ADJ : Adjectif, 
+ADJPOS : Adjectif possessif, 
+ADJDEM : Adjectif démonstratif, 
+ADJNUM : Adjectif numéral, 
+ADJVPP : Adjectif ou Verbe au participe passé, 
+ADJWH : Adjectif interrogatif, 
+ADV : Adverbe, 
+ADVHW : Adverbe interrogatif, 
+AUX : Auxiliaire, 
+CC : Conjonction de coordination, 
+CS : Conjonction de subordination, 
+CL : Clitique , 
+CLS : Clitique sujet, 
+CLO : Clitique object, 
+CLR : Clitique réflexif, 
+DET : Déterminant, 
+DETI : Déterminant indéfini, 
+DETD : Déterminant défini, 
+DETWH : Déterminant interrogatif, 
+I : Interjection, 
+NC : Nom commmun, 
+NPP : Nom propre, 
+P : Préposition, 
+PD : Contraction d'une préposition et d'un déterminant, 
+PONCT : Ponctuation, 
+PRO : Pronom, 
+PROREL : Pronom relatif, 
+PROWH : Pronom interrogatif, 
+SEMAUX : Semi-Auxiliaire, 
+V : Verbe, 
+VIMP : Verbe conjugué à l'impératif, 
+VINF : Verbe à l'infinitif, 
+VPP : Verbe conjugué au participe passé, 
+VPR : Verbe conjugué au participe présent, 
+VS : Verbe au subjonctif
 
 * predicate (String) : Sémantiquement un prédicat exprime une propriété ou une relation, c'est-à-dire quelque chose d'attribuable à une ou plusieurs entités (en l'occurrence les arguments).
 Dans "Luc envoie une facture", "envoyer" est un prédicat ayant pour arguments "Luc" et "facture".
