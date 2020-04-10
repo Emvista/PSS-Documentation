@@ -50,7 +50,42 @@ Dans "Luc envoie une facture proforma", l'attribut negation vaut false car la ph
 
 * plural (String) : Indication sur le caractère singulier ("false") ou pluriel ("true") de l'élément auquel il est rattaché. 
 
-* pos (String) : Catégorie grammaticale. Voir la liste des catégories grammaticales gérées.
+* pos (String) : Catégorie grammaticale. Liste des catégories grammaticales gérées (pos) :
+ADJ : Adjectif, 
+ADJPOS : Adjectif possessif, 
+ADJDEM : Adjectif démonstratif, 
+ADJNUM : Adjectif numéral, 
+ADJVPP : Adjectif ou Verbe au participe passé, 
+ADJWH : Adjectif interrogatif, 
+ADV : Adverbe, 
+ADVHW : Adverbe interrogatif, 
+AUX : Auxiliaire, 
+CC : Conjonction de coordination, 
+CS : Conjonction de subordination, 
+CL : Clitique , 
+CLS : Clitique sujet, 
+CLO : Clitique object, 
+CLR : Clitique réflexif, 
+DET : Déterminant, 
+DETI : Déterminant indéfini, 
+DETD : Déterminant défini, 
+DETWH : Déterminant interrogatif, 
+I : Interjection, 
+NC : Nom commmun, 
+NPP : Nom propre, 
+P : Préposition, 
+PD : Contraction d'une préposition et d'un déterminant, 
+PONCT : Ponctuation, 
+PRO : Pronom, 
+PROREL : Pronom relatif, 
+PROWH : Pronom interrogatif, 
+SEMAUX : Semi-Auxiliaire, 
+V : Verbe, 
+VIMP : Verbe conjugué à l'impératif, 
+VINF : Verbe à l'infinitif, 
+VPP : Verbe conjugué au participe passé, 
+VPR : Verbe conjugué au participe présent, 
+VS : Verbe au subjonctif
 
 * pronominal (Boolean) : Indique si le verbe est pronominal.
 
