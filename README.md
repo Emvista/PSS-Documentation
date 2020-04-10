@@ -154,8 +154,7 @@ Dans "Luc déteste envoyer des e-mails", la colère et le dégoût sont des émo
 * polarity (Double between -1 and +1) : Sentiment positif, négatif ou neutre exprimé dans le texte.
 Dans "Luc déteste envoyer une facture", un sentiment négatif est déclenchée.
 
-* pos (String) : Catégorie grammaticale. Voir la liste des catégories grammaticales gérées. 
-Liste des catégories grammaticales gérées (pos) :
+* pos (String) : Catégorie grammaticale. Liste des catégories grammaticales gérées (pos) :
 ADJ : Adjectif, 
 ADJPOS : Adjectif possessif, 
 ADJDEM : Adjectif démonstratif, 
