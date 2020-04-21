@@ -132,6 +132,12 @@ Le parser fournit une analyse syntaxique du texte, c'est-à-dire indique les cat
 
 [Rest API](pss/README_PARSER.md)
 
+Query
+==
+
+Le service Query prend une question écrite en langage naturel et la transforme en une requête SPARQL pour interroger une base de connaissances.
+
+[Rest API](pss/README_QUERY.md)
 
 Glossaire général
 ==
@@ -258,5 +264,9 @@ Dans "Luc envoie une facture proforma", "Luc" a pour tag nerd:Person.
 * type : Type de la phrase analysée : declarative, exclamative, interrogative ou imperative. 
 
 * value (String) : Valeur de l'élément auquel cet attribut est rattaché.
+
+* values (List) : Liste des valeurs de l'élément auquel cet attribut est rattaché.
+
+* valuesToDisplay (List) : Liste des valeurs de l'élément auquel cet attribut est rattaché, contenant les informations de mise en forme du texte (sauts de ligne : \n, tabulations : \t, ...).
 
 * verbalForm (String) : Forme verbale : active ou passive.
