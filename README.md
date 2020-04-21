@@ -99,6 +99,12 @@ Le parser fournit une analyse syntaxique du texte, c'est-à-dire indique les cat
 
 [Rest API](pss/README_PARSER.md)
 
+Query
+==
+
+Le service Query prend une question écrite en langage naturel et la transforme en une requête SPARQL pour interroger une base de connaissance.
+
+[Rest API](pss/README_QUERY.md)
 
 Glossaire général
 ==
