@@ -226,4 +226,8 @@ Dans "Luc envoie une facture proforma", "Luc" a pour tag nerd:Person.
 
 * value (String) : Valeur de l'élément auquel cet attribut est rattaché.
 
+* values (List) : Liste des valeurs de l'élément auquel cet attribut est rattaché.
+
+* valuesToDisplay (List) : Liste des valeurs de l'élément auquel cet attribut est rattaché, contenant les informations de mise en forme du texte (sauts de ligne : \n, tabulations : \t, ...).
+
 * verbalForm (String) : Forme verbale : active ou passive.
