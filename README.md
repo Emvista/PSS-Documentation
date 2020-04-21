@@ -18,7 +18,7 @@ USAGE
 API SYNCHRONE ET ASYNCHRONE
 ===
 
-En dessous de 1000 mots, l'API est synchrone. Elle donnera le résultat dans la réponse à la requète.
+En-dessous de 1000 mots, l'API est synchrone. Elle donnera le résultat dans la réponse à la requête.
 ==== 
 
 Exemple : 
@@ -29,7 +29,7 @@ Réponse :
 `{"startTime":1587460733812,"endTime":1587460735473,"result":{"sentiments":[{"value":"ne pas aimer(pomme(bonne))","emotions":["sadness"],"polarity":-1.0,"pointOfView":"Paul"}]}}{"startTime":1587460733812,"endTime":1587460735473,"result":{"sentiments":[{"value":"ne pas aimer(pomme(bonne))","emotions":["sadness"],"polarity":-1.0,"pointOfView":"Paul"}]}}`
 
 
-Au dessous de 1000 mots, l'API est synchrone. Elle renvera un token dans la réponse à la requète. 
+Au-dessus de 1000 mots, l'API est asynchrone. Elle renvera un token dans la réponse à la requête. 
 ====
 
 Exemple:
