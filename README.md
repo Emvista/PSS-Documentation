@@ -102,7 +102,7 @@ Le parser fournit une analyse syntaxique du texte, c'est-à-dire indique les cat
 Query
 ==
 
-Le service Query prend une question écrite en langage naturel et la transforme en une requête SPARQL pour interroger une base de connaissance.
+Le service Query prend une question écrite en langage naturel et la transforme en une requête SPARQL pour interroger une base de connaissances.
 
 [Rest API](pss/README_QUERY.md)
 
