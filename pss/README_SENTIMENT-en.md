@@ -10,7 +10,7 @@ Query
 * Method : POST
 * Header : Content-Type: application/json
 * Poa-Token : TOKEN
-* Server : https://pss-api.prevyo.com/pss/api/sentiments
+* Server : https://pss-api.prevyo.com/pss/api/v1/sentiments
 * Body : {"text": "TEXT"}
 
 INPUT
@@ -65,5 +65,5 @@ Body :
 TEST
 --
 
-`curl -X POST "https://pss-api.prevyo.com/pss/api/sentiments" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Paul n'aime pas la très bonne pomme de Marie."}` 
+`curl -X POST "https://pss-api.prevyo.com/pss/api/v1/sentiments" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Paul n'aime pas la très bonne pomme de Marie."}` 
 

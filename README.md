@@ -15,6 +15,38 @@ Version
 USAGE
 ==
 
+API SYNCHRONE ET ASYNCHRONE
+===
+
+En dessous de 1000 mots, l'API est synchrone. Elle donnera le résultat dans la réponse à la requète.
+==== 
+
+Exemple : 
+
+`curl -X POST "https://pss-api.prevyo.com/pss/api/v1/sentiments" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d "{\"text\": \"Paul n'aime pas la très bonne pomme de Marie.\"}` 
+
+Réponse : 
+`{"startTime":1587460733812,"endTime":1587460735473,"result":{"sentiments":[{"value":"ne pas aimer(pomme(bonne))","emotions":["sadness"],"polarity":-1.0,"pointOfView":"Paul"}]}}{"startTime":1587460733812,"endTime":1587460735473,"result":{"sentiments":[{"value":"ne pas aimer(pomme(bonne))","emotions":["sadness"],"polarity":-1.0,"pointOfView":"Paul"}]}}`
+
+
+Au dessous de 1000 mots, l'API est synchrone. Elle renvera un token dans la réponse à la requète. 
+====
+
+Exemple:
+
+`curl -X POST "https://pss-api.prevyo.com/pss/api/v1/sentiments" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d "{\"text\": \"<TEXTE DE PLUS DE 1000 MOTS>\"}`
+
+Réponse :
+`{"token": "<TOKEN>","code": 201}`
+
+Récupération du résultat de l'analyse : 
+
+`curl -X GET "https://pss-api.prevyo.com/pss/api/v1/sentiments/<TOKEN>" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d "{\"text\": \"<TEXTE DE PLUS DE 1000 MOTS>\"}`
+
+Réponse :
+`{"startTime": 1587476808783,"endTime": 1587476889428,"result": { ....}`
+
+
 Postman
 ===
 
@@ -25,6 +57,7 @@ Téléchargez le fichier collection Postman : [Postman Collection](postman/PSS.p
 Créez 2 variables :
 * PSS-SERVER : https://pss-api.prevyo.com/
 * POA-TOKEN : votre token Prevyo
+
 
 REST API
 =
