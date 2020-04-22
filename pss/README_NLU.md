@@ -9,7 +9,7 @@ Query
 * Method : POST
 * Header : Content-Type: application/json
 * Poa-Token : TOKEN
-* Server : https://pss-api.prevyo.com/pss/api/nlu
+* Server : https://pss-api.prevyo.com/pss/api/v1/nlu
 * Body : {"text": "TEXT"}
 
 INPUT
@@ -87,5 +87,5 @@ Body :
 TEST
 --
 
-`curl -X POST "https://pss-api.prevyo.com/pss/api/nlu" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Peux-tu envoyer une facture à Marie ?"}` 
+`curl -X POST "https://pss-api.prevyo.com/pss/api/v1/nlu" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Peux-tu envoyer une facture à Marie ?"}` 
 

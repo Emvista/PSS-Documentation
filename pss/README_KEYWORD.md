@@ -10,7 +10,7 @@ Query
 * Method : POST
 * Header : Content-Type: application/json
 * Poa-Token : TOKEN
-* Server : https://pss-api.prevyo.com/pss/api/keywords
+* Server : https://pss-api.prevyo.com/pss/api/v1/keywords
 * Body : {"text": "TEXT"}
 
 INPUT
@@ -90,5 +90,5 @@ Body :
 TEST
 --
 
-`curl -X POST "https://pss-api.prevyo.com/pss/api/keyword" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel."}` 
+`curl -X POST "https://pss-api.prevyo.com/pss/api/v1/keywords" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel."}` 
 

@@ -10,7 +10,7 @@ Query
 * Method : POST
 * Header : Content-Type: application/json
 * Poa-Token : TOKEN
-* Server : https://pss-api.prevyo.com/pss/api/meaningrepresentation
+* Server : https://pss-api.prevyo.com/pss/api/v1/meaningrepresentation
 * Body : {"text": "TEXT"}
 
 INPUT
@@ -122,4 +122,4 @@ Body :
 TEST
 --
 
-`curl -X POST "https://pss-api.prevyo.com/pss/api/meaningrepresentation" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Marie enverra la facture demain."}` 
+`curl -X POST "https://pss-api.prevyo.com/pss/api/v1/meaningrepresentation" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Marie enverra la facture demain."}` 
