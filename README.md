@@ -18,7 +18,7 @@ USAGE
 API SYNCHRONE ET ASYNCHRONE
 ===
 
-En-dessous de 1000 mots, l'API est synchrone. Elle donnera le résultat dans la réponse à la requête.
+Au-dessous de 1000 mots, l'API est synchrone. Elle donnera le résultat dans la réponse à la requête.
 ==== 
 
 Exemple : 
@@ -52,9 +52,9 @@ Postman
 
 Télécharger et installer [POSTMAN](https://www.getpostman.com/)
 
-Téléchargez le fichier collection Postman : [Postman Collection](postman/PSS.postman_collection.json) et importez-le dans Postman
+Télécharger le fichier collection Postman : [Postman Collection](postman/PSS.postman_collection.json) et l'importer dans Postman
 
-Créez 2 variables :
+Créer 2 variables :
 * PSS-SERVER : https://pss-api.prevyo.com/
 * POA-TOKEN : votre token Prevyo
 

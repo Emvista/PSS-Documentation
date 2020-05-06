@@ -2,7 +2,7 @@
 
 ## Nouveautés de l'API :
 - Nouveau JSON de sortie
-- Mise en place d'une gestion de version dans les URLs des services : 
+- Mise en place d'une gestion de versions dans les URLs des services : 
 `/pss/api/v1/<service>`
 - L'API devient asynchrone au-delà d'un certain nombre de caractères. Si vous envoyez un long texte, vous aurez alors un retour (code Http) qui vous informera que votre demande a été prise en compte. Une autre url est disponible pour interroger le serveur qui soit vous répondra que la demande est toujours en cours d'analyse, soit vous renverra le résultat de l'analyse.
 
