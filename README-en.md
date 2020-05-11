@@ -1,9 +1,10 @@
 Prevyo Semantic Services
 =
 
-Briques logicielles pour comprendre le langage naturel.
+Tools for natural language processing.
 
-Pour tester les Prevyo Semantic Services vous pouvez soit utiliser l'interface web [https://pss.prevyo.com/](https://pss.prevyo.com/) soit utiliser l'API REST. Pour utiliser l'API REST, vous devez créer un compte Prevyo sur [https://pss.prevyo.com/](https://pss.prevyo.com/) puis nous contacter à [dev@emvista.com](mailto:dev@emvista.com) pour obtenir votre Token d'authentifcation.
+To use Prevyo Semantic Services: Web interface [https://pss.prevyo.com/](https://pss.prevyo.com/) and REST API are available. 
+To use the REST API you will need to create an Prevyo account on [https://pss.prevyo.com/](https://pss.prevyo.com/) then to contact [dev@emvista.com](mailto:dev@emvista.com) asking for an authentification token.
 
 Version
 ==
@@ -15,38 +16,6 @@ Version
 USAGE
 ==
 
-API SYNCHRONE ET ASYNCHRONE
-===
-
-Au-dessous de 1000 mots, l'API est synchrone. Elle donnera le résultat dans la réponse à la requête.
-==== 
-
-Exemple : 
-
-`curl -X POST "https://pss-api.prevyo.com/pss/api/v1/sentiments" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d "{\"text\": \"Paul n'aime pas la très bonne pomme de Marie.\"}` 
-
-Réponse : 
-`{"startTime":1587460733812,"endTime":1587460735473,"result":{"sentiments":[{"value":"ne pas aimer(pomme(bonne))","emotions":["sadness"],"polarity":-1.0,"pointOfView":"Paul"}]}}{"startTime":1587460733812,"endTime":1587460735473,"result":{"sentiments":[{"value":"ne pas aimer(pomme(bonne))","emotions":["sadness"],"polarity":-1.0,"pointOfView":"Paul"}]}}`
-
-
-Au-dessus de 1000 mots, l'API est asynchrone. Elle renvera un token dans la réponse à la requête. 
-====
-
-Exemple:
-
-`curl -X POST "https://pss-api.prevyo.com/pss/api/v1/sentiments" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d "{\"text\": \"<TEXTE DE PLUS DE 1000 MOTS>\"}`
-
-Réponse :
-`{"token": "<TOKEN>","code": 201}`
-
-Récupération du résultat de l'analyse : 
-
-`curl -X GET "https://pss-api.prevyo.com/pss/api/v1/sentiments/<TOKEN>" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d "{\"text\": \"<TEXTE DE PLUS DE 1000 MOTS>\"}`
-
-Réponse :
-`{"startTime": 1587476808783,"endTime": 1587476889428,"result": { ....}`
-
-
 Postman
 ===
 
@@ -57,7 +26,6 @@ Télécharger le fichier collection Postman : [Postman Collection](postman/PSS.p
 Créer 2 variables :
 * PSS-SERVER : https://pss-api.prevyo.com/
 * POA-TOKEN : votre token Prevyo
-
 
 REST API
 =
@@ -76,9 +44,10 @@ Sentiment
 
 <img src="images/ic_pss_sentiment.png" alt="drawing" width="80"/>
 
-L'analyse de sentiments (<i>opinion mining</i> ou <i>sentiment analysis</i>) consiste à identifier les sentiments (positif/négatif/neutre) ainsi que les émotions (joie, tristesse, peur, colère, dégoût, surprise) qui sont exprimés dans le texte à analyser. Ce service propose une analyse au niveau des mots et des groupes de mots significatifs. Il est ainsi possible d'identifier des sentiments ou émotions contradictoires au sein d'une même phrase. Par exemple dans "Luc déteste ce produit alors que Marie l'adore." le produit est négatif du point de vue de Luc mais positif du point de vue de Marie.
 
-[Rest API](pss/README_SENTIMENT.md)
+Sentiment analysis aims at identifying sentiments (positive, negative, and neutral) and emotions (joy, sadness, fear, anger, disgust, surprise) which are embedded in the text to analyse. This Sentiment service provides words and multiwords level analysis. Hence, it is possible in a very fine-grained way to identify several sentiments and emotions within a given sentence. For instance, in "Luc hates this product whereas Marie likes it.", the "product" is negative from Luc's point of view but not from Maries's one.
+
+[Rest API](pss/README_SENTIMENT-en.md)
 
 Anonymiser
 ==
@@ -98,14 +67,14 @@ L'identification des concepts permet de faire émerger des concepts qui n'appara
 
 [Rest API](pss/README_CONCEPT.md)
 
-Résumés
+Summarizer
 ==
 
 <img src="images/ic_pss_resume.png" alt="drawing" width="80"/>
 
-Le générateur de résumés crée une synthèse du texte, dont le niveau d'abstraction est paramétrable.
+The Summarizer service generates a textual abstract from a given text. The abstract is generated according to a compression rate defined by the user (from 1 to 10).
 
-[Rest API](pss/README_RESUME.md)
+[Rest API](pss/README_RESUME-en.md)
 
 Meaning Representation
 ==
@@ -132,12 +101,6 @@ Le parser fournit une analyse syntaxique du texte, c'est-à-dire indique les cat
 
 [Rest API](pss/README_PARSER.md)
 
-Query
-==
-
-Le service Query prend une question écrite en langage naturel et la transforme en une requête SPARQL pour interroger une base de connaissances.
-
-[Rest API](pss/README_QUERY.md)
 
 Glossaire général
 ==
@@ -193,42 +156,7 @@ Dans "Luc déteste envoyer des e-mails", la colère et le dégoût sont des émo
 * polarity (Double between -1 and +1) : Sentiment positif, négatif ou neutre exprimé dans le texte.
 Dans "Luc déteste envoyer une facture", un sentiment négatif est déclenchée.
 
-* pos (String) : Catégorie grammaticale. Liste des catégories grammaticales gérées (pos) :
-ADJ : Adjectif, 
-ADJPOS : Adjectif possessif, 
-ADJDEM : Adjectif démonstratif, 
-ADJNUM : Adjectif numéral, 
-ADJVPP : Adjectif ou Verbe au participe passé, 
-ADJWH : Adjectif interrogatif, 
-ADV : Adverbe, 
-ADVHW : Adverbe interrogatif, 
-AUX : Auxiliaire, 
-CC : Conjonction de coordination, 
-CS : Conjonction de subordination, 
-CL : Clitique , 
-CLS : Clitique sujet, 
-CLO : Clitique object, 
-CLR : Clitique réflexif, 
-DET : Déterminant, 
-DETI : Déterminant indéfini, 
-DETD : Déterminant défini, 
-DETWH : Déterminant interrogatif, 
-I : Interjection, 
-NC : Nom commmun, 
-NPP : Nom propre, 
-P : Préposition, 
-PD : Contraction d'une préposition et d'un déterminant, 
-PONCT : Ponctuation, 
-PRO : Pronom, 
-PROREL : Pronom relatif, 
-PROWH : Pronom interrogatif, 
-SEMAUX : Semi-Auxiliaire, 
-V : Verbe, 
-VIMP : Verbe conjugué à l'impératif, 
-VINF : Verbe à l'infinitif, 
-VPP : Verbe conjugué au participe passé, 
-VPR : Verbe conjugué au participe présent, 
-VS : Verbe au subjonctif
+* pos (String) : Catégorie grammaticale. Voir la liste des catégories grammaticales gérées. 
 
 * predicate (String) : Sémantiquement un prédicat exprime une propriété ou une relation, c'est-à-dire quelque chose d'attribuable à une ou plusieurs entités (en l'occurrence les arguments).
 Dans "Luc envoie une facture", "envoyer" est un prédicat ayant pour arguments "Luc" et "facture".
@@ -264,9 +192,5 @@ Dans "Luc envoie une facture proforma", "Luc" a pour tag nerd:Person.
 * type : Type de la phrase analysée : declarative, exclamative, interrogative ou imperative. 
 
 * value (String) : Valeur de l'élément auquel cet attribut est rattaché.
-
-* values (List) : Liste des valeurs de l'élément auquel cet attribut est rattaché.
-
-* valuesToDisplay (List) : Liste des valeurs de l'élément auquel cet attribut est rattaché, contenant les informations de mise en forme du texte (sauts de ligne : \n, tabulations : \t, ...).
 
 * verbalForm (String) : Forme verbale : active ou passive.

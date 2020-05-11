@@ -1,9 +1,9 @@
-Résumés
+Summarizer
 ==
 
 <img src="../images/ic_pss_resume.png" alt="drawing" width="80"/>
 
-Le générateur de résumés crée une synthèse du texte, dont le niveau d'abstraction est paramétrable. Le service retourne chaque phrase du texte donné en entrée, avec 10 niveaux d'abstraction pour chacune d'entre elles.
+The Summarizer service generates a textual abstract from a given text. The abstract is generated according to a compression rate defined by the user (from 1 to 10).
 
 Query
 --
