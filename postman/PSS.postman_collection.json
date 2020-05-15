@@ -55,7 +55,7 @@
 			"response": []
 		},
 		{
-			"name": "PSS - Anonymise",
+			"name": "PSS - Anonymiser",
 			"event": [
 				{
 					"listen": "test",
@@ -145,6 +145,58 @@
 					"path": [
 						"api",
 						"concepts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PSS - Concepts Get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e66d1b3d-03df-4891-8fb9-ad1b968f5f05",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Poa-Token",
+						"value": "{{POA-TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{PSS-SERVER}}pss/api/sentiments/f96dc6fc-1653-4cd3-9410-2bd820b43f3b",
+					"host": [
+						"{{PSS-SERVER}}pss"
+					],
+					"path": [
+						"api",
+						"sentiments",
+						"f96dc6fc-1653-4cd3-9410-2bd820b43f3b"
 					]
 				}
 			},
@@ -247,54 +299,6 @@
 			"response": []
 		},
 		{
-			"name": "PSS - nlu",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "42875cd5-a407-44b3-a9d4-555d6c695a79",
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					},
-					{
-						"key": "Poa-Token",
-						"type": "text",
-						"value": "{{POA-TOKEN}}"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\"text\":\"Peux-tu envoyer une facture à Marie ?\"}"
-				},
-				"url": {
-					"raw": "{{PSS-SERVER}}pss/api/nlu",
-					"host": [
-						"{{PSS-SERVER}}pss"
-					],
-					"path": [
-						"api",
-						"nlu"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "PSS - Summarizer",
 			"event": [
 				{
@@ -343,7 +347,7 @@
 			"response": []
 		},
 		{
-			"name": "PSS - Sentiments",
+			"name": "PSS - summarizer Get",
 			"event": [
 				{
 					"listen": "test",
@@ -356,6 +360,63 @@
 					}
 				}
 			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Poa-Token",
+						"value": "{{POA-TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{PSS-SERVER}}pss/api/sentiments/f96dc6fc-1653-4cd3-9410-2bd820b43f3b",
+					"host": [
+						"{{PSS-SERVER}}pss"
+					],
+					"path": [
+						"api",
+						"sentiments",
+						"f96dc6fc-1653-4cd3-9410-2bd820b43f3b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PSS - Sentiments",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4f361d5a-bed4-4a92-a5fd-c3abf5b84a61",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true
+				}
+			},
 			"request": {
 				"auth": {
 					"type": "noauth"
@@ -375,16 +436,74 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"text\":\"Paul n'aime pas la très bonne pomme de Marie.\"}"
+					"raw": "{\n    \"text\": \"J'aime les pommes.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
 				},
 				"url": {
-					"raw": "{{PSS-SERVER}}pss/api/sentiments",
+					"raw": "{{PSS-SERVER}}pss/api/v1/sentiments",
 					"host": [
 						"{{PSS-SERVER}}pss"
 					],
 					"path": [
 						"api",
+						"v1",
 						"sentiments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PSS - Sentiments Get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "42875cd5-a407-44b3-a9d4-555d6c695a79",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Poa-Token",
+						"value": "{{POA-TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{PSS-SERVER}}pss/api/sentiments/f96dc6fc-1653-4cd3-9410-2bd820b43f3b",
+					"host": [
+						"{{PSS-SERVER}}pss"
+					],
+					"path": [
+						"api",
+						"sentiments",
+						"f96dc6fc-1653-4cd3-9410-2bd820b43f3b"
 					]
 				}
 			},
