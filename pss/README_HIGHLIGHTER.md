@@ -10,7 +10,7 @@ Query
 * Method : POST
 * Header : Content-Type: application/json
 * Poa-Token : TOKEN
-* Server : https://pss-api.prevyo.com/pss/api/highlight
+* Server : https://pss-api.prevyo.com/pss/api/v1/highlight
 * Body : {"text": "TEXT"}
 
 INPUT
@@ -18,7 +18,7 @@ INPUT
 
 ```JSON
 {
-    "text": "Marie enverra la facture demain à Pierre de chez Emvista."
+    "text": "Luc et Marc Dupont aiment les pommes."
 }
 ```
 
@@ -26,61 +26,53 @@ OUTPUT
 --
 HTTP Status : 200
 
+* annotatedValue (String) : Donnée textuelle annotée avec le langage de balisage XML. Dans ce service, une balise est de la forme <TAG>VALUE</TAG> avec TAG correspondant à un type d'entité (cf. "tag") et VALUE correspondant à la chaîne de caractères annotée.
+
+* end (Integer) : Index de fin (en nombre de caractères).
+Dans "Luc envoie une facture proforma", la valeur de end pour le mot "une" est 14.
+
+* endTime (Time Stamp Unix) : Indication temporelle de la fin de l'analyse. Time Stamp Unix en millisecondes.
+
+* namedentities (List) : Liste des entités nommées (noms de personnes, de lieux, d'organisations, etc. ; cf. les tags ayant pour préfixe "nerd:" dans l'entrée "tag" du glossaire).
+
+* result (List) : Liste des résultats retournés par le service.
+
+* start (Integer) : Index de début (en nombre de caractères).
+Dans "Luc envoie une facture proforma", la valeur de end pour le mot "une" est 11.
+
+* startTime (Time Stamp Unix) : Indication temporelle du début de l'analyse. Time Stamp Unix en millisecondes.
+
+* tags (List) : Liste d'étiquettes sémantiques. Cf. "tag".
+
+* tag (String) : Etiquette sémantique faisant partie de l'ontologie NERD ou de l'otologie WSD : nerd:Date, nerd:Animal, nerd:Function, nerd:Nation, nerd:Time, nerd:Timemin, nerd:Timemax, nerd:Timefuzzy, nerd:Timeduration, nerd:Person, nerd:Facility, nerd:Location, nerd:LocationSource, nerd:LocationDestination, nerd:LocationFuzzy, nerd:LocationSpan, nerd:Money, nerd:Organization, nerd:Measure, nerd:PhoneNumber, nerd:EMail, nerd:Duration, nerd:Set, nerd:Url, nerd:Brand, nerd:Event, nerd:FictionalCharacter, nerd:Language, nerd:TransportLine, nerd:Sportsteam, nerd:Sport, nerd:Media, nerd:Method, nerd:Product, nerd:ProductRange, nerd:ReferenceDocument, nerd:Reference, nerd:Reward, nerd:Species, nerd:Ingredient, wsd:Concrete, wsd:Abstract, wsd:Animate, wsd:Inanimate, wsd:LivingBeing, wsd:Animal, wsd:Vehicle, wsd:Vegetal, wsd:Location, wsd:Time, wsd:TimeMin, wsd:TimeMax, wsd:TimeFuzzy, wsd:Sport, wsd:Color, wsd:MusicalInstrument, wsd:Religion, ...
+Dans "Luc envoie une facture proforma", "Luc" a pour tag nerd:Person.
+
+* value (String) : Valeur de l'élément auquel cet attribut est rattaché.
+
 Body :
 
 ```JSON
 {
-  "originalText": "Marie enverra la facture demain à Pierre de chez Emvista.",
-  "globalTypesCount": {
-    "Time": 1,
-    "Organization": 1,
-    "Person": 1,
-    "Location": 1
-  },
-  "entities": [
-    {
-      "entityType": "nerd:Person>Individual>FirstName",
-      "wiki": "",
-      "value": "Marie",
-      "indexEnd": 4,
-      "indexStart": 0,
-      "depiction": ""
-    },
-    {
-      "entityType": "nerd:Time",
-      "wiki": "",
-      "value": "demain",
-      "indexEnd": 30,
-      "indexStart": 25,
-      "depiction": ""
-    },
-    {
-      "entityType": "nerd:Location",
-      "wiki": "http://dbpedia.org/resource/Pierre",
-      "value": "Pierre",
-      "indexEnd": 39,
-      "indexStart": 34,
-      "depiction": ""
-    },
-    {
-      "entityType": "nerd:Organization",
-      "wiki": "",
-      "value": "Emvista",
-      "indexEnd": 55,
-      "indexStart": 49,
-      "depiction": ""
-    }
-  ],
-  "entityTypes": [
-    "Organization",
-    "Time",
-    "Person",
-    "Location"
-  ]
+  "startTime" : 1585835594994,
+  "endTime" : 1585835598384,
+  "result" : {
+    "namedentities" : [ {
+      "value" : "Luc",
+      "tags" : [ "nerd:Person" ],
+      "start" : 0,
+      "end" : 3
+    }, {
+      "value" : "Marc Dupont",
+      "tags" : [ "nerd:Person" ],
+      "start" : 7,
+      "end" : 18
+    } ],
+    "annotatedValue" : "<nerd:Person>Luc</nerd:Person> et <nerd:Person>Marc Dupont</nerd:Person> aiment les pommes ."
+  }
 }
 ```
 
 TEST
 --
 
-`curl -X POST "https://pss-api.prevyo.com/pss/api/highlight" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Marie enverra la facture demain à Pierre de chez Emvista."}` 
+`curl -X POST "https://pss-api.prevyo.com/pss/api/v1/highlight" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Marie enverra la facture demain à Pierre de chez Emvista."}` 

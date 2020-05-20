@@ -10,7 +10,7 @@ Query
 * Method : POST
 * Header : Content-Type: application/json
 * Poa-Token : TOKEN
-* Server : https://pss-api.prevyo.com/pss/api/keywords
+* Server : https://pss-api.prevyo.com/pss/api/v1/keywords
 * Body : {"text": "TEXT"}
 
 INPUT
@@ -18,7 +18,7 @@ INPUT
 
 ```JSON
 {
-    "text": "Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel. À partir de ces briques technologiques, Emvista propose Prevyo, un assistant virtuel intelligent de gestion d’e-mails."
+    "text": "Luc et Marc Dupont aiment les pommes rouge."
 }
 ```
 
@@ -26,140 +26,69 @@ OUTPUT
 --
 HTTP Status : 200
 
+* context (String) : Ensemble de mots constituant le contexte de value.
+Dans "Luc envoie une facture proforma", "proforma" a pour contexte "facture proforma".
+
+* contexts (List) : Liste de contextes. Cf. "context" dans le glossaire.
+
+* endTime (Time Stamp Unix) : Indication temporelle de la fin de l'analyse. Time Stamp Unix en millisecondes.
+
+* keywords (List) : Liste de mots clés.
+
+* pos (String) : Catégorie grammaticale. Voir la liste des catégories grammaticales gérées. 
+
+* result (List) : Liste des résultats retournés par le service.
+
+* score (Integer) : Score de l'élément auquel cet attribut est rattaché.
+
+* startTime (Time Stamp Unix) : Indication temporelle du début de l'analyse. Time Stamp Unix en millisecondes.
+
+* value (String) : Valeur de l'élément auquel cet attribut est rattaché.
+
 Body :
 
 ```JSON
 {
-  "original": "Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel. À partir de ces briques technologiques, Emvista propose Prevyo, un assistant virtuel intelligent de gestion d'e-mails.",
-  "keywords": {
-    "NC": [
-      {
-        "occurence": 1,
-        "word": "société",
-        "fullword": [
-          "société"
-        ]
-      },
-      {
-        "occurence": 2,
-        "word": "brique",
-        "fullword": [
-          "briques technologiques",
-          "briques logicielles"
-        ]
-      },
-      {
-        "occurence": 1,
-        "word": "langage",
-        "fullword": [
-          "langage naturel"
-        ]
-      },
-      {
-        "occurence": 1,
-        "word": "assistant",
-        "fullword": [
-          "assistant virtuel intelligent de gestion d' e-mails"
-        ]
-      },
-      {
-        "occurence": 1,
-        "word": "gestion",
-        "fullword": [
-          "assistant virtuel intelligent de gestion d' e-mails"
-        ]
-      },
-      {
-        "occurence": 1,
-        "word": "e-mail",
-        "fullword": [
-          "assistant virtuel intelligent de gestion d' e-mails"
-        ]
-      }
-    ],
-    "V": [
-      {
-        "occurence": 1,
-        "word": "développer",
-        "fullword": [
-          "développer"
-        ]
-      },
-      {
-        "occurence": 1,
-        "word": "proposer",
-        "fullword": [
-          "proposer"
-        ]
-      }
-    ],
-    "ADJ": [
-      {
-        "occurence": 1,
-        "word": "logiciel",
-        "fullword": [
-          "briques logicielles"
-        ]
-      },
-      {
-        "occurence": 1,
-        "word": "naturel",
-        "fullword": [
-          "langage naturel"
-        ]
-      },
-      {
-        "occurence": 1,
-        "word": "technologique",
-        "fullword": [
-          "briques technologiques"
-        ]
-      },
-      {
-        "occurence": 1,
-        "word": "virtuel",
-        "fullword": [
-          "assistant virtuel intelligent de gestion d' e-mails"
-        ]
-      },
-      {
-        "occurence": 1,
-        "word": "intelligent",
-        "fullword": [
-          "assistant virtuel intelligent de gestion d' e-mails"
-        ]
-      }
-    ],
-    "NPP": [
-      {
-        "occurence": 3,
-        "word": "Emvista",
-        "fullword": [
-          "Emvista"
-        ]
-      },
-      {
-        "occurence": 1,
-        "word": "Montpellier",
-        "fullword": [
-          "Montpellier"
-        ]
-      },
-      {
-        "occurence": 1,
-        "word": "Prevyo",
-        "fullword": [
-          "Prevyo"
-        ]
-      }
-    ]
-  },
-  "max-gram": 10
+  "startTime" : 1585836099260,
+  "endTime" : 1585836103015,
+  "result" : {
+    "keywords" : [ {
+      "value" : "Luc",
+      "contexts" : [ "Luc" ],
+      "score" : 1,
+      "pos" : "NPP"
+    }, {
+      "value" : "Marc",
+      "contexts" : [ "Marc Dupont" ],
+      "score" : 1,
+      "pos" : "NPP"
+    }, {
+      "value" : "Dupont",
+      "contexts" : [ "Marc Dupont" ],
+      "score" : 1,
+      "pos" : "NPP"
+    }, {
+      "value" : "aimer",
+      "contexts" : [ "Luc et Marc Dupont aiment les pommes rouge." ],
+      "score" : 1,
+      "pos" : "V"
+    }, {
+      "value" : "pomme",
+      "contexts" : [ "pommes rouge" ],
+      "score" : 1,
+      "pos" : "NC"
+    }, {
+      "value" : "rouge",
+      "contexts" : [ "pommes rouge" ],
+      "score" : 1,
+      "pos" : "ADJ"
+    } ]
+  }
 }
 ```
 
 TEST
 --
 
-`curl -X POST "https://pss-api.prevyo.com/pss/api/keyword" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel."}` 
+`curl -X POST "https://pss-api.prevyo.com/pss/api/v1/keywords" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel."}` 
 
