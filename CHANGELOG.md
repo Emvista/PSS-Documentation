@@ -1,3 +1,7 @@
+# Version 2020.07
+- Ajout de la possibilité de passer des paramètres à l'API.
+- Ajout du service Sentiments Expérimental.
+
 # Version 2020.05
 
 ## Nouveautés de l'API :

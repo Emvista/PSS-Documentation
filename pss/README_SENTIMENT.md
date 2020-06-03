@@ -22,6 +22,21 @@ INPUT
 }
 ```
 
+Version expérimentale
+--
+```JSON
+{
+    "text": "Luc déteste envoyer des e-mails alors que Marie adore ça.",
+    "parameters": [
+			{
+	    	"name": "exp",
+	    	"value": "true"
+			}
+    ]
+}
+```
+
+
 OUTPUT
 --
 HTTP Status : 200
