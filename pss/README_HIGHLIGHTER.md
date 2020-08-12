@@ -18,7 +18,13 @@ INPUT
 
 ```JSON
 {
-    "text": "Luc et Marc Dupont aiment les pommes."
+    "text": "Luc et Marc Dupont aiment les pommes.",
+    "parameters": [
+        {
+            "name": "lowercase",
+            "value": "true"
+        }
+    ]
 }
 ```
 
@@ -34,6 +40,8 @@ Dans "Luc envoie une facture proforma", la valeur de end pour le mot "une" est 1
 * endTime (Time Stamp Unix) : Indication temporelle de la fin de l'analyse. Time Stamp Unix en millisecondes.
 
 * namedentities (List) : Liste des entités nommées (noms de personnes, de lieux, d'organisations, etc. ; cf. les tags ayant pour préfixe "nerd:" dans l'entrée "tag" du glossaire).
+
+* refValue (String) : Indique l'identifiant du terme. Cet identifiant existe dans plusieurs services ce qui permet de croiser des informations provenant de ces services.
 
 * result (List) : Liste des résultats retournés par le service.
 
@@ -53,16 +61,18 @@ Body :
 
 ```JSON
 {
-  "startTime" : 1585835594994,
-  "endTime" : 1585835598384,
+  "startTime" : 1597235911116,
+  "endTime" : 1597235912146,
   "result" : {
     "namedentities" : [ {
       "value" : "Luc",
+      "refValue" : "0-0",
       "tags" : [ "nerd:Person" ],
       "start" : 0,
       "end" : 3
     }, {
       "value" : "Marc Dupont",
+      "refValue" : "0-2",
       "tags" : [ "nerd:Person" ],
       "start" : 7,
       "end" : 18
