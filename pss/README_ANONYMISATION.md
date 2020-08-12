@@ -35,6 +35,8 @@ Dans "Luc envoie une facture proforma", la valeur de end pour le mot "une" est 1
 
 * namedentities (List) : Liste des entités nommées (noms de personnes, de lieux, d'organisations, etc. ; cf. les tags ayant pour préfixe "nerd:" dans l'entrée "tag" du glossaire).
 
+* refValue (String) : Indique l'identifiant du terme. Cet identifiant existe dans plusieurs services ce qui permet de croiser des informations provenant de ces services.
+
 * result (List) : Liste des résultats retournés par le service.
 
 * source (String) : Terme à partir duquel un resultat a été généré.
@@ -57,25 +59,28 @@ Body :
 
 ```JSON
 {
-  "startTime" : 1585833674415,
-  "endTime" : 1585833678144,
+  "startTime" : 1597234633193,
+  "endTime" : 1597234634198,
   "result" : {
     "namedentities" : [ {
       "value" : "Luc",
+      "refValue" : "0-3",
       "tags" : [ "nerd:Person" ],
       "start" : 13,
       "end" : 16,
       "source" : null
     }, {
-      "value" : "le 06 21 32 43 54 .",
+      "value" : "06 21 32 43 54 .",
+      "refValue" : "0-6",
       "tags" : [ "nerd:PhoneNumber" ],
       "start" : 24,
-      "end" : 43,
+      "end" : 40,
       "source" : null
     } ],
-    "annotatedValue" : "Le numéro de <PERSON_13/> est le <PHONENUMBER_24/>"
+    "annotatedValue" : "Le numéro de <PERSON_13> est le <PHONENUMBER_24>"
   }
 }
+
 ```
 
 TEST
