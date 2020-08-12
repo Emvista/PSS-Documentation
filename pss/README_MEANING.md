@@ -39,6 +39,10 @@ Dans "Luc envoie une facture proforma", l'attribut negation vaut false car la ph
 * predicate (String) : Sémantiquement un prédicat exprime une propriété ou une relation, c'est-à-dire quelque chose d'attribuable à une ou plusieurs entités (en l'occurrence les arguments).
 Dans "Luc envoie une facture", "envoyer" est un prédicat ayant pour arguments "Luc" et "facture".
 
+* refSource (String) : Indique l'identifiant du terme. Cet identifiant existe dans plusieurs services ce qui permet de croiser des informations provenant de ces services.
+
+* refValue (String) : Indique l'identifiant du terme. Cet identifiant existe dans plusieurs services ce qui permet de croiser des informations provenant de ces services.
+
 * result (List) : Liste des résultats retournés par le service.
 
 * role (String) : Role sémantique parmis : vn:Agent, vn:Theme, vn:Patient, vn:Time, vn:Beneficiary, vn:Location, vn:Recipient, vn:Pivot, etc.
@@ -58,61 +62,90 @@ Body :
 
 ```JSON
 {
-  "startTime" : 1585839286839,
-  "endTime" : 1585839289836,
+  "startTime" : 1597241651492,
+  "endTime" : 1597241652904,
   "result" : {
     "predicates" : [ {
       "id" : 6,
       "value" : [ "give-13.1" ],
       "source" : "envoyer",
+      "refSource" : "0-1",
       "negation" : false,
       "arguments" : [ {
-        "id" : 25,
-        "role" : "TimeExact",
-        "tags" : [ "nerd:Time" ],
-        "value" : "demain"
+        "id" : 0,
+        "role" : "Agent",
+        "tags" : [ "nerd:Person>Individual>FirstName" ],
+        "value" : "Marie",
+        "refValue" : "0-0"
       }, {
         "id" : 17,
         "role" : "Theme",
         "tags" : [ "" ],
-        "value" : "facture"
+        "value" : "facture",
+        "refValue" : "0-3"
       }, {
-        "id" : 0,
-        "role" : "Agent",
-        "tags" : [ "nerd:Person" ],
-        "value" : "Marie"
+        "id" : 25,
+        "role" : "TimeExact",
+        "tags" : [ "nerd:Time" ],
+        "value" : "demain",
+        "refValue" : "0-4"
       } ]
     }, {
       "id" : 14,
       "value" : [ "cardinality" ],
       "source" : "le",
+      "refSource" : "0-2",
       "negation" : false,
       "arguments" : [ {
         "id" : 17,
         "role" : "Theme",
         "tags" : [ "" ],
-        "value" : "facture"
+        "value" : "facture",
+        "refValue" : "0-3"
       }, {
         "id" : -1,
         "role" : "Measureexact",
         "tags" : [ "" ],
-        "value" : "1"
+        "value" : "1",
+        "refValue" : null
+      } ]
+    }, {
+      "id" : 0,
+      "value" : [ "rdf:type" ],
+      "source" : "Marie",
+      "refSource" : "0-0",
+      "negation" : false,
+      "arguments" : [ {
+        "id" : -1,
+        "role" : "Attribute",
+        "tags" : [ "" ],
+        "value" : "nerd:Person",
+        "refValue" : null
+      }, {
+        "id" : 0,
+        "role" : "Experiencer",
+        "tags" : [ "nerd:Person>Individual>FirstName" ],
+        "value" : "Marie",
+        "refValue" : "0-0"
       } ]
     }, {
       "id" : 0,
       "value" : [ "isA" ],
       "source" : "Marie",
+      "refSource" : "0-0",
       "negation" : false,
       "arguments" : [ {
-        "id" : 0,
-        "role" : "Experiencer",
-        "tags" : [ "nerd:Person" ],
-        "value" : "Marie"
-      }, {
         "id" : -1,
         "role" : "Attribute",
         "tags" : [ "" ],
-        "value" : "femelle"
+        "value" : "femelle",
+        "refValue" : null
+      }, {
+        "id" : 0,
+        "role" : "Experiencer",
+        "tags" : [ "nerd:Person>Individual>FirstName" ],
+        "value" : "Marie",
+        "refValue" : "0-0"
       } ]
     } ]
   }
