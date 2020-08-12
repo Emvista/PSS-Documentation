@@ -62,14 +62,14 @@ Body :
 
 ```JSON
 {
-  "startTime" : 1597235443769,
-  "endTime" : 1597235445413,
+  "startTime" : 1597241651492,
+  "endTime" : 1597241652904,
   "result" : {
     "predicates" : [ {
       "id" : 6,
       "value" : [ "give-13.1" ],
       "source" : "envoyer",
-      "refSource" : "envoyer",
+      "refSource" : "0-1",
       "negation" : false,
       "arguments" : [ {
         "id" : 0,
@@ -78,23 +78,23 @@ Body :
         "value" : "Marie",
         "refValue" : "0-0"
       }, {
-        "id" : 25,
-        "role" : "TimeExact",
-        "tags" : [ "nerd:Time" ],
-        "value" : "demain",
-        "refValue" : "0-4"
-      }, {
         "id" : 17,
         "role" : "Theme",
         "tags" : [ "" ],
         "value" : "facture",
         "refValue" : "0-3"
+      }, {
+        "id" : 25,
+        "role" : "TimeExact",
+        "tags" : [ "nerd:Time" ],
+        "value" : "demain",
+        "refValue" : "0-4"
       } ]
     }, {
       "id" : 14,
       "value" : [ "cardinality" ],
       "source" : "le",
-      "refSource" : "le",
+      "refSource" : "0-2",
       "negation" : false,
       "arguments" : [ {
         "id" : 17,
@@ -113,7 +113,108 @@ Body :
       "id" : 0,
       "value" : [ "rdf:type" ],
       "source" : "Marie",
-      "refSource" : "Marie",
+      "refSource" : "0-0",
+      "negation" : false,
+      "arguments" : [ {
+        "id" : -1,
+        "role" : "Attribute",
+        "tags" : [ "" ],
+        "value" : "nerd:Person",
+        "refValue" : null
+      }, {
+        "id" : 0,
+        "role" : "Experiencer",
+        "tags" : [ "nerd:Person>Individual>FirstName" ],
+        "value" : "Marie",
+        "refValue" : "0-0"
+      } ]
+    }, {
+      "id" : 0,
+      "value" : [ "isA" ],
+      "source" : "Marie",
+      "refSource" : "0-0",
+      "negation" : false,
+      "arguments" : [ {
+        "id" : -1,
+        "role" : "Attribute",
+        "tags" : [ "" ],
+        "value" : "femelle",
+        "refValue" : null
+      }, {
+        "id" : 0,
+        "role" : "Experiencer",
+        "tags" : [ "nerd:Person>Individual>FirstName" ],
+        "value" : "Marie",
+        "refValue" : "0-0"
+      } ]
+    }, {
+      "id" : 6,
+      "value" : [ "give-13.1" ],
+      "source" : "envoyer",
+      "refSource" : "0-1",
+      "negation" : false,
+      "arguments" : [ {
+        "id" : 25,
+        "role" : "TimeExact",
+        "tags" : [ "nerd:Time" ],
+        "value" : "demain",
+        "refValue" : "0-4"
+      }, {
+        "id" : 0,
+        "role" : "Agent",
+        "tags" : [ "nerd:Person>Individual>FirstName" ],
+        "value" : "Marie",
+        "refValue" : "0-0"
+      }, {
+        "id" : 17,
+        "role" : "Theme",
+        "tags" : [ "" ],
+        "value" : "facture",
+        "refValue" : "0-3"
+      } ]
+    }, {
+      "id" : 14,
+      "value" : [ "cardinality" ],
+      "source" : "le",
+      "refSource" : "0-2",
+      "negation" : false,
+      "arguments" : [ {
+        "id" : -1,
+        "role" : "Measureexact",
+        "tags" : [ "" ],
+        "value" : "1",
+        "refValue" : null
+      }, {
+        "id" : 17,
+        "role" : "Theme",
+        "tags" : [ "" ],
+        "value" : "facture",
+        "refValue" : "0-3"
+      } ]
+    }, {
+      "id" : 0,
+      "value" : [ "rdf:type" ],
+      "source" : "Marie",
+      "refSource" : "0-0",
+      "negation" : false,
+      "arguments" : [ {
+        "id" : -1,
+        "role" : "Attribute",
+        "tags" : [ "" ],
+        "value" : "nerd:Person",
+        "refValue" : null
+      }, {
+        "id" : 0,
+        "role" : "Experiencer",
+        "tags" : [ "nerd:Person>Individual>FirstName" ],
+        "value" : "Marie",
+        "refValue" : "0-0"
+      } ]
+    }, {
+      "id" : 0,
+      "value" : [ "isA" ],
+      "source" : "Marie",
+      "refSource" : "0-0",
       "negation" : false,
       "arguments" : [ {
         "id" : 0,
@@ -125,26 +226,7 @@ Body :
         "id" : -1,
         "role" : "Attribute",
         "tags" : [ "" ],
-        "value" : "nerd:Person",
-        "refValue" : null
-      } ]
-    }, {
-      "id" : 0,
-      "value" : [ "isA" ],
-      "source" : "Marie",
-      "refSource" : "Marie",
-      "negation" : false,
-      "arguments" : [ {
-        "id" : 0,
-        "role" : "Experiencer",
-        "tags" : [ "nerd:Person" ],
-        "value" : "Marie",
-        "refValue" : "0-0"
-      }, {
-        "id" : -1,
-        "role" : "Attribute",
-        "tags" : [ "" ],
-        "value" : "feminine",
+        "value" : "femelle",
         "refValue" : null
       } ]
     } ]
