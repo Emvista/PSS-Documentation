@@ -18,7 +18,7 @@ INPUT
 
 ```JSON
 {
-    "text": "Luc aime les pommes."
+    "text": "Paris est une belle ville."
 }
 ```
 
@@ -30,6 +30,8 @@ HTTP Status : 200
 * endTime (Time Stamp Unix) : Indication temporelle de la fin de l'analyse. Time Stamp Unix en millisecondes.
 
 * concepts (List) : Liste de concepts.
+
+* refSource (String) : Indique l'identifiant du terme. Cet identifiant existe dans plusieurs services ce qui permet de croiser des informations provenant de ces services.
 
 * result (List) : Liste des résultats retournés par le service.
 
@@ -46,164 +48,248 @@ Body :
 
 ```JSON
 {
-  "startTime" : 1585837488962,
-  "endTime" : 1585837492390,
+  "startTime" : 1597234837453,
+  "endTime" : 1597234839091,
   "result" : {
     "concepts" : [ {
-      "value" : "douche",
-      "source" : [ "pomme" ],
+      "value" : "département",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
       "score" : 1
     }, {
-      "value" : "gâteau",
-      "source" : [ "pomme" ],
+      "value" : "pays",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
       "score" : 1
     }, {
-      "value" : "salade",
-      "source" : [ "pomme" ],
-      "score" : 3
-    }, {
-      "value" : "sablés bretons et leur duo de confiture de lait",
-      "source" : [ "pomme" ],
+      "value" : "monde",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
       "score" : 1
     }, {
       "value" : "Terre",
-      "source" : [ "pomme" ],
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
       "score" : 1
     }, {
-      "value" : "pommier",
-      "source" : [ "pomme" ],
+      "value" : "canton",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
       "score" : 1
     }, {
-      "value" : "Fondue au chocolat",
-      "source" : [ "pomme" ],
+      "value" : "région",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
       "score" : 1
     }, {
-      "value" : "mélange sucré salé",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "miam aux fruits",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "pomme d'amour",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "pizza gorgonzola pommes et noix",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "salade de fruits",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "fruit",
-      "source" : [ "pomme" ],
+      "value" : "zone",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
       "score" : 3
     }, {
-      "value" : "ingrédient de cuisine",
-      "source" : [ "pomme" ],
+      "value" : "agglomération",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 3
+    }, {
+      "value" : "métropole",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
       "score" : 1
     }, {
-      "value" : "produit végétal",
-      "source" : [ "pomme" ],
+      "value" : "campagne",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
       "score" : 1
     }, {
-      "value" : "fruit à pépin",
-      "source" : [ "pomme" ],
+      "value" : "Amérique",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
       "score" : 1
     }, {
-      "value" : "aliment périssable",
-      "source" : [ "pomme" ],
+      "value" : "Europe",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
       "score" : 1
     }, {
-      "value" : "aliment",
-      "source" : [ "pomme" ],
+      "value" : "province",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
       "score" : 1
     }, {
-      "value" : "produit alimentaire",
-      "source" : [ "pomme" ],
+      "value" : "continent",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
       "score" : 1
     }, {
-      "value" : "personne",
-      "source" : [ "pomme" ],
+      "value" : "mégalopole",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "::",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "état",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "planète",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "carte",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "communauté urbaine",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "cité",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "lieu",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
       "score" : 2
     }, {
-      "value" : "individu",
-      "source" : [ "pomme" ],
+      "value" : "localité",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
       "score" : 1
     }, {
-      "value" : "être humain",
-      "source" : [ "pomme" ],
+      "value" : "endroit",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
       "score" : 2
     }, {
-      "value" : "être vivant",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "fruit comestible",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "ingrédient de recette de cuisine",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "organe végétal",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "objet",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "fruit à pépins",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "gastronomie",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "biologie",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "botanique",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "cuisine",
-      "source" : [ "pomme" ],
+      "value" : "commune",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
       "score" : 2
     }, {
-      "value" : "agriculture",
-      "source" : [ "pomme" ],
+      "value" : "collectivité territoriale",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
       "score" : 1
     }, {
-      "value" : "marine",
-      "source" : [ "pomme" ],
+      "value" : "division administrative",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "zone urbaine",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "zone géographique",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "milieu physique",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "municipalité",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "classification",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "division territoriale",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
       "score" : 1
     }, {
       "value" : "architecture",
-      "source" : [ "pomme" ],
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
       "score" : 1
     }, {
-      "value" : "nutrition",
-      "source" : [ "pomme" ],
+      "value" : "politique",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
       "score" : 1
     }, {
-      "value" : "alimentation",
-      "source" : [ "pomme" ],
+      "value" : "médecine",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
       "score" : 1
     }, {
-      "value" : "fruits",
-      "source" : [ "pomme" ],
+      "value" : "commerce",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
       "score" : 1
     }, {
-      "value" : "pomme de terre",
-      "source" : [ "pomme" ],
+      "value" : "prévention",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "tissu associatif",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "automobile",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "droit",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "histoire",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "administration",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "électricité",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "sociologie",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "économie",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "géographie",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "urbanisme",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
       "score" : 1
     } ]
   }
