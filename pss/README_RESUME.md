@@ -18,7 +18,7 @@ INPUT
 
 ```JSON
 {
-    "text": "Emvista est une société (montpelliéraine) qui développe des briques logicielles pour comprendre le langage naturel."
+    "text": "Emvista est une société (montpelliéraine) innovante qui développe des briques logicielles pour comprendre le langage naturel."
 }
 ```
 
@@ -44,40 +44,40 @@ Body :
 
 ```JSON
 {
-  "startTime" : 1585838031451,
-  "endTime" : 1585838036498,
+  "startTime" : 1597235217521,
+  "endTime" : 1597235220237,
   "result" : {
     "sentences" : [ {
       "id" : 0,
-      "value" : "Emvista est une société qui développe des briques logicielles pour comprendre le langage naturel . ",
+      "value" : "Emvista est une société innovante qui développe des briques logicielles pour comprendre le langage naturel . ",
       "level" : 1
     }, {
       "id" : 0,
-      "value" : "Emvista est une société qui développe des briques logicielles pour comprendre le langage naturel . ",
+      "value" : "Emvista est une société innovante qui développe des briques logicielles pour comprendre le langage naturel . ",
       "level" : 2
     }, {
       "id" : 0,
-      "value" : "Emvista est une société qui développe des briques logicielles pour comprendre le langage naturel . ",
+      "value" : "Emvista est une société innovante qui développe des briques logicielles pour comprendre le langage naturel . ",
       "level" : 3
     }, {
       "id" : 0,
-      "value" : "Emvista est une société qui développe des briques logicielles pour comprendre le langage naturel . ",
+      "value" : "Emvista est une société innovante qui développe des briques logicielles pour comprendre le langage naturel . ",
       "level" : 4
     }, {
       "id" : 0,
-      "value" : "Emvista est une société qui développe des briques logicielles pour comprendre le langage naturel . ",
+      "value" : "Emvista est une société innovante qui développe des briques logicielles pour comprendre le langage naturel . ",
       "level" : 5
     }, {
       "id" : 0,
-      "value" : "Emvista est une société qui développe des briques logicielles pour comprendre le langage naturel . ",
+      "value" : "Emvista est une société innovante qui développe des briques logicielles pour comprendre le langage naturel . ",
       "level" : 6
     }, {
       "id" : 0,
-      "value" : "Emvista est une société qui développe des briques pour comprendre le langage . ",
+      "value" : "Emvista est une société innovante qui développe des briques pour comprendre le langage . ",
       "level" : 7
     }, {
       "id" : 0,
-      "value" : "Emvista est une société . ",
+      "value" : "Emvista est une société innovante . ",
       "level" : 8
     }, {
       "id" : 0,
@@ -89,6 +89,7 @@ Body :
       "level" : 10
     } ]
   }
+}
 ```
 
 TEST
