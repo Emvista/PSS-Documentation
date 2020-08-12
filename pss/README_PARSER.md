@@ -18,13 +18,21 @@ INPUT
 
 ```JSON
 {
-    "text": "Luc aime les pommes."
+    "text": "Luc aime les pommes. Elles sont bonnes.",
+    "parameters": [
+        {
+            "name": "coreference",
+            "value": "true"
+        }
+    ]
 }
 ```
 
 OUTPUT
 --
 HTTP Status : 200
+
+* coref (List) : Liste des identifiants de tokens qui coréfèrent avec le token auquel cet attribut est rattaché.
 
 * definite (Boolean) : Indication sur le caractère défini ou indéfini de l'élément auquel cet attribut est rattaché (un token par exemple).
 
@@ -35,11 +43,11 @@ Dans "Luc envoie une facture proforma", la valeur de end pour le mot "une" est 1
 
 * endTime (Time Stamp Unix) : Indication temporelle de la fin de l'analyse. Time Stamp Unix en millisecondes.
 
-* id (Integer) : Identifiant de l'élément auquel cet attribut est rattaché.
-
 * form (String) : mot ou locution tel qu'il apparaît dans le contexte (accordé en genre et en nombre par exemple). Par exemple la forme "envoyées" a pour lemme "envoyer". Voir "lemma" dans le glossaire.
 
 * head (String) : Tête syntaxique d'un token.
+
+* id (Integer) : Identifiant de l'élément auquel cet attribut est rattaché.
 
 * lemma (String) : Forme canonique, considérée par convention comme non fléchie, d’un nom, d’un adjectif, d’un verbe, d’un pronom, présentée comme entrée principale, dans un dictionnaire. Par exemple la forme "envoyées" a pour lemme "envoyer". Voir "form" dans le glossaire.
 
@@ -110,8 +118,8 @@ Body :
 
 ```JSON
 {
-  "startTime" : 1585838742981,
-  "endTime" : 1585838742982,
+  "startTime" : 1597236091960,
+  "endTime" : 1597236091961,
   "result" : {
     "sentences" : [ {
       "id" : 0,
@@ -131,7 +139,8 @@ Body :
         "pronominal" : false,
         "person" : "",
         "plural" : false,
-        "tense" : null
+        "tense" : null,
+        "coref" : [ ]
       }, {
         "id" : 1,
         "form" : "aime",
@@ -139,7 +148,7 @@ Body :
         "depRel" : "root",
         "head" : -1,
         "pos" : "V",
-        "verbalform" : "",
+        "verbalform" : "active",
         "start" : 4,
         "end" : 7,
         "negation" : false,
@@ -147,7 +156,8 @@ Body :
         "pronominal" : false,
         "person" : "1",
         "plural" : false,
-        "tense" : "present"
+        "tense" : "present",
+        "coref" : [ ]
       }, {
         "id" : 2,
         "form" : "les",
@@ -159,11 +169,12 @@ Body :
         "start" : 9,
         "end" : 11,
         "negation" : false,
-        "definite" : false,
+        "definite" : true,
         "pronominal" : false,
         "person" : "",
         "plural" : true,
-        "tense" : null
+        "tense" : null,
+        "coref" : [ ]
       }, {
         "id" : 3,
         "form" : "pommes",
@@ -175,11 +186,12 @@ Body :
         "start" : 13,
         "end" : 18,
         "negation" : false,
-        "definite" : false,
+        "definite" : true,
         "pronominal" : false,
         "person" : "",
         "plural" : true,
-        "tense" : null
+        "tense" : null,
+        "coref" : [ ]
       }, {
         "id" : 4,
         "form" : ".",
@@ -195,7 +207,80 @@ Body :
         "pronominal" : false,
         "person" : "",
         "plural" : false,
-        "tense" : null
+        "tense" : null,
+        "coref" : [ ]
+      } ]
+    }, {
+      "id" : 1,
+      "type" : "declarative",
+      "tokens" : [ {
+        "id" : 0,
+        "form" : "Elles",
+        "lemma" : "elles",
+        "depRel" : "suj",
+        "head" : 1,
+        "pos" : "CLS",
+        "verbalform" : "",
+        "start" : 21,
+        "end" : 25,
+        "negation" : false,
+        "definite" : false,
+        "pronominal" : false,
+        "person" : "3",
+        "plural" : true,
+        "tense" : null,
+        "coref" : [ "0-3" ]
+      }, {
+        "id" : 1,
+        "form" : "sont",
+        "lemma" : "être",
+        "depRel" : "root",
+        "head" : -1,
+        "pos" : "V",
+        "verbalform" : "active",
+        "start" : 27,
+        "end" : 30,
+        "negation" : false,
+        "definite" : false,
+        "pronominal" : false,
+        "person" : "3",
+        "plural" : true,
+        "tense" : "present",
+        "coref" : [ ]
+      }, {
+        "id" : 2,
+        "form" : "bonnes",
+        "lemma" : "bon",
+        "depRel" : "ats",
+        "head" : 1,
+        "pos" : "ADJ",
+        "verbalform" : "",
+        "start" : 32,
+        "end" : 37,
+        "negation" : false,
+        "definite" : false,
+        "pronominal" : false,
+        "person" : "",
+        "plural" : true,
+        "tense" : null,
+        "coref" : [ ]
+      }, {
+        "id" : 3,
+        "form" : ".",
+        "lemma" : ".",
+        "depRel" : "ponct",
+        "head" : 1,
+        "pos" : "PONCT",
+        "verbalform" : "",
+        "start" : 38,
+        "end" : 38,
+        "negation" : false,
+        "definite" : false,
+        "pronominal" : false,
+        "person" : "",
+        "plural" : false,
+        "tense" : null,
+        "coref" : [ ]
       } ]
     } ]
   }
