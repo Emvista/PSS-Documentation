@@ -19,6 +19,12 @@ INPUT
 ```JSON
 {
     "text": "Luc et Marc Dupont aiment les pommes rouge."
+    "parameters": [
+        {
+            "name": "lowercase",
+            "value": "false"
+        }
+    ]
 }
 ```
 
@@ -37,6 +43,8 @@ Dans "Luc envoie une facture proforma", "proforma" a pour contexte "facture prof
 
 * pos (String) : Catégorie grammaticale. Voir la liste des catégories grammaticales gérées. 
 
+* refValue (String) : Indique l'identifiant du terme. Cet identifiant existe dans plusieurs services ce qui permet de croiser des informations provenant de ces services.
+
 * result (List) : Liste des résultats retournés par le service.
 
 * score (Integer) : Score de l'élément auquel cet attribut est rattaché.
@@ -49,42 +57,67 @@ Body :
 
 ```JSON
 {
-  "startTime" : 1585836099260,
-  "endTime" : 1585836103015,
+  "startTime" : 1597227690925,
+  "endTime" : 1597227691933,
   "result" : {
     "keywords" : [ {
       "value" : "Luc",
+      "refValue" : "0-0",
       "contexts" : [ "Luc" ],
       "score" : 1,
       "pos" : "NPP"
     }, {
+      "value" : "et",
+      "refValue" : "0-1",
+      "contexts" : [ "et" ],
+      "score" : 1,
+      "pos" : "CC"
+    }, {
       "value" : "Marc",
+      "refValue" : "0-2",
       "contexts" : [ "Marc Dupont" ],
       "score" : 1,
       "pos" : "NPP"
     }, {
       "value" : "Dupont",
+      "refValue" : "0-3",
       "contexts" : [ "Marc Dupont" ],
       "score" : 1,
       "pos" : "NPP"
     }, {
       "value" : "aimer",
-      "contexts" : [ "Luc et Marc Dupont aiment les pommes rouge." ],
+      "refValue" : "0-4",
+      "contexts" : [ "aimer" ],
       "score" : 1,
       "pos" : "V"
     }, {
+      "value" : "le",
+      "refValue" : "0-5",
+      "contexts" : [ "pommes rouge" ],
+      "score" : 1,
+      "pos" : "DETD"
+    }, {
       "value" : "pomme",
+      "refValue" : "0-6",
       "contexts" : [ "pommes rouge" ],
       "score" : 1,
       "pos" : "NC"
     }, {
       "value" : "rouge",
+      "refValue" : "0-7",
       "contexts" : [ "pommes rouge" ],
       "score" : 1,
       "pos" : "ADJ"
+    }, {
+      "value" : ".",
+      "refValue" : "0-8",
+      "contexts" : [ "." ],
+      "score" : 1,
+      "pos" : "PONCT"
     } ]
   }
 }
+
 ```
 
 TEST
