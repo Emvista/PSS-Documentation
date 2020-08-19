@@ -51,7 +51,7 @@ Body :
   "startTime" : 1597235911116,
   "endTime" : 1597235912146,
   "result" : {
-    "namedentities" : [ {
+    "namedEntities" : [ {
       "value" : "Luc",
       "refValue" : "0-0",
       "tags" : [ "nerd:Person" ],
