@@ -16,10 +16,12 @@ Query
 ```JSON
 {
 	"text": "TEXT",
-	{
-		"name": "lang",
-		"value": "LANG"
-	}
+	"parameters": [
+		{
+			"name": "lang",
+			"value": "LANG"
+		}
+	]
 }
 ```
 avec LANG : fr (par défaut) ou en.
