@@ -11,7 +11,18 @@ Query
 * Header : Content-Type: application/json
 * Poa-Token : TOKEN
 * Server : https://pss-api.prevyo.com/pss/api/v1/concepts
-* Body : {"text": "TEXT"}
+* Body : 
+
+```JSON
+{
+	"text": "TEXT",
+	{
+		"name": "lang",
+		"value": "LANG"
+	}
+}
+```
+avec LANG : fr (par défaut) ou en.
 
 INPUT
 --
@@ -25,25 +36,6 @@ INPUT
 OUTPUT
 --
 HTTP Status : 200
-
-
-* endTime (Time Stamp Unix) : Indication temporelle de la fin de l'analyse. Time Stamp Unix en millisecondes.
-
-* concepts (List) : Liste de concepts.
-
-* refSource (String) : Indique l'identifiant du terme. Cet identifiant existe dans plusieurs services ce qui permet de croiser des informations provenant de ces services.
-
-* result (List) : Liste des résultats retournés par le service.
-
-* score (Integer) : Score de l'élément auquel cet attribut est rattaché.
-
-* source (String) : Terme à partir duquel un resultat a été généré.
-Dans "Luc envoie une facture proforma", le concept "administratif" pourrait être généré à partir de la source "facture".
-
-* startTime (Time Stamp Unix) : Indication temporelle du début de l'analyse. Time Stamp Unix en millisecondes.
-
-* value (String) : Valeur de l'élément auquel cet attribut est rattaché.
-
 Body :
 
 ```JSON
@@ -295,6 +287,25 @@ Body :
   }
 }
 ```
+
+
+* endTime (Time Stamp Unix) : Indication temporelle de la fin de l'analyse. Time Stamp Unix en millisecondes.
+
+* concepts (List) : Liste de concepts.
+
+* refSource (String) : Indique l'identifiant du terme. Cet identifiant existe dans plusieurs services ce qui permet de croiser des informations provenant de ces services.
+
+* result (List) : Liste des résultats retournés par le service.
+
+* score (Integer) : Score de l'élément auquel cet attribut est rattaché.
+
+* source (String) : Terme à partir duquel un resultat a été généré.
+Dans "Luc envoie une facture proforma", le concept "administratif" pourrait être généré à partir de la source "facture".
+
+* startTime (Time Stamp Unix) : Indication temporelle du début de l'analyse. Time Stamp Unix en millisecondes.
+
+* value (String) : Valeur de l'élément auquel cet attribut est rattaché.
+
 
 TEST
 --

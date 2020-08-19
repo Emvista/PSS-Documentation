@@ -25,19 +25,6 @@ INPUT
 OUTPUT
 --
 HTTP Status : 200
-
-* endTime (Time Stamp Unix) : Indication temporelle de la fin de l'analyse. Time Stamp Unix en millisecondes.
-
-* score (Integer) : Score entre 0 et 1 de l'élément auquel cet attribut est rattaché.
-
-* startTime (Time Stamp Unix) : Indication temporelle du début de l'analyse. Time Stamp Unix en millisecondes.
-
-* value (String) : Valeur de l'élément auquel cet attribut est rattaché.
-
-* values (List) : Liste des requêtes SPARQL générées à partir du texte donné en entrée.
-
-* valuesToDisplay (List) : Liste des requêtes SPARQL générées à partir du texte donné en entrée, contenant les informations de mise en forme du texte (sauts de ligne : \n, tabulations : \t, ...).
-
 Body :
 
 ```JSON
@@ -53,6 +40,19 @@ Body :
    }
 }
 ```
+
+* endTime (Time Stamp Unix) : Indication temporelle de la fin de l'analyse. Time Stamp Unix en millisecondes.
+
+* score (Integer) : Score entre 0 et 1 de l'élément auquel cet attribut est rattaché.
+
+* startTime (Time Stamp Unix) : Indication temporelle du début de l'analyse. Time Stamp Unix en millisecondes.
+
+* value (String) : Valeur de l'élément auquel cet attribut est rattaché.
+
+* values (List) : Liste des requêtes SPARQL générées à partir du texte donné en entrée.
+
+* valuesToDisplay (List) : Liste des requêtes SPARQL générées à partir du texte donné en entrée, contenant les informations de mise en forme du texte (sauts de ligne : \n, tabulations : \t, ...).
+
 
 TEST
 --

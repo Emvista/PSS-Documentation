@@ -11,7 +11,18 @@ Query
 * Header : Content-Type: application/json
 * Poa-Token : TOKEN
 * Server : https://pss-api.prevyo.com/pss/api/v1/anonymizer
-* Body : {"text": "TEXT"}
+* Body : 
+
+```JSON
+{
+	"text": "TEXT",
+	{
+		"name": "lang",
+		"value": "LANG"
+	}
+}
+```
+avec LANG : fr (par défaut) ou en.
 
 INPUT
 --
@@ -25,6 +36,34 @@ INPUT
 OUTPUT
 --
 HTTP Status : 200
+
+Body :
+
+```JSON
+{
+  "startTime" : 1597234633193,
+  "endTime" : 1597234634198,
+  "result" : {
+    "namedentities" : [ {
+      "value" : "Luc",
+      "refValue" : "0-3",
+      "tags" : [ "nerd:Person" ],
+      "start" : 13,
+      "end" : 16,
+      "source" : null
+    }, {
+      "value" : "06 21 32 43 54 .",
+      "refValue" : "0-6",
+      "tags" : [ "nerd:PhoneNumber" ],
+      "start" : 24,
+      "end" : 40,
+      "source" : null
+    } ],
+    "annotatedValue" : "Le numéro de <PERSON_13> est le <PHONENUMBER_24>"
+  }
+}
+
+```
 
 * annotatedValue (String) : Donnée textuelle annotée avec le langage de balisage XML. Dans ce service, une balise est de la forme <TAG_INT/> avec TAG correspondant à un type d'entité et INT correspondant à "start" qui sert d'identifiant.
 
@@ -55,33 +94,6 @@ Dans "Luc envoie une facture proforma", "Luc" a pour tag nerd:Person.
 * value (String) : Valeur de l'élément auquel cet attribut est rattaché.
 
 
-Body :
-
-```JSON
-{
-  "startTime" : 1597234633193,
-  "endTime" : 1597234634198,
-  "result" : {
-    "namedentities" : [ {
-      "value" : "Luc",
-      "refValue" : "0-3",
-      "tags" : [ "nerd:Person" ],
-      "start" : 13,
-      "end" : 16,
-      "source" : null
-    }, {
-      "value" : "06 21 32 43 54 .",
-      "refValue" : "0-6",
-      "tags" : [ "nerd:PhoneNumber" ],
-      "start" : 24,
-      "end" : 40,
-      "source" : null
-    } ],
-    "annotatedValue" : "Le numéro de <PERSON_13> est le <PHONENUMBER_24>"
-  }
-}
-
-```
 
 TEST
 --
