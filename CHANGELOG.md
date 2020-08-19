@@ -4,10 +4,11 @@
 - Intégration de la coréférence dans le service Parser
 - Nouvelle visualisation pour le service Parser
 - Documentation des API REST à jour
+- Le service Sentiment Expérimental (version 2020.07) est maintenant le service par défaut.
 
 ## Notes pour l'anglais
 
-La langue est passéd en paramètre, par défaut c'est le français.  
+La langue est passée en paramètre. Par défaut c'est le français. Les langues disponibles sont : français (fr) et anglais (en).   
 
 ```JSON
 {
