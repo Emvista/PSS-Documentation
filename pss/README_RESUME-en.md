@@ -11,7 +11,21 @@ Query
 * Header : Content-Type: application/json
 * Poa-Token : TOKEN
 * Server : https://pss-api.prevyo.com/pss/api/v1/summarizer
-* Body : {"text": "TEXT"}
+* Body : 
+
+```JSON
+{
+	"text": "TEXT",
+	"parameters": [
+		{
+			"name": "lang",
+			"value": "LANG"
+		}
+	]
+}
+```
+
+With LANG : fr (default) ou en.
 
 INPUT
 --
@@ -25,21 +39,6 @@ INPUT
 OUTPUT
 --
 HTTP Status : 200
-
-* endTime (Time Stamp Unix) : Indication temporelle de la fin de l'analyse. Time Stamp Unix en millisecondes.
-
-* id (Integer) : Identifiant de l'élément auquel cet attribut est rattaché.
-
-* level (Integer) : niveau d'analyse. Dans le cadre du service Summarizer, "level" est un niveau d'abstraction compris entre 1 et 10 : 1 indique un résumé proche du texte d'origine, 10 indique un texte le plus fortement résumé.
-
-* result (List) : Liste des résultats retournés par le service.
-
-* sentences (List) : Phrases analysées.
-
-* startTime (Time Stamp Unix) : Indication temporelle du début de l'analyse. Time Stamp Unix en millisecondes.
-
-* value (String) : Valeur de l'élément auquel cet attribut est rattaché.
-
 Body :
 
 ```JSON
@@ -90,6 +89,21 @@ Body :
     } ]
   }
 ```
+
+* endTime (Time Stamp Unix) : Indication temporelle de la fin de l'analyse. Time Stamp Unix en millisecondes.
+
+* id (Integer) : Identifiant de l'élément auquel cet attribut est rattaché.
+
+* level (Integer) : niveau d'analyse. Dans le cadre du service Summarizer, "level" est un niveau d'abstraction compris entre 1 et 10 : 1 indique un résumé proche du texte d'origine, 10 indique un texte le plus fortement résumé.
+
+* result (List) : Liste des résultats retournés par le service.
+
+* sentences (List) : Phrases analysées.
+
+* startTime (Time Stamp Unix) : Indication temporelle du début de l'analyse. Time Stamp Unix en millisecondes.
+
+* value (String) : Valeur de l'élément auquel cet attribut est rattaché.
+
 
 TEST
 --

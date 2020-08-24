@@ -25,39 +25,6 @@ INPUT
 OUTPUT
 --
 HTTP Status : 200
-
-* arguments (Object) : Sémantiquement un prédicat exprime une propriété ou une relation, c'est-à-dire quelque chose d'attribuable à une ou plusieurs entités (en l'occurrence les arguments).
-Dans "Luc envoie une facture proforma", "envoyer" est un prédicat ayant pour arguments "Luc" et "facture proforma".
-
-* endTime (Time Stamp Unix) : Indication temporelle de la fin de l'analyse. Time Stamp Unix en millisecondes.
-
-* id (Integer) : Identifiant de l'élément auquel cet attribut est rattaché.
-
-* negation (Boolean : true/false) : Indique si le token, la valeur ou le prédicat considéré est négatif ou affirmatif.
-Dans "Luc envoie une facture proforma", l'attribut negation vaut false car la phrase est affirmative.
-
-* predicate (String) : Sémantiquement un prédicat exprime une propriété ou une relation, c'est-à-dire quelque chose d'attribuable à une ou plusieurs entités (en l'occurrence les arguments).
-Dans "Luc envoie une facture", "envoyer" est un prédicat ayant pour arguments "Luc" et "facture".
-
-* refSource (String) : Indique l'identifiant du terme. Cet identifiant existe dans plusieurs services ce qui permet de croiser des informations provenant de ces services.
-
-* refValue (String) : Indique l'identifiant du terme. Cet identifiant existe dans plusieurs services ce qui permet de croiser des informations provenant de ces services.
-
-* result (List) : Liste des résultats retournés par le service.
-
-* role (String) : Role sémantique parmis : vn:Agent, vn:Theme, vn:Patient, vn:Time, vn:Beneficiary, vn:Location, vn:Recipient, vn:Pivot, etc.
-Dans "Luc envoie une facture proforma", "Luc" a pour rôle Agent et "facture proforma" a pour rôle Theme.
-
-* score (Integer) : Score de l'élément auquel cet attribut est rattaché.
-
-* start (Integer) : Index de début (en nombre de caractères).
-Dans "Luc envoie une facture proforma", la valeur de end pour le mot "une" est 11.
-
-* tags (List) : Liste d'étiquettes sémantiques. Cf. "tag".
-
-* value (String) : Valeur de l'élément auquel cet attribut est rattaché.
-
-
 Body :
 
 ```JSON
@@ -151,6 +118,40 @@ Body :
   }
 }
 ```
+
+
+* arguments (Object) : Sémantiquement un prédicat exprime une propriété ou une relation, c'est-à-dire quelque chose d'attribuable à une ou plusieurs entités (en l'occurrence les arguments).
+Dans "Luc envoie une facture proforma", "envoyer" est un prédicat ayant pour arguments "Luc" et "facture proforma".
+
+* endTime (Time Stamp Unix) : Indication temporelle de la fin de l'analyse. Time Stamp Unix en millisecondes.
+
+* id (Integer) : Identifiant de l'élément auquel cet attribut est rattaché.
+
+* negation (Boolean : true/false) : Indique si le token, la valeur ou le prédicat considéré est négatif ou affirmatif.
+Dans "Luc envoie une facture proforma", l'attribut negation vaut false car la phrase est affirmative.
+
+* predicate (String) : Sémantiquement un prédicat exprime une propriété ou une relation, c'est-à-dire quelque chose d'attribuable à une ou plusieurs entités (en l'occurrence les arguments).
+Dans "Luc envoie une facture", "envoyer" est un prédicat ayant pour arguments "Luc" et "facture".
+
+* refSource (String) : Indique l'identifiant du terme. Cet identifiant existe dans plusieurs services ce qui permet de croiser des informations provenant de ces services.
+
+* refValue (String) : Indique l'identifiant du terme. Cet identifiant existe dans plusieurs services ce qui permet de croiser des informations provenant de ces services.
+
+* result (List) : Liste des résultats retournés par le service.
+
+* role (String) : Role sémantique parmis : vn:Agent, vn:Theme, vn:Patient, vn:Time, vn:Beneficiary, vn:Location, vn:Recipient, vn:Pivot, etc.
+Dans "Luc envoie une facture proforma", "Luc" a pour rôle Agent et "facture proforma" a pour rôle Theme.
+
+* score (Integer) : Score de l'élément auquel cet attribut est rattaché.
+
+* start (Integer) : Index de début (en nombre de caractères).
+Dans "Luc envoie une facture proforma", la valeur de end pour le mot "une" est 11.
+
+* tags (List) : Liste d'étiquettes sémantiques. Cf. "tag".
+
+* value (String) : Valeur de l'élément auquel cet attribut est rattaché.
+
+
 
 TEST
 --

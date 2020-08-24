@@ -11,7 +11,20 @@ Query
 * Header : Content-Type: application/json
 * Poa-Token : TOKEN
 * Server : https://pss-api.prevyo.com/pss/api/v1/keywords
-* Body : {"text": "TEXT"}
+* Body : 
+
+```JSON
+{
+	"text": "TEXT",
+	"parameters": [
+		{
+			"name": "lang",
+			"value": "LANG"
+		}
+	]
+}
+```
+avec LANG : fr (par défaut) ou en.
 
 INPUT
 --
@@ -31,28 +44,6 @@ INPUT
 OUTPUT
 --
 HTTP Status : 200
-
-* context (String) : Ensemble de mots constituant le contexte de value.
-Dans "Luc envoie une facture proforma", "proforma" a pour contexte "facture proforma".
-
-* contexts (List) : Liste de contextes. Cf. "context" dans le glossaire.
-
-* endTime (Time Stamp Unix) : Indication temporelle de la fin de l'analyse. Time Stamp Unix en millisecondes.
-
-* keywords (List) : Liste de mots clés.
-
-* pos (String) : Catégorie grammaticale. Voir la liste des catégories grammaticales gérées. 
-
-* refValue (String) : Indique l'identifiant du terme. Cet identifiant existe dans plusieurs services ce qui permet de croiser des informations provenant de ces services.
-
-* result (List) : Liste des résultats retournés par le service.
-
-* score (Integer) : Score de l'élément auquel cet attribut est rattaché.
-
-* startTime (Time Stamp Unix) : Indication temporelle du début de l'analyse. Time Stamp Unix en millisecondes.
-
-* value (String) : Valeur de l'élément auquel cet attribut est rattaché.
-
 Body :
 
 ```JSON
@@ -119,6 +110,29 @@ Body :
 }
 
 ```
+
+* context (String) : Ensemble de mots constituant le contexte de value.
+Dans "Luc envoie une facture proforma", "proforma" a pour contexte "facture proforma".
+
+* contexts (List) : Liste de contextes. Cf. "context" dans le glossaire.
+
+* endTime (Time Stamp Unix) : Indication temporelle de la fin de l'analyse. Time Stamp Unix en millisecondes.
+
+* keywords (List) : Liste de mots clés.
+
+* pos (String) : Catégorie grammaticale. Voir la liste des catégories grammaticales gérées. 
+
+* refValue (String) : Indique l'identifiant du terme. Cet identifiant existe dans plusieurs services ce qui permet de croiser des informations provenant de ces services.
+
+* result (List) : Liste des résultats retournés par le service.
+
+* score (Integer) : Score de l'élément auquel cet attribut est rattaché.
+
+* startTime (Time Stamp Unix) : Indication temporelle du début de l'analyse. Time Stamp Unix en millisecondes.
+
+* value (String) : Valeur de l'élément auquel cet attribut est rattaché.
+
+
 
 TEST
 --
