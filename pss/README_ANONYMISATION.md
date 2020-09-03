@@ -11,7 +11,20 @@ Query
 * Header : Content-Type: application/json
 * Poa-Token : TOKEN
 * Server : https://pss-api.prevyo.com/pss/api/v1/anonymizer
-* Body : {"text": "TEXT"}
+* Body : 
+
+```JSON
+{
+	"text": "TEXT",
+	"parameters": [
+		{
+			"name": "lang",
+			"value": "LANG"
+		}
+	]
+}
+```
+avec LANG : fr (par défaut) ou en.
 
 INPUT
 --
@@ -26,6 +39,34 @@ OUTPUT
 --
 HTTP Status : 200
 
+Body :
+
+```JSON
+{
+  "startTime" : 1597234633193,
+  "endTime" : 1597234634198,
+  "result" : {
+    "namedEntities" : [ {
+      "value" : "Luc",
+      "refValue" : "0-3",
+      "tags" : [ "nerd:Person" ],
+      "start" : 13,
+      "end" : 16,
+      "source" : null
+    }, {
+      "value" : "06 21 32 43 54 .",
+      "refValue" : "0-6",
+      "tags" : [ "nerd:PhoneNumber" ],
+      "start" : 24,
+      "end" : 40,
+      "source" : null
+    } ],
+    "annotatedValue" : "Le numéro de <PERSON_13> est le <PHONENUMBER_24>"
+  }
+}
+
+```
+
 * annotatedValue (String) : Donnée textuelle annotée avec le langage de balisage XML. Dans ce service, une balise est de la forme <TAG_INT/> avec TAG correspondant à un type d'entité et INT correspondant à "start" qui sert d'identifiant.
 
 * end (Integer) : Index de fin (en nombre de caractères).
@@ -34,6 +75,8 @@ Dans "Luc envoie une facture proforma", la valeur de end pour le mot "une" est 1
 * endTime (Time Stamp Unix) : Indication temporelle de la fin de l'analyse. Time Stamp Unix en millisecondes.
 
 * namedentities (List) : Liste des entités nommées (noms de personnes, de lieux, d'organisations, etc. ; cf. les tags ayant pour préfixe "nerd:" dans l'entrée "tag" du glossaire).
+
+* refValue (String) : Indique l'identifiant du terme. Cet identifiant existe dans plusieurs services ce qui permet de croiser des informations provenant de ces services.
 
 * result (List) : Liste des résultats retournés par le service.
 
@@ -53,30 +96,6 @@ Dans "Luc envoie une facture proforma", "Luc" a pour tag nerd:Person.
 * value (String) : Valeur de l'élément auquel cet attribut est rattaché.
 
 
-Body :
-
-```JSON
-{
-  "startTime" : 1585833674415,
-  "endTime" : 1585833678144,
-  "result" : {
-    "namedentities" : [ {
-      "value" : "Luc",
-      "tags" : [ "nerd:Person" ],
-      "start" : 13,
-      "end" : 16,
-      "source" : null
-    }, {
-      "value" : "le 06 21 32 43 54 .",
-      "tags" : [ "nerd:PhoneNumber" ],
-      "start" : 24,
-      "end" : 43,
-      "source" : null
-    } ],
-    "annotatedValue" : "Le numéro de <PERSON_13/> est le <PHONENUMBER_24/>"
-  }
-}
-```
 
 TEST
 --

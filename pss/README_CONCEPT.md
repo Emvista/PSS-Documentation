@@ -11,25 +11,291 @@ Query
 * Header : Content-Type: application/json
 * Poa-Token : TOKEN
 * Server : https://pss-api.prevyo.com/pss/api/v1/concepts
-* Body : {"text": "TEXT"}
+* Body : 
+
+```JSON
+{
+	"text": "TEXT",
+	"parameters": [
+		{
+			"name": "lang",
+			"value": "LANG"
+		}
+	]
+}
+```
+avec LANG : fr (par défaut) ou en.
 
 INPUT
 --
 
 ```JSON
 {
-    "text": "Luc aime les pommes."
+    "text": "Paris est une belle ville."
 }
 ```
 
 OUTPUT
 --
 HTTP Status : 200
+Body :
+
+```JSON
+{
+  "startTime" : 1597234837453,
+  "endTime" : 1597234839091,
+  "result" : {
+    "concepts" : [ {
+      "value" : "département",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "pays",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "monde",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "Terre",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "canton",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "région",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "zone",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 3
+    }, {
+      "value" : "agglomération",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 3
+    }, {
+      "value" : "métropole",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "campagne",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "Amérique",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "Europe",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "province",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "continent",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "mégalopole",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "::",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "état",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "planète",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "carte",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "communauté urbaine",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "cité",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "lieu",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 2
+    }, {
+      "value" : "localité",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "endroit",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 2
+    }, {
+      "value" : "commune",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 2
+    }, {
+      "value" : "collectivité territoriale",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "division administrative",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "zone urbaine",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "zone géographique",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "milieu physique",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "municipalité",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "classification",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "division territoriale",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "architecture",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "politique",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "médecine",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "commerce",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "prévention",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "tissu associatif",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "automobile",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "droit",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "histoire",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "administration",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "électricité",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "sociologie",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "économie",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "géographie",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    }, {
+      "value" : "urbanisme",
+      "source" : [ "ville" ],
+      "refSource" : [ "0-4" ],
+      "score" : 1
+    } ]
+  }
+}
+```
 
 
 * endTime (Time Stamp Unix) : Indication temporelle de la fin de l'analyse. Time Stamp Unix en millisecondes.
 
 * concepts (List) : Liste de concepts.
+
+* refSource (String) : Indique l'identifiant du terme. Cet identifiant existe dans plusieurs services ce qui permet de croiser des informations provenant de ces services.
 
 * result (List) : Liste des résultats retournés par le service.
 
@@ -42,173 +308,6 @@ Dans "Luc envoie une facture proforma", le concept "administratif" pourrait êtr
 
 * value (String) : Valeur de l'élément auquel cet attribut est rattaché.
 
-Body :
-
-```JSON
-{
-  "startTime" : 1585837488962,
-  "endTime" : 1585837492390,
-  "result" : {
-    "concepts" : [ {
-      "value" : "douche",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "gâteau",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "salade",
-      "source" : [ "pomme" ],
-      "score" : 3
-    }, {
-      "value" : "sablés bretons et leur duo de confiture de lait",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "Terre",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "pommier",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "Fondue au chocolat",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "mélange sucré salé",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "miam aux fruits",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "pomme d'amour",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "pizza gorgonzola pommes et noix",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "salade de fruits",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "fruit",
-      "source" : [ "pomme" ],
-      "score" : 3
-    }, {
-      "value" : "ingrédient de cuisine",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "produit végétal",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "fruit à pépin",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "aliment périssable",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "aliment",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "produit alimentaire",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "personne",
-      "source" : [ "pomme" ],
-      "score" : 2
-    }, {
-      "value" : "individu",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "être humain",
-      "source" : [ "pomme" ],
-      "score" : 2
-    }, {
-      "value" : "être vivant",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "fruit comestible",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "ingrédient de recette de cuisine",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "organe végétal",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "objet",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "fruit à pépins",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "gastronomie",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "biologie",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "botanique",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "cuisine",
-      "source" : [ "pomme" ],
-      "score" : 2
-    }, {
-      "value" : "agriculture",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "marine",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "architecture",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "nutrition",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "alimentation",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "fruits",
-      "source" : [ "pomme" ],
-      "score" : 1
-    }, {
-      "value" : "pomme de terre",
-      "source" : [ "pomme" ],
-      "score" : 1
-    } ]
-  }
-}
-```
 
 TEST
 --

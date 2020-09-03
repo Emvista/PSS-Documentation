@@ -11,20 +11,63 @@ Query
 * Header : Content-Type: application/json
 * Poa-Token : TOKEN
 * Server : https://pss-api.prevyo.com/pss/api/v1/highlight
-* Body : {"text": "TEXT"}
+* Body : 
+
+```JSON
+{
+	"text": "TEXT",
+	"parameters": [
+		{
+			"name": "lang",
+			"value": "LANG"
+		}
+	]
+}
+```
+avec LANG : fr (par défaut) ou en.
 
 INPUT
 --
 
 ```JSON
 {
-    "text": "Luc et Marc Dupont aiment les pommes."
+    "text": "Luc et Marc Dupont aiment les pommes.",
+    "parameters": [
+        {
+            "name": "lowercase",
+            "value": "true"
+        }
+    ]
 }
 ```
 
 OUTPUT
 --
 HTTP Status : 200
+Body :
+
+```JSON
+{
+  "startTime" : 1597235911116,
+  "endTime" : 1597235912146,
+  "result" : {
+    "namedEntities" : [ {
+      "value" : "Luc",
+      "refValue" : "0-0",
+      "tags" : [ "nerd:Person" ],
+      "start" : 0,
+      "end" : 3
+    }, {
+      "value" : "Marc Dupont",
+      "refValue" : "0-2",
+      "tags" : [ "nerd:Person" ],
+      "start" : 7,
+      "end" : 18
+    } ],
+    "annotatedValue" : "<nerd:Person>Luc</nerd:Person> et <nerd:Person>Marc Dupont</nerd:Person> aiment les pommes ."
+  }
+}
+```
 
 * annotatedValue (String) : Donnée textuelle annotée avec le langage de balisage XML. Dans ce service, une balise est de la forme <TAG>VALUE</TAG> avec TAG correspondant à un type d'entité (cf. "tag") et VALUE correspondant à la chaîne de caractères annotée.
 
@@ -34,6 +77,8 @@ Dans "Luc envoie une facture proforma", la valeur de end pour le mot "une" est 1
 * endTime (Time Stamp Unix) : Indication temporelle de la fin de l'analyse. Time Stamp Unix en millisecondes.
 
 * namedentities (List) : Liste des entités nommées (noms de personnes, de lieux, d'organisations, etc. ; cf. les tags ayant pour préfixe "nerd:" dans l'entrée "tag" du glossaire).
+
+* refValue (String) : Indique l'identifiant du terme. Cet identifiant existe dans plusieurs services ce qui permet de croiser des informations provenant de ces services.
 
 * result (List) : Liste des résultats retournés par le service.
 
@@ -48,29 +93,6 @@ Dans "Luc envoie une facture proforma", la valeur de end pour le mot "une" est 1
 Dans "Luc envoie une facture proforma", "Luc" a pour tag nerd:Person.
 
 * value (String) : Valeur de l'élément auquel cet attribut est rattaché.
-
-Body :
-
-```JSON
-{
-  "startTime" : 1585835594994,
-  "endTime" : 1585835598384,
-  "result" : {
-    "namedentities" : [ {
-      "value" : "Luc",
-      "tags" : [ "nerd:Person" ],
-      "start" : 0,
-      "end" : 3
-    }, {
-      "value" : "Marc Dupont",
-      "tags" : [ "nerd:Person" ],
-      "start" : 7,
-      "end" : 18
-    } ],
-    "annotatedValue" : "<nerd:Person>Luc</nerd:Person> et <nerd:Person>Marc Dupont</nerd:Person> aiment les pommes ."
-  }
-}
-```
 
 TEST
 --

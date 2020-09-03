@@ -11,20 +11,84 @@ Query
 * Header : Content-Type: application/json
 * Poa-Token : TOKEN
 * Server : https://pss-api.prevyo.com/pss/api/v1/summarizer
-* Body : {"text": "TEXT"}
+* Body : 
+
+```JSON
+{
+	"text": "TEXT",
+	"parameters": [
+		{
+			"name": "lang",
+			"value": "LANG"
+		}
+	]
+}
+```
+avec LANG : fr (par défaut) ou en.
 
 INPUT
 --
 
 ```JSON
 {
-    "text": "Emvista est une société (montpelliéraine) qui développe des briques logicielles pour comprendre le langage naturel."
+    "text": "Emvista est une société (montpelliéraine) innovante qui développe des briques logicielles pour comprendre le langage naturel."
 }
 ```
 
 OUTPUT
 --
 HTTP Status : 200
+Body :
+
+```JSON
+{
+  "startTime" : 1597235217521,
+  "endTime" : 1597235220237,
+  "result" : {
+    "sentences" : [ {
+      "id" : 0,
+      "value" : "Emvista est une société innovante qui développe des briques logicielles pour comprendre le langage naturel . ",
+      "level" : 1
+    }, {
+      "id" : 0,
+      "value" : "Emvista est une société innovante qui développe des briques logicielles pour comprendre le langage naturel . ",
+      "level" : 2
+    }, {
+      "id" : 0,
+      "value" : "Emvista est une société innovante qui développe des briques logicielles pour comprendre le langage naturel . ",
+      "level" : 3
+    }, {
+      "id" : 0,
+      "value" : "Emvista est une société innovante qui développe des briques logicielles pour comprendre le langage naturel . ",
+      "level" : 4
+    }, {
+      "id" : 0,
+      "value" : "Emvista est une société innovante qui développe des briques logicielles pour comprendre le langage naturel . ",
+      "level" : 5
+    }, {
+      "id" : 0,
+      "value" : "Emvista est une société innovante qui développe des briques logicielles pour comprendre le langage naturel . ",
+      "level" : 6
+    }, {
+      "id" : 0,
+      "value" : "Emvista est une société innovante qui développe des briques pour comprendre le langage . ",
+      "level" : 7
+    }, {
+      "id" : 0,
+      "value" : "Emvista est une société innovante . ",
+      "level" : 8
+    }, {
+      "id" : 0,
+      "value" : "Emvista est une société . ",
+      "level" : 9
+    }, {
+      "id" : 0,
+      "value" : "Emvista est une société . ",
+      "level" : 10
+    } ]
+  }
+}
+```
 
 * endTime (Time Stamp Unix) : Indication temporelle de la fin de l'analyse. Time Stamp Unix en millisecondes.
 
@@ -40,56 +104,6 @@ HTTP Status : 200
 
 * value (String) : Valeur de l'élément auquel cet attribut est rattaché.
 
-Body :
-
-```JSON
-{
-  "startTime" : 1585838031451,
-  "endTime" : 1585838036498,
-  "result" : {
-    "sentences" : [ {
-      "id" : 0,
-      "value" : "Emvista est une société qui développe des briques logicielles pour comprendre le langage naturel . ",
-      "level" : 1
-    }, {
-      "id" : 0,
-      "value" : "Emvista est une société qui développe des briques logicielles pour comprendre le langage naturel . ",
-      "level" : 2
-    }, {
-      "id" : 0,
-      "value" : "Emvista est une société qui développe des briques logicielles pour comprendre le langage naturel . ",
-      "level" : 3
-    }, {
-      "id" : 0,
-      "value" : "Emvista est une société qui développe des briques logicielles pour comprendre le langage naturel . ",
-      "level" : 4
-    }, {
-      "id" : 0,
-      "value" : "Emvista est une société qui développe des briques logicielles pour comprendre le langage naturel . ",
-      "level" : 5
-    }, {
-      "id" : 0,
-      "value" : "Emvista est une société qui développe des briques logicielles pour comprendre le langage naturel . ",
-      "level" : 6
-    }, {
-      "id" : 0,
-      "value" : "Emvista est une société qui développe des briques pour comprendre le langage . ",
-      "level" : 7
-    }, {
-      "id" : 0,
-      "value" : "Emvista est une société . ",
-      "level" : 8
-    }, {
-      "id" : 0,
-      "value" : "Emvista est une société . ",
-      "level" : 9
-    }, {
-      "id" : 0,
-      "value" : "Emvista est une société . ",
-      "level" : 10
-    } ]
-  }
-```
 
 TEST
 --

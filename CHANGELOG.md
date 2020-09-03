@@ -1,3 +1,33 @@
+# Version 2020.08
+- Intéropérabilité des services : possibilité de croiser les résultats des services (par exemple Highlighter pour repérer des noms de produits et Sentiments pour obtenir les opinions détectés sur ces produits.
+- Nouveaux services pour l'analyse de l'anglais :  Mots clés, Concepts, Highlighter, Anonymisation, Résumés, Parser.
+- Intégration de la coréférence dans le service Parser
+- Nouvelle visualisation pour le service Parser
+- Documentation des API REST à jour
+- Le service Sentiment Expérimental (version 2020.07) est maintenant le service par défaut.
+
+## Notes pour l'anglais
+
+La langue est passée en paramètre. Par défaut c'est le français. Les langues disponibles sont : français (fr) et anglais (en).   
+
+```JSON
+{
+	"text": "TEXT",
+	"parameters": [
+		{
+			"name": "lang",
+			"value": "LANG"
+		}
+	]
+}
+```
+avec LANG : fr (par défaut) ou en.
+
+
+# Version 2020.07
+- Ajout de la possibilité de passer des paramètres à l'API.
+- Ajout du service Sentiments Expérimental.
+
 # Version 2020.05
 
 ## Nouveautés de l'API :

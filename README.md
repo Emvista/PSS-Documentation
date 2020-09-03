@@ -7,6 +7,7 @@ Pour tester les Prevyo Semantic Services vous pouvez soit utiliser l'interface w
 
 Version
 ==
+- 2020.08 [changelog](CHANGELOG.md#version-202008)
 - 2020.05 [changelog](CHANGELOG.md#version-202005)
 - 2020.03 [changelog](CHANGELOG.md#version-202003)
 - 2019.12
@@ -29,7 +30,7 @@ Réponse :
 `{"startTime":1587460733812,"endTime":1587460735473,"result":{"sentiments":[{"value":"ne pas aimer(pomme(bonne))","emotions":["sadness"],"polarity":-1.0,"pointOfView":"Paul"}]}}{"startTime":1587460733812,"endTime":1587460735473,"result":{"sentiments":[{"value":"ne pas aimer(pomme(bonne))","emotions":["sadness"],"polarity":-1.0,"pointOfView":"Paul"}]}}`
 
 
-Au-dessus de 1000 mots, l'API est asynchrone. Elle renvera un token dans la réponse à la requête. 
+Au-dessus de 1000 mots, l'API est asynchrone. Elle renverra un token dans la réponse à la requête. 
 ====
 
 Exemple:
@@ -158,6 +159,8 @@ Dans "Luc envoie une facture proforma", "proforma" a pour contexte "facture prof
 
 * depRel (String) : Type de la relation de dépendance syntaxique entre deux tokens : sujet, objet, complément, etc. Voir la liste des dépendances gérées.
 
+* emitter (String) : Emetteur de l'élément auquel cet attribut est rattaché. 
+
 * emotions (List) : Liste d'émotions parmi : joie, tristesse, peur, colère, dégoût, surprise.
 Dans "Luc déteste envoyer des e-mails", la colère et le dégoût sont des émotions déclenchées.
 
@@ -167,6 +170,8 @@ Dans "Luc envoie une facture proforma", la valeur de end pour le mot "une" est 1
 * endTime (Time Stamp Unix) : Indication temporelle de la fin de l'analyse. Time Stamp Unix en millisecondes.
 
 * form (String) : mot ou locution tel qu'il apparaît dans le contexte (accordé en genre et en nombre par exemple). Par exemple la forme "envoyées" a pour lemme "envoyer". Voir "lemma" dans le glossaire.
+
+ * gender (String) : Indique si le mot est au féminin ou au masculin. 
 
 * head (String) : Tête syntaxique d'un token.
 
@@ -178,10 +183,16 @@ Dans "Luc envoie une facture proforma", la valeur de end pour le mot "une" est 1
 
 * level (Integer) : niveau d'analyse. Dans le cadre du service Summarizer, "level" est un niveau d'abstraction compris entre 1 et 10 : 1 indique un résumé proche du texte d'origine, 10 indique un texte le plus fortement résumé.
 
+* mode (String) : trait grammatical qui dénote la manière dont le verbe exprime le fait (indicatif, impératif, subjonctif, conditionnel, infinitif, participe, gérondif).
+
 * namedentities (List) : Liste des entités nommées (noms de personnes, de lieux, d'organisations, etc. ; cf. les tags ayant pour préfixe "nerd:" dans l'entrée "tag" du glossaire).
 
 * negation (Boolean : true/false) : Indique si le token, la valeur ou le prédicat considéré est négatif ou affirmatif.
 Dans "Luc envoie une facture proforma", l'attribut negation vaut false car la phrase est affirmative.
+
+* number :  Indique si le mot est au singulier ou au pluriel. 
+
+* opinions (List) : Liste des opinions positives et négatives détectées dans le texte.
 
 * person (String) : Indique la première personne ("1"), la deuxième personne ("2") ou la troisième personne ("3"). Par exemple, "vous" est la deuxième personne du pluriel (voir "plural").
 
@@ -235,6 +246,8 @@ Dans "Luc envoie une facture", "envoyer" est un prédicat ayant pour arguments "
 
 * pronominal (Boolean) : Indique si le verbe est pronominal.
 
+* ref[value/source/target/trigger] (String) : Indique l'identifiant du terme. Cet identifiant existe dans plusieurs services ce qui permet de croiser des informations provenant de ces services.
+
 * result (List) : Liste des résultats retournés par le service.
 
 * role (String) : Role sémantique parmis : vn:Agent, vn:Theme, vn:Patient, vn:Time, vn:Beneficiary, vn:Location, vn:Recipient, vn:Pivot, etc.
@@ -257,9 +270,13 @@ Dans "Luc envoie une facture proforma", la valeur de end pour le mot "une" est 1
 * tag (String) : Etiquette sémantique faisant partie de l'ontologie NERD ou de l'otologie WSD : nerd:Date, nerd:Animal, nerd:Function, nerd:Nation, nerd:Time, nerd:Timemin, nerd:Timemax, nerd:Timefuzzy, nerd:Timeduration, nerd:Person, nerd:Facility, nerd:Location, nerd:LocationSource, nerd:LocationDestination, nerd:LocationFuzzy, nerd:LocationSpan, nerd:Money, nerd:Organization, nerd:Measure, nerd:PhoneNumber, nerd:EMail, nerd:Duration, nerd:Set, nerd:Url, nerd:Brand, nerd:Event, nerd:FictionalCharacter, nerd:Language, nerd:TransportLine, nerd:Sportsteam, nerd:Sport, nerd:Media, nerd:Method, nerd:Product, nerd:ProductRange, nerd:ReferenceDocument, nerd:Reference, nerd:Reward, nerd:Species, nerd:Ingredient, wsd:Concrete, wsd:Abstract, wsd:Animate, wsd:Inanimate, wsd:LivingBeing, wsd:Animal, wsd:Vehicle, wsd:Vegetal, wsd:Location, wsd:Time, wsd:TimeMin, wsd:TimeMax, wsd:TimeFuzzy, wsd:Sport, wsd:Color, wsd:MusicalInstrument, wsd:Religion, ...
 Dans "Luc envoie une facture proforma", "Luc" a pour tag nerd:Person.
 
+* target (String) : Cible sur laquelle porte l'élément auquel il est rattaché (l'opinion par exemple).
+
 * tense (String) : Indique le temps utilisé ("past", "present", ou "future").
 
 * tokens (List) : Ensemble de tokens, c'est-à-dire de mots ou locutions.
+
+* trigger (String) : Déclencheur de l'élément auquel il est rattaché (par exemple une émotion).
 
 * type : Type de la phrase analysée : declarative, exclamative, interrogative ou imperative. 
 
