@@ -10,7 +10,7 @@ Query
 * Method : POST
 * Header : Content-Type: application/json
 * Poa-Token : TOKEN
-* Server : https://pss-api.prevyo.com/pss/api/v1/highlight
+* Server : https://pss-api.prevyo.com/pss/api/v1/highlighter
 * Body : 
 
 ```JSON
