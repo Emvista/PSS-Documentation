@@ -7,6 +7,7 @@ Pour tester les Prevyo Semantic Services vous pouvez soit utiliser l'interface w
 
 Version
 ==
+- 2021.06 [changelog](CHANGELOG.md#version-202106)
 - 2020.08 [changelog](CHANGELOG.md#version-202008)
 - 2020.05 [changelog](CHANGELOG.md#version-202005)
 - 2020.03 [changelog](CHANGELOG.md#version-202003)
@@ -46,6 +47,24 @@ Récupération du résultat de l'analyse :
 
 Réponse :
 `{"startTime": 1587476808783,"endTime": 1587476889428,"result": { ....}`
+
+Notes pour les langues
+====
+
+La langue est passée en paramètre. Par défaut c'est l'anglais. Les langues disponibles sont : français (fr) et anglais (en).   
+
+```JSON
+{
+	"text": "TEXT",
+	"parameters": [
+		{
+			"name": "lang",
+			"value": "LANG"
+		}
+	]
+}
+```
+avec LANG : fr ou en (par défaut).
 
 
 Postman
