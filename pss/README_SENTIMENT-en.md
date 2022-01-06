@@ -8,8 +8,8 @@ Sentiment analysis aims at identifying sentiments (positive, negative, and neutr
 Query
 --
 * Method : POST
-* Header : Content-Type: application/json
-* Poa-Token : TOKEN
+* Header : "Content-Type: application/json"
+* Header : "Poa-Token : TOKEN"
 * Server : https://pss-api.prevyo.com/pss/api/v1/sentiments
 * Body : {"text": "TEXT"}
 
