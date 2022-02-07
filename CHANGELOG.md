@@ -1,3 +1,6 @@
+# Version 2021.06
+- la langue par defaut devient l'anglais
+
 # Version 2020.08
 - Intéropérabilité des services : possibilité de croiser les résultats des services (par exemple Highlighter pour repérer des noms de produits et Sentiments pour obtenir les opinions détectés sur ces produits.
 - Nouveaux services pour l'analyse de l'anglais :  Mots clés, Concepts, Highlighter, Anonymisation, Résumés, Parser.

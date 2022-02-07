@@ -7,8 +7,8 @@ Le NLU (<i>Natural Language Understanding</i>) sert à extraire les intentions e
 Query
 --
 * Method : POST
-* Header : Content-Type: application/json
-* Poa-Token : TOKEN
+* Header : "Content-Type: application/json"
+* Header : "Poa-Token : TOKEN"
 * Server : https://pss-api.prevyo.com/pss/api/v1/nlu
 * Body : {"text": "TEXT"}
 
