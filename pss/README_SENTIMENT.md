@@ -8,8 +8,8 @@ L'analyse de sentiments (<i>opinion mining</i> ou <i>sentiment analysis</i>) con
 Query
 --
 * Method : POST
-* Header : Content-Type: application/json
-* Poa-Token : TOKEN
+* Header : "Content-Type: application/json"
+* Header : "Poa-Token : TOKEN"
 * Server : https://pss-api.prevyo.com/pss/api/v1/sentiments
 * Body : {"text": "TEXT"}
 
@@ -18,12 +18,16 @@ INPUT
 
 ```JSON
 {
-    "text": "Je déteste les e-mails."
+    "text": "Luc déteste les e-mails."
     "parameters": [
         {
-            "name": "lowercase",
-            "value": "false"
-        }
+          "name": "lowercase",
+          "value": "false"
+        },
+        {
+			    "name": "lang",
+			    "value": "LANG"
+		    }
     ]
 }
 ```

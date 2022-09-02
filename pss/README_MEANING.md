@@ -8,8 +8,8 @@ Meaning Representation retourne une représentation sémantique du texte donné 
 Query
 --
 * Method : POST
-* Header : Content-Type: application/json
-* Poa-Token : TOKEN
+* Header : "Content-Type: application/json"
+* Header : "Poa-Token : TOKEN"
 * Server : https://pss-api.prevyo.com/pss/api/v1/meaningrepresentation
 * Body : {"text": "TEXT"}
 
@@ -18,7 +18,14 @@ INPUT
 
 ```JSON
 {
-    "text": "Marie enverra la facture demain."
+    "text": "Marie enverra la facture demain.",
+    "parameters": [
+      {
+        "name": "lang",
+        "value": "LANG"
+      }
+    ]
+
 }
 ```
 

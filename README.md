@@ -5,8 +5,10 @@ Briques logicielles pour comprendre le langage naturel.
 
 Pour tester les Prevyo Semantic Services vous pouvez soit utiliser l'interface web [https://pss.prevyo.com/](https://pss.prevyo.com/) soit utiliser l'API REST. Pour utiliser l'API REST, vous devez créer un compte Prevyo sur [https://pss.prevyo.com/](https://pss.prevyo.com/). Une fois connecté(e), rendez-vous dans le menu en haut à droite de l'écran, dans API, pour récupérer le token d'authentification.
 
-Version
+Versions
 ==
+- 2022.06 [changelog](CHANGELOG.md#version-202206)
+- 2021.06 [changelog](CHANGELOG.md#version-202106)
 - 2020.08 [changelog](CHANGELOG.md#version-202008)
 - 2020.05 [changelog](CHANGELOG.md#version-202005)
 - 2020.03 [changelog](CHANGELOG.md#version-202003)
@@ -47,17 +49,23 @@ Récupération du résultat de l'analyse :
 Réponse :
 `{"startTime": 1587476808783,"endTime": 1587476889428,"result": { ....}`
 
+Notes pour les langues
+====
 
-Postman
-===
+La langue doit être passée en paramètre. Les langues disponibles sont : français (fr) et anglais (en).   
 
-Télécharger et installer [POSTMAN](https://www.getpostman.com/)
-
-Télécharger le fichier collection Postman : [Postman Collection](postman/PSS.postman_collection.json) et l'importer dans Postman
-
-Créer 2 variables :
-* PSS-SERVER : https://pss-api.prevyo.com/
-* POA-TOKEN : votre token Prevyo
+```JSON
+{
+	"text": "TEXT",
+	"parameters": [
+		{
+			"name": "lang",
+			"value": "LANG"
+		}
+	]
+}
+```
+avec LANG : fr ou en.
 
 
 REST API

@@ -8,8 +8,8 @@ Le service Query prend une question écrite en langage naturel et la transforme 
 Query
 --
 * Method : POST
-* Header : Content-Type: application/json
-* Poa-Token : TOKEN
+* Header : "Content-Type: application/json"
+* Header : "Poa-Token : TOKEN"
 * Server : https://pss-api.prevyo.com/pss/api/query
 * Body : {"text": "TEXT"}
 
