@@ -18,7 +18,7 @@ INPUT
 
 ```JSON
 {
-    "text": "Je déteste les e-mails."
+    "text": "Luc déteste les e-mails."
     "parameters": [
         {
           "name": "lowercase",

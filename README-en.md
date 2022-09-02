@@ -4,9 +4,9 @@ Prevyo Semantic Services
 Tools for natural language processing.
 
 To use Prevyo Semantic Services: Web interface [https://pss.prevyo.com/](https://pss.prevyo.com/) and REST API are available. 
-To use the REST API you will need to create an Prevyo account on [https://pss.prevyo.com/](https://pss.prevyo.com/).
+To use the REST API you must create a Prevyo account on [https://pss.prevyo.com/](https://pss.prevyo.com/).
 
-Version
+Versions
 ==
 - 2022.06 [changelog](CHANGELOG.md#version-202206)
 - 2021.06 [changelog](CHANGELOG.md#version-202106)

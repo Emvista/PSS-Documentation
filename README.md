@@ -5,7 +5,7 @@ Briques logicielles pour comprendre le langage naturel.
 
 Pour tester les Prevyo Semantic Services vous pouvez soit utiliser l'interface web [https://pss.prevyo.com/](https://pss.prevyo.com/) soit utiliser l'API REST. Pour utiliser l'API REST, vous devez créer un compte Prevyo sur [https://pss.prevyo.com/](https://pss.prevyo.com/). Une fois connecté(e), rendez-vous dans le menu en haut à droite de l'écran, dans API, pour récupérer le token d'authentification.
 
-Version
+Versions
 ==
 - 2022.06 [changelog](CHANGELOG.md#version-202206)
 - 2021.06 [changelog](CHANGELOG.md#version-202106)
