@@ -4,28 +4,16 @@ Prevyo Semantic Services
 Tools for natural language processing.
 
 To use Prevyo Semantic Services: Web interface [https://pss.prevyo.com/](https://pss.prevyo.com/) and REST API are available. 
-To use the REST API you will need to create an Prevyo account on [https://pss.prevyo.com/](https://pss.prevyo.com/) then to contact [dev@emvista.com](mailto:dev@emvista.com) asking for an authentification token.
+To use the REST API you will need to create an Prevyo account on [https://pss.prevyo.com/](https://pss.prevyo.com/).
 
 Version
 ==
+- 2022.06 [changelog](CHANGELOG.md#version-202206)
+- 2021.06 [changelog](CHANGELOG.md#version-202106)
+- 2020.08 [changelog](CHANGELOG.md#version-202008)
 - 2020.05 [changelog](CHANGELOG.md#version-202005)
 - 2020.03 [changelog](CHANGELOG.md#version-202003)
 - 2019.12
-
-
-USAGE
-==
-
-Postman
-===
-
-Télécharger et installer [POSTMAN](https://www.getpostman.com/)
-
-Télécharger le fichier collection Postman : [Postman Collection](postman/PSS.postman_collection.json) et l'importer dans Postman
-
-Créer 2 variables :
-* PSS-SERVER : https://pss-api.prevyo.com/
-* POA-TOKEN : votre token Prevyo
 
 REST API
 =

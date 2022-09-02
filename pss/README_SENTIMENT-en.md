@@ -19,6 +19,12 @@ INPUT
 ```JSON
 {
     "text": "Luc déteste envoyer des e-mails alors que Marie adore ça."
+    "parameters": [
+        {
+			    "name": "lang",
+			    "value": "LANG"
+		    }
+    ]
 }
 ```
 

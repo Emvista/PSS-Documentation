@@ -1,3 +1,19 @@
+# Version 2022.06
+- la langue est obligatoire. La langue doit être passée en paramètre. Les langues disponibles sont : français (fr) et anglais (en).   
+
+```JSON
+{
+	"text": "TEXT",
+	"parameters": [
+		{
+			"name": "lang",
+			"value": "LANG"
+		}
+	]
+}
+```
+
+
 # Version 2021.06
 - la langue par defaut devient l'anglais
 

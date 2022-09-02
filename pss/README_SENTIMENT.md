@@ -21,9 +21,13 @@ INPUT
     "text": "Je déteste les e-mails."
     "parameters": [
         {
-            "name": "lowercase",
-            "value": "false"
-        }
+          "name": "lowercase",
+          "value": "false"
+        },
+        {
+			    "name": "lang",
+			    "value": "LANG"
+		    }
     ]
 }
 ```

@@ -7,6 +7,7 @@ Pour tester les Prevyo Semantic Services vous pouvez soit utiliser l'interface w
 
 Version
 ==
+- 2022.06 [changelog](CHANGELOG.md#version-202206)
 - 2021.06 [changelog](CHANGELOG.md#version-202106)
 - 2020.08 [changelog](CHANGELOG.md#version-202008)
 - 2020.05 [changelog](CHANGELOG.md#version-202005)
@@ -51,7 +52,7 @@ Réponse :
 Notes pour les langues
 ====
 
-La langue est passée en paramètre. Par défaut c'est l'anglais. Les langues disponibles sont : français (fr) et anglais (en).   
+La langue doit être passée en paramètre. Les langues disponibles sont : français (fr) et anglais (en).   
 
 ```JSON
 {
@@ -64,19 +65,7 @@ La langue est passée en paramètre. Par défaut c'est l'anglais. Les langues di
 	]
 }
 ```
-avec LANG : fr ou en (par défaut).
-
-
-Postman
-===
-
-Télécharger et installer [POSTMAN](https://www.getpostman.com/)
-
-Télécharger le fichier collection Postman : [Postman Collection](postman/PSS.postman_collection.json) et l'importer dans Postman
-
-Créer 2 variables :
-* PSS-SERVER : https://pss-api.prevyo.com/
-* POA-TOKEN : votre token Prevyo
+avec LANG : fr ou en.
 
 
 REST API
