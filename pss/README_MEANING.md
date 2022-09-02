@@ -18,7 +18,14 @@ INPUT
 
 ```JSON
 {
-    "text": "Marie enverra la facture demain."
+    "text": "Marie enverra la facture demain.",
+    "parameters": [
+      {
+        "name": "lang",
+        "value": "LANG"
+      }
+    ]
+
 }
 ```
 
