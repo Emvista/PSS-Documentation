@@ -20,7 +20,11 @@ INPUT
 {
     "text": "Marie enverra la facture demain.",
     "parameters": [
-      {
+{
+  "name": "emitter",
+  "value": "Author"
+},
+{
         "name": "lang",
         "value": "LANG"
       }
