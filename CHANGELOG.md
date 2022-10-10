@@ -1,3 +1,9 @@
+# Version 2022.10
+- Suppression du service Sentiment
+- Création d'un service Opinion
+- Création d'un service Emotion
+- Mise à jour de la documentation pour les services Opinions et Emotions
+
 # Version 2022.06
 - la langue est obligatoire. La langue doit être passée en paramètre. Les langues disponibles sont : français (fr) et anglais (en).   
 
