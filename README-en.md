@@ -8,6 +8,7 @@ To use the REST API you must create a Prevyo account on [https://pss.prevyo.com/
 
 Versions
 ==
+- 2022.10 [changelog](CHANGELOG.md#version-202210)
 - 2022.06 [changelog](CHANGELOG.md#version-202206)
 - 2021.06 [changelog](CHANGELOG.md#version-202106)
 - 2020.08 [changelog](CHANGELOG.md#version-202008)
