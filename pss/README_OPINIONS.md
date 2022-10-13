@@ -11,7 +11,7 @@ Query
 * Method : POST
 * Header : "Content-Type: application/json"
 * Header : "Poa-Token : TOKEN"
-* Server : https://pss-api.prevyo.com/pss/api/v1/sentiments
+* Server : https://pss-api.prevyo.com/pss/api/v1/opinions
 * Body : {"text": "TEXT"}
 
 INPUT
@@ -90,5 +90,5 @@ La sortie de ce service fournit :
 TEST
 --
 
-`curl -X POST "https://pss-api.prevyo.com/pss/api/v1/sentiments" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Je déteste les e-mails."}` 
+`curl -X POST "https://pss-api.prevyo.com/pss/api/v1/opinions" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Je déteste les e-mails."}`
 
