@@ -81,14 +81,25 @@ L'extraction de mots clés fournit une liste ordonnée des termes les plus perti
 
 [Rest API](pss/README_KEYWORD.md)
 
-Sentiment
+Emotions
 ==
 
 <img src="images/ic_pss_sentiment.png" alt="drawing" width="80"/>
 
-L'analyse de sentiments (<i>opinion mining</i> ou <i>sentiment analysis</i>) consiste à identifier les sentiments (positif/négatif/neutre) ainsi que les émotions (joie, tristesse, peur, colère, dégoût, surprise) qui sont exprimés dans le texte à analyser. Ce service propose une analyse au niveau des mots et des groupes de mots significatifs. Il est ainsi possible d'identifier des sentiments ou émotions contradictoires au sein d'une même phrase. Par exemple dans "Luc déteste ce produit alors que Marie l'adore." le produit est négatif du point de vue de Luc mais positif du point de vue de Marie.
+L'analyse d'émotions consiste à identifier les émotions (joie, colère, tristesse, dégoût, surprise, peur)
+qui sont exprimées dans le texte à analyser. Ce service permet d'identifier quelle est l'émotion ("value" dans l'output), qui la ressent ("emitter" dans l'output) et ce qui la déclenche ("trigger" dans l'output). Par exemple dans "Luc déteste les e-mails.", l'émetteur Luc a une émotion colérique envers le produit.
 
-[Rest API](pss/README_SENTIMENT.md)
+[Rest API](pss/README_EMOTIONS.md)
+
+Opinions
+==
+
+<img src="images/ic_pss_sentiment.png" alt="drawing" width="80"/>
+
+L'analyse d'opinions (<i>opinion mining</i> ou <i>sentiment analysis</i>) consiste à identifier les opinions (positif/négatif/neutre) 
+qui sont exprimées dans le texte à analyser. Ce service permet d'identifier quelle est l'opinion ("value" dans l'output), qui l'exprime ("emitter" dans l'output) et sur quoi porte-t-elle ("target" dans l'output). De surcroit, ce service fournit pour chaque texte un score global d'opinion compris entre -1 et 1. Par exemple dans "Luc déteste ce produit alors que Sophie l'adore." le produit est positif du point de vue de Luc mais négatif du point de vue de Marie.
+
+[Rest API](pss/README_OPINIONS.md)
 
 Anonymiser
 ==

@@ -28,15 +28,30 @@ L'extraction de mots clés fournit une liste ordonnée des termes les plus perti
 
 [Rest API](pss/README_KEYWORD.md)
 
-Sentiment
+Emotions
 ==
 
 <img src="images/ic_pss_sentiment.png" alt="drawing" width="80"/>
 
+Emotion analysis aims at identifying emotions (joy, sadness, fear, anger, disgust, surprise) 
+which are embedded in the text to analyse.
+For instance, in "Luc hates this product.", the "product" triggers angry for Luc.
+This service provides a very fine-grained way to identify several emotions within a given sentence. 
 
-Sentiment analysis aims at identifying sentiments (positive, negative, and neutral) and emotions (joy, sadness, fear, anger, disgust, surprise) which are embedded in the text to analyse. This Sentiment service provides words and multiwords level analysis. Hence, it is possible in a very fine-grained way to identify several sentiments and emotions within a given sentence. For instance, in "Luc hates this product whereas Marie likes it.", the "product" is negative from Luc's point of view but not from Maries's one.
+[Rest API](pss/README_EMOTIONS-en.md)
 
-[Rest API](pss/README_SENTIMENT-en.md)
+Opinions
+==
+
+<img src="images/ic_pss_sentiment.png" alt="drawing" width="80"/>
+
+Opinion analysis aims at identifying opinions (positive, negative, and neutral) which are embedded in the text 
+to analyse. 
+This service provides a very fine-grained way to identify several opinions within a given sentence. 
+For instance, in "Luc hates this product whereas Marie likes it.", the "product" is negative from Luc's point of view but not from Maries's one.
+
+
+[Rest API](pss/README_OPINIONS-en.md)
 
 Anonymiser
 ==
