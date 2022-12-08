@@ -7,6 +7,7 @@ Pour tester les Prevyo Semantic Services vous pouvez soit utiliser l'interface w
 
 Versions
 ==
+- 2022.12 [changelog](CHANGELOG.md#version-202212)
 - 2022.06 [changelog](CHANGELOG.md#version-202206)
 - 2021.06 [changelog](CHANGELOG.md#version-202106)
 - 2020.08 [changelog](CHANGELOG.md#version-202008)
@@ -51,6 +52,32 @@ Réponse :
 
 Notes pour les langues
 ====
+
+Version 2
+=====
+
+La langue n'est plus obligatoire. Si la langue n'est pas précisée, celle-ci sera automatiquement détectée.
+
+Requête :
+
+```JSON
+{
+	"text": "TEXT"
+}
+```
+
+Réponse : la langue détectée sera retournée dans la réponse.
+
+```JSON
+{
+	"message": null,
+	"code": 0,
+	"language": "fr",
+    ...
+```
+
+Version 1
+=====
 
 La langue doit être passée en paramètre. Les langues disponibles sont : français (fr) et anglais (en).   
 
