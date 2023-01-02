@@ -1,3 +1,24 @@
+# Version 2022.12
+Une nouvelle version (v2) de l'API est disponible. Avec cette version la langue n'est plus obligatoire. Si la langue n'est pas précisée, celle-ci sera automatiquement détectée. 
+
+Requête : 
+
+```JSON
+{
+	"text": "TEXT"
+}
+```
+
+Réponse : la langue détectée sera retournée dans la réponse.
+
+```JSON
+{
+	"message": null,
+	"code": 0,
+	"language": "fr",
+    ...
+```
+
 # Version 2022.10
 - Suppression du service Sentiment
 - Création d'un service Opinion
