@@ -28,10 +28,10 @@ Au-dessous de 1000 mots, l'API est synchrone. Elle donnera le résultat dans la 
 
 Exemple : 
 
-`curl -X POST "https://pss-api.prevyo.com/pss/api/v1/sentiments" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d "{\"text\": \"Paul n'aime pas la très bonne pomme de Marie.\"}` 
+`curl -X POST "https://pss-api.prevyo.com/pss/api/v1/opinions" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d "{\"text\": \"Paul n'aime pas la très bonne pomme de Marie.\"}"` 
 
 Réponse : 
-`{"startTime":1587460733812,"endTime":1587460735473,"result":{"sentiments":[{"value":"ne pas aimer(pomme(bonne))","emotions":["sadness"],"polarity":-1.0,"pointOfView":"Paul"}]}}{"startTime":1587460733812,"endTime":1587460735473,"result":{"sentiments":[{"value":"ne pas aimer(pomme(bonne))","emotions":["sadness"],"polarity":-1.0,"pointOfView":"Paul"}]}}`
+`{"message":null,"code":0,"language":"fr","startTime":1679302086167,"endTime":1679302086167,"result":{"opinions":[{"target":"pomme","refTarget":"0-7","context":null,"value":-1.0,"emitter":"Paul"}],"globalScore":-1.0}}`
 
 
 Au-dessus de 1000 mots, l'API est asynchrone. Elle renverra un token dans la réponse à la requête. 
@@ -39,17 +39,17 @@ Au-dessus de 1000 mots, l'API est asynchrone. Elle renverra un token dans la ré
 
 Exemple:
 
-`curl -X POST "https://pss-api.prevyo.com/pss/api/v1/sentiments" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d "{\"text\": \"<TEXTE DE PLUS DE 1000 MOTS>\"}`
+`curl -X POST "https://pss-api.prevyo.com/pss/api/v1/opinions" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d "{\"text\": \"<TEXTE DE PLUS DE 1000 MOTS>\"}"`
 
 Réponse :
 `{"token": "<TOKEN>","code": 201}`
 
 Récupération du résultat de l'analyse : 
 
-`curl -X GET "https://pss-api.prevyo.com/pss/api/v1/sentiments/<TOKEN>" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d "{\"text\": \"<TEXTE DE PLUS DE 1000 MOTS>\"}`
+`curl -X GET "https://pss-api.prevyo.com/pss/api/v1/opinions/<TOKEN>" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX"`
 
 Réponse :
-`{"startTime": 1587476808783,"endTime": 1587476889428,"result": { ....}`
+`{"message":null,"code":0,"language":"fr","startTime":1679302086167,"endTime":1679302086167,"result":{...}`
 
 Notes pour les langues
 ====
