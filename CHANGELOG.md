@@ -1,3 +1,7 @@
+# Version 2023.03
+- Remplacement de `sentiments` (deprecated) par `opinions` dans les exemples d'appels à l'API
+- Ajout des guillemets manquants dans les commandes `curl`
+
 # Version 2022.12
 Une nouvelle version (v2) de l'API est disponible. Avec cette version la langue n'est plus obligatoire. Si la langue n'est pas précisée, celle-ci sera automatiquement détectée. 
 
