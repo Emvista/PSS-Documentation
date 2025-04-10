@@ -83,7 +83,7 @@ avec LANG : fr (par défaut) ou en.
 ## Nouveautés de l'API :
 - Nouveau JSON de sortie ;
 - Mise en place d'une gestion de versions dans les URLs des services :
-`/pss/api/v1/<service>` ;
+`/pss/api/v2/<service>` ;
 - L'API devient asynchrone au-delà d'un certain nombre de caractères. Si vous envoyez un long texte, vous aurez alors un retour (code Http) qui vous informera de la prise en compte de votre demande. Une url est renvoyée pour interroger le serveur qui soit vous répondra que la demande est toujours en cours d'analyse, soit vous renverra le résultat de l'analyse ;
 - Nouveau service Parser : analyse syntaxique ;
 - Documentation complète.

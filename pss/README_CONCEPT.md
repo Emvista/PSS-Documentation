@@ -10,7 +10,7 @@ Query
 * Method : POST
 * Header : "Content-Type: application/json"
 * Header : "Poa-Token : TOKEN"
-* Server : https://pss-api.prevyo.com/pss/api/v1/concepts
+* Server : https://pss-api.prevyo.com/pss/api/v2/concepts
 * Body : 
 
 ```JSON
@@ -312,4 +312,4 @@ Dans "Luc envoie une facture proforma", le concept "administratif" pourrait êtr
 TEST
 --
 
-`curl -X POST "https://pss-api.prevyo.com/pss/api/v1/concepts" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Bonjour Jean, peux tu appeler demain midi, la société Emvista pour parler à Paul."}` 
+`curl -X POST "https://pss-api.prevyo.com/pss/api/v2/concepts" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Bonjour Jean, peux tu appeler demain midi, la société Emvista pour parler à Paul."}` 

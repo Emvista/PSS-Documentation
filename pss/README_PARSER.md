@@ -10,7 +10,7 @@ Query
 * Method : POST
 * Header : "Content-Type: application/json"
 * Header : "Poa-Token : TOKEN"
-* Server : https://pss-api.prevyo.com/pss/api/v1/parser
+* Server : https://pss-api.prevyo.com/pss/api/v2/parser
 * Body : 
 
 ```JSON
@@ -304,4 +304,4 @@ Dans "Luc envoie une facture proforma", la valeur de end pour le mot "une" est 1
 TEST
 --
 
-`curl -X POST "https://pss-api.prevyo.com/pss/api/v1/parser" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Marie enverra la facture demain à Pierre de chez Emvista."}` 
+`curl -X POST "https://pss-api.prevyo.com/pss/api/v2/parser" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Marie enverra la facture demain à Pierre de chez Emvista."}` 
