@@ -10,7 +10,7 @@ Query
 * Method : POST
 * Header : "Content-Type: application/json"
 * Header : "Poa-Token : TOKEN"
-* Server : https://pss-api.prevyo.com/pss/api/v1/keywords
+* Server : https://pss-api.prevyo.com/pss/api/v2/keywords
 * Body : 
 
 ```JSON
@@ -137,5 +137,5 @@ Dans "Luc envoie une facture proforma", "proforma" a pour contexte "facture prof
 TEST
 --
 
-`curl -X POST "https://pss-api.prevyo.com/pss/api/v1/keywords" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel."}` 
+`curl -X POST "https://pss-api.prevyo.com/pss/api/v2/keywords" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Emvista est une société créée à Montpellier en février 2018. Emvista développe des briques logicielles pour comprendre le langage naturel."}` 
 

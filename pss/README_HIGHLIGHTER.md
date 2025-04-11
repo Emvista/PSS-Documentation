@@ -10,7 +10,7 @@ Query
 * Method : POST
 * Header : "Content-Type: application/json"
 * Header : "Poa-Token : TOKEN"
-* Server : https://pss-api.prevyo.com/pss/api/v1/highlighter
+* Server : https://pss-api.prevyo.com/pss/api/v2/highlighter
 * Body :
 
 ```JSON
@@ -97,4 +97,4 @@ Dans "Luc envoie une facture proforma", "Luc" a pour tag nerd:Person.
 TEST
 --
 
-`curl -X POST "https://pss-api.prevyo.com/pss/api/v1/highlighter" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Marie enverra la facture demain à Pierre de chez Emvista."}`
+`curl -X POST "https://pss-api.prevyo.com/pss/api/v2/highlighter" -H "accept: application/json" -H "Content-Type: application/json" -H "Poa-Token: XXXXXXXX" -d {"text": "Marie enverra la facture demain à Pierre de chez Emvista."}`
